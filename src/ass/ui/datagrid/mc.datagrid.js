@@ -70,7 +70,8 @@ define(["avalon", "text!./mc.datagrid.html", "css!./mc.datagrid.min.css", "mcChe
             "time": 4,
             "switch": 5,
             "selectbox": 6,
-            "icon": 7
+            "icon": 7,
+            "html": 8
         },
         $datagridBody: null, //datagrid body 的 jQuery 对象
 

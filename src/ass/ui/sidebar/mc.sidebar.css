@@ -116,6 +116,11 @@
 .mc-sidebar-cotar .mc-accordion-cotar .panel-wrap .panel-body {
   padding-left: 30px;
 }
+.mc-sidebar-cotar .mc-accordion-cotar .panel-wrap .panel-header.select {
+  padding-left: 27px;
+  border-left: 3px solid #01caca;
+  background: #16191c;
+}
 .mc-sidebar-cotar .link-bar {
   padding-left: 60px;
 }

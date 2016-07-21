@@ -1975,6 +1975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        onDataChange: _interface, //ajax请求时返回data 
 	        onPushStart: _interface, //数据加入前
 	        onPushEnd: _interface, //数据加入后  都可return掉不加入
+	        onLoadData: _interface, //数据加载完毕
 	        //外部接口 
 	        setSelectById: _interface, //设置选中项  
 	        setUnCheckedById: _interface, //设置选中项  
@@ -2208,6 +2209,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    case "unchecked":
 	                        if (typeof vm.onUnChecked == "function") {
 	                            vm.onUnChecked(ev.target);
+	                        }
+	                        break;
+	                    case "loadData":
+	                        if (typeof vm.onLoadData == "function") {
+	                            vm.onLoadData(ev, vm);
 	                        }
 	                        break;
 	                    default: break;
@@ -2589,6 +2595,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        }
 	                    }
 	                    vm.unfold(item, opt.silence).then(function () {
+	                        vm._trigger(item, "loadData"); //触发数据加载完毕事件
 	                        if (item.children.length) {
 	                            //展开后有数据
 	                            vm.showItem(item.children, --n, opt);
@@ -7070,6 +7077,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            vm.setSelect = function (href) {
 	                //todo find
 	                vm.sidebarList.forEach(function (pat) {
+	                    //菜单文件位置但是一个文件菜单需要选中
+	                    if (pat.href) {
+	                        //判断href是否存在,判断是否为菜单文件还是菜单文件夹
+	                        pat.select = false;
+	                        if (pat.href.toLowerCase().indexOf(href.toLowerCase()) > -1) {
+	                            pat.select = true;
+	                        }
+	                    }
+	                    //子节点选中（因为只支持2级..就类似写死）
 	                    //todo remove
 	                    _.each(pat.children, function (child) {
 	                        child.select = false;
@@ -7081,7 +7097,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                            return false;
 	                        }
 	                    })
-	                    console.log(vm.sidebarList)
 	                })
 	            }
 	            
@@ -7116,7 +7131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 28 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mc-sidebar-cotar\" ms-class=\"mc-loading: isInit\">\r\n    <div class=\"mc-accordion-cotar\" ms-repeat=\"sidebarList\">\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length>0\">\r\n            <div class=\"panel-header\" ms-click=\"clickPanel($event, $index)\">\r\n                <a href=\"javascript:void(0)\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\" ms-css-padding=\"padding\">\r\n                <div class=\"mc-accordion-cotar\" ms-repeat-el=\"el.children\">\r\n                    <div class=\"link-bar hf\" ms-class-1=\"select:el.select\">\r\n                        <a class=\"fp\" ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n                        <div class=\"fp\" ms-if=\"el.$btn_opt\">\r\n                            <mc:button ms-attr-config=\"el.$btn_opt\"></mc:button>\r\n                            <!--<mc:droplist config=\"$droplist_opt\"></mc:droplist>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length==0\">\r\n            <div class=\"panel-header\">\r\n                <a ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+	module.exports = "<div class=\"mc-sidebar-cotar\" ms-class=\"mc-loading: isInit\">\r\n    <div class=\"mc-accordion-cotar\" ms-repeat=\"sidebarList\">\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length>0\">\r\n            <div class=\"panel-header\" ms-click=\"clickPanel($event, $index)\">\r\n                <a href=\"javascript:void(0)\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\" ms-css-padding=\"padding\">\r\n                <div class=\"mc-accordion-cotar\" ms-repeat-el=\"el.children\">\r\n                    <div class=\"link-bar hf\" ms-class-1=\"select:el.select\">\r\n                        <a class=\"fp\" ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n                        <div class=\"fp\" ms-if=\"el.$btn_opt\">\r\n                            <mc:button ms-attr-config=\"el.$btn_opt\"></mc:button>\r\n                            <!--<mc:droplist config=\"$droplist_opt\"></mc:droplist>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length==0\">\r\n            <div class=\"panel-header\" ms-class-1=\"select:el.select\">\r\n                <a ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 29 */
@@ -7358,7 +7373,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            "time": 4,
 	            "switch": 5,
 	            "selectbox": 6,
-	            "icon": 7
+	            "icon": 7,
+	            "html": 8
 	        },
 	        $datagridBody: null, //datagrid body 的 jQuery 对象
 	
@@ -8103,7 +8119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 34 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mc-datagrid-cotar\" ms-class-1=\"{{name}}\" ms-class-2=\"mc-hide:isInit\">\r\n    <div class=\"mc-datagrid-scroll-cotar\">\r\n        {{renderHeader()|html}}\r\n        <table class=\"data-table\">\r\n            <tr>\r\n                <th ms-repeat=\"tableConfig\" ms-class=\"col-{{$index}}\" ms-class-1=\"active:sortActive\" ms-click=\"sort($event, $index)\">\r\n                    <span class=\"vm-cotar\" ms-if=\"dataHeadType($index)==='data'\">{{el.headTxt}}</span>\r\n                    <!-- 复选框 -->\r\n                    <div class=\"vm-cotar checkbox-wrap\" ms-if=\"dataHeadType($index)===1\">\r\n                        <mc:checkbox on-changed=\"selectAll\" on-init=\"getCheckBoxAllVm\" ms-attr-config=\"checkbox_opt{{$outer.$index}}\"></mc:checkbox>\r\n                    </div>\r\n                </th>\r\n            </tr>\r\n        </table>\r\n        <div class=\"mc-tbody\">\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 0\">\r\n                <div class=\"h1\">数据加载中</div>\r\n            </div>\r\n            <table class=\"data-table\" ms-if=\"dataGridState === 1\">\r\n                <tr ms-repeat=\"data\" ms-class=\"active:selected[$index]\" ms-click=\"clickRow($event, $index)\">\r\n                    <!-- 数据内容 -->\r\n                    <td ms-repeat-el=\"tableConfig\" ms-class=\"col-{{$index}}\">\r\n                        <!-- 正常数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===false\">{{renderContent($outer.$index,$index)}}</span>\r\n                        <!-- 时间数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===4\">{{renderContent($outer.$index,$index)| date(\"yyyy-MM-dd HH:mm:ss\")}}</span>\r\n                        <!-- 带连接数据 -->\r\n                        <a class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===true\" ms-attr-href=\"{{renderHref($outer.$index,$index)}}\">{{renderContent($outer.$index,$index)}}</a>\r\n                        <!-- 复选框 -->\r\n                        <div class=\"vm-cotar checkbox-wrap\" ms-if=\"datagridType($outer.$index,$index)===1\">\r\n                            <mc:checkbox on-changed=\"selectRow\" on-init=\"getChildCheckBoxVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:checkbox>\r\n                        </div>\r\n                        <!-- switch -->\r\n                        <div class=\"vm-cotar switch-wrap\" ms-if=\"datagridType($outer.$index,$index)===5\">\r\n                            <mc:switch on-click=\"clickSwitch\" on-init=\"setSwitch\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:switch>\r\n                        </div>\r\n                        <!-- select box -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===6\">\r\n                            <mc:selectbox config=\"$selectbox_opt\" on-selected=\"changeSelect\" on-init=\"setSelect\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:selectbox>\r\n                        </div>\r\n                        <!-- icon -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index) === 7\">\r\n                            <span class=\"vm-cotar iconfont\"> {{renderContent($outer.$index,$index)|html}} </span>\r\n                        </div>\r\n                        <!-- 按钮 -->\r\n                        <div class=\"vm-cotar button-wrap\" ms-if=\"datagridType($outer.$index,$index)===2 && ( el.filter ?  el.filter($outer.el.$model) : true )\">\r\n                            <mc:button on-click=\"clickButton\" on-init=\"getChildButtonVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\" ms-attr-label=\"{{renderBtn($outer.$index,$index)}}\"></mc:button>\r\n                        </div>\r\n                        <!-- 图片 -->\r\n                        <div class=\"vm-cotar img-wrap\" ms-if=\"datagridType($outer.$index,$index)===3\"><div class=\"mc-img-cotar\"><img ms-attr-src=\"renderContent($outer.$index,$index)\"></div></div>\r\n                    </td>\r\n                </tr>\r\n            </table>\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 2\">\r\n                <img src=\"/Content/Include/img/img_no_data.jpg\" />\r\n                <!--<div class=\"h1\">暂无数据</div>-->\r\n            </div>\r\n        </div>\r\n        {{renderStyle()|html}}\r\n    </div>\r\n</div>\r\n"
+	module.exports = "<div class=\"mc-datagrid-cotar\" ms-class-1=\"{{name}}\" ms-class-2=\"mc-hide:isInit\">\r\n    <div class=\"mc-datagrid-scroll-cotar\">\r\n        {{renderHeader()|html}}\r\n        <table class=\"data-table\">\r\n            <tr>\r\n                <th ms-repeat=\"tableConfig\" ms-class=\"col-{{$index}}\" ms-class-1=\"active:sortActive\" ms-click=\"sort($event, $index)\">\r\n                    <span class=\"vm-cotar\" ms-if=\"dataHeadType($index)==='data'\">{{el.headTxt}}</span>\r\n                    <!-- 复选框 -->\r\n                    <div class=\"vm-cotar checkbox-wrap\" ms-if=\"dataHeadType($index)===1\">\r\n                        <mc:checkbox on-changed=\"selectAll\" on-init=\"getCheckBoxAllVm\" ms-attr-config=\"checkbox_opt{{$outer.$index}}\"></mc:checkbox>\r\n                    </div>\r\n                </th>\r\n            </tr>\r\n        </table>\r\n        <div class=\"mc-tbody\">\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 0\">\r\n                <div class=\"h1\">数据加载中</div>\r\n            </div>\r\n            <table class=\"data-table\" ms-if=\"dataGridState === 1\">\r\n                <tr ms-repeat=\"data\" ms-class=\"active:selected[$index]\" ms-click=\"clickRow($event, $index)\">\r\n                    <!-- 数据内容 -->\r\n                    <td ms-repeat-el=\"tableConfig\" ms-class=\"col-{{$index}}\">\r\n                        <!-- 正常数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===false\">{{renderContent($outer.$index,$index)}}</span>\r\n                        <!-- html数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===8\">{{renderContent($outer.$index,$index) | html }}</span>\r\n                        <!-- 时间数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===4\">{{renderContent($outer.$index,$index)| date(\"yyyy-MM-dd HH:mm:ss\")}}</span>\r\n                        <!-- 带连接数据 -->\r\n                        <a class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===true\" ms-attr-href=\"{{renderHref($outer.$index,$index)}}\">{{renderContent($outer.$index,$index)}}</a>\r\n                        <!-- 复选框 -->\r\n                        <div class=\"vm-cotar checkbox-wrap\" ms-if=\"datagridType($outer.$index,$index)===1\">\r\n                            <mc:checkbox on-changed=\"selectRow\" on-init=\"getChildCheckBoxVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:checkbox>\r\n                        </div>\r\n                        <!-- switch -->\r\n                        <div class=\"vm-cotar switch-wrap\" ms-if=\"datagridType($outer.$index,$index)===5\">\r\n                            <mc:switch on-click=\"clickSwitch\" on-init=\"setSwitch\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:switch>\r\n                        </div>\r\n                        <!-- select box -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===6\">\r\n                            <mc:selectbox config=\"$selectbox_opt\" on-selected=\"changeSelect\" on-init=\"setSelect\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:selectbox>\r\n                        </div>\r\n                        <!-- icon -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index) === 7\">\r\n                            <span class=\"vm-cotar iconfont\"> {{renderContent($outer.$index,$index)|html}} </span>\r\n                        </div>\r\n                        <!-- 按钮 -->\r\n                        <div class=\"vm-cotar button-wrap\" ms-if=\"datagridType($outer.$index,$index)===2 && ( el.filter ?  el.filter($outer.el.$model) : true )\">\r\n                            <mc:button on-click=\"clickButton\" on-init=\"getChildButtonVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\" ms-attr-label=\"{{renderBtn($outer.$index,$index)}}\"></mc:button>\r\n                        </div>\r\n                        <!-- 图片 -->\r\n                        <div class=\"vm-cotar img-wrap\" ms-if=\"datagridType($outer.$index,$index)===3\"><div class=\"mc-img-cotar\"><img ms-attr-src=\"renderContent($outer.$index,$index)\"></div></div>\r\n                    </td>\r\n                </tr>\r\n            </table>\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 2\">\r\n                <img src=\"/Content/Include/img/img_no_data.jpg\" />\r\n                <!--<div class=\"h1\">暂无数据</div>-->\r\n            </div>\r\n        </div>\r\n        {{renderStyle()|html}}\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 35 */

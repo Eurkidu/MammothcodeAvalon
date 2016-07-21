@@ -22,6 +22,8 @@
                     <td ms-repeat-el="tableConfig" ms-class="col-{{$index}}">
                         <!-- 正常数据 -->
                         <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===false">{{renderContent($outer.$index,$index)}}</span>
+                        <!-- html数据 -->
+                        <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===8">{{renderContent($outer.$index,$index) | html }}</span>
                         <!-- 时间数据 -->
                         <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===4">{{renderContent($outer.$index,$index)| date("yyyy-MM-dd HH:mm:ss")}}</span>
                         <!-- 带连接数据 -->

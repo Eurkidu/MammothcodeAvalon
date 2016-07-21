@@ -118,6 +118,7 @@ define(['avalon', 'text!./mc.tree.html', 'css!./mc.tree.min.css','mcButton'], fu
         onDataChange: _interface, //ajax请求时返回data 
         onPushStart: _interface, //数据加入前
         onPushEnd: _interface, //数据加入后  都可return掉不加入
+        onLoadData: _interface, //数据加载完毕
         //外部接口 
         setSelectById: _interface, //设置选中项  
         setUnCheckedById: _interface, //设置选中项  
@@ -351,6 +352,11 @@ define(['avalon', 'text!./mc.tree.html', 'css!./mc.tree.min.css','mcButton'], fu
                     case "unchecked":
                         if (typeof vm.onUnChecked == "function") {
                             vm.onUnChecked(ev.target);
+                        }
+                        break;
+                    case "loadData":
+                        if (typeof vm.onLoadData == "function") {
+                            vm.onLoadData(ev, vm);
                         }
                         break;
                     default: break;
@@ -732,6 +738,7 @@ define(['avalon', 'text!./mc.tree.html', 'css!./mc.tree.min.css','mcButton'], fu
                         }
                     }
                     vm.unfold(item, opt.silence).then(function () {
+                        vm._trigger(item, "loadData"); //触发数据加载完毕事件
                         if (item.children.length) {
                             //展开后有数据
                             vm.showItem(item.children, --n, opt);

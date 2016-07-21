@@ -102,6 +102,15 @@ define(['avalon', 'text!./mc.sidebar.html', 'css!./mc.sidebar.min.css'], functio
             vm.setSelect = function (href) {
                 //todo find
                 vm.sidebarList.forEach(function (pat) {
+                    //菜单文件位置但是一个文件菜单需要选中
+                    if (pat.href) {
+                        //判断href是否存在,判断是否为菜单文件还是菜单文件夹
+                        pat.select = false;
+                        if (pat.href.toLowerCase().indexOf(href.toLowerCase()) > -1) {
+                            pat.select = true;
+                        }
+                    }
+                    //子节点选中（因为只支持2级..就类似写死）
                     //todo remove
                     _.each(pat.children, function (child) {
                         child.select = false;
@@ -113,7 +122,6 @@ define(['avalon', 'text!./mc.sidebar.html', 'css!./mc.sidebar.min.css'], functio
                             return false;
                         }
                     })
-                    console.log(vm.sidebarList)
                 })
             }
             
