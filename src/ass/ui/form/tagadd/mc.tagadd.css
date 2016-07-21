@@ -1,0 +1,198 @@
+﻿@charset "utf-8";
+/*
+    Name: tagadd (标签添加)
+    Version: 0.1
+    Create Time: 2016年4月6日10:16:21
+    Update Time: 2016年4月6日10:16:25
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-tagadd-cotar [slot] {
+  visibility: visible;
+}
+.mc-tagadd-cotar .mc-tip {
+  line-height: 27px;
+}
+.mc-tagadd-cotar .mc-ipt {
+  height: 27px;
+  line-height: 25px;
+  padding: 0 5px;
+  border-radius: 3px;
+  border: 1px solid #bebebe;
+  font-size: 14px;
+}
+.mc-tagadd-cotar .mc-add-btn {
+  line-height: 27px;
+  margin: 0 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  background: #15b956;
+  color: #ffffff;
+  cursor: pointer;
+}
+.mc-tagadd-cotar .mc-text-field-tip {
+  line-height: 20px;
+  font-size: 14px;
+  color: #888888;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item {
+  position: relative;
+  margin: 3px 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  cursor: default;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item:hover .mc-close-btn {
+  opacity: 1;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item .mc-close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 50%;
+  background: #888888;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item .mc-close-btn:hover {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: #e24343;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item .mc-tag-type {
+  position: absolute;
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item .mc-tag-name {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 13px;
+  border-radius: 10px;
+  background: #349fd5;
+  color: #ffffff;
+  font-size: 12px;
+}
+.mc-tagadd-cotar .mc-tag-show-cotar .mc-tag-item .mc-tag-name.mc-type {
+  padding-left: 30px;
+}
+/*# sourceMappingURL=mc.tagadd.css.map */

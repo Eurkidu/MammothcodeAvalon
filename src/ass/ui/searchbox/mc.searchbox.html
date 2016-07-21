@@ -1,0 +1,6 @@
+﻿<div class="mc-searchbox-cotar hf" ms-class="mc-loading: isInit">
+    <mc:selectbox class="fp" config="$search_type_opt" label="搜索" label-size="40" on-init="getSearchTypeVM" on-selected="changeSearchType"></mc:selectbox>
+    <mc:text class="fp" width="150" on-init="getSearchIptVM" ms-attr-placeholder="placeholder"></mc:text>
+    <mc:button class="fp no-radius no-lr-border" label="搜索" on-click="doSearch"></mc:button>
+    <mc:button class="fp no-left-radius" label="全部数据" on-click="doGetAll"></mc:button>
+</div>

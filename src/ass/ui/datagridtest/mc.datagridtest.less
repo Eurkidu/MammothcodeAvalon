@@ -1,0 +1,77 @@
+﻿/*
+    Name: datagrid (数据表)
+    Version: 0.1
+    Create Time: 2015年12月15日17:20:28
+    Update Time: 2016年1月11日17:17:52
+    Author: Zero
+*/
+@import "../base/css/MammothcodeCoreLib.less";
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_datagrid_color_config;
+
+.mc-datagrid-cotar-test{
+    margin-bottom: 15px;
+    background: @c_nc_1;
+    overflow: hidden;
+    [slot]{
+        visibility: visible;
+    }
+    .datagrid-title{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        background: @c_nc_1;
+    }
+    .data-table{
+        width: 100%;
+        border-top: 1px solid @c_nc_3;
+        tr{
+            &:hover{
+                background: #faf7ed;
+            }
+            &.active{
+                background: #fafafa;
+            }
+        }
+        th,
+        td{
+            padding: 12px 10px;
+            border-bottom: 1px solid @c_nc_3;
+            font-size: 14px;
+            text-align: center;
+            .mc_peVm;
+        }
+        th{
+            position: relative;
+            padding: 7px 10px;
+            font-weight: normal;
+            text-align: left;
+            background: #F1F4FB;
+            cursor: pointer;
+            &.active{
+                background-color: #ffadad; 
+                &:before{  
+                .mc_peAbsolute(30px, 35px);
+                .mc_bgNp("ic_trend_down.png");
+                right: 0;
+                top: 0;
+                }  
+                //上箭头
+                 &.trend{
+                     &:before{
+                     .mc_bgNp("ic_trend_up.png");
+                     }
+                }
+            }
+
+        }
+        //复选框包裹层
+        .checkbox-wrap{
+            text-align: center;
+            font-size: 0;
+        }
+    }
+}
+

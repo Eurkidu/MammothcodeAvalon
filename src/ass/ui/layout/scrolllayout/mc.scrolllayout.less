@@ -1,0 +1,23 @@
+﻿/*
+    Name: relativelayout (相对布局)
+    Version: 0.1
+    Create Time: 2016年1月12日21:51:38
+    Update Time: 2016年1月12日21:51:41
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_relativelayout_color_config;
+
+.mc-relativelayout-cotar {
+	position: relative;
+    &:after{
+        display: block;
+        content: "";
+        #McBaseLib > .cleanFloat;
+    }
+    [slot]{
+        visibility: visible;
+    }
+}

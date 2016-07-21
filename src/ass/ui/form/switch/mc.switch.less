@@ -1,0 +1,66 @@
+﻿/*
+    Name: switch (标签添加)
+    Version: 0.1
+    Create Time: 2016年4月6日10:16:21
+    Update Time: 2016年4月6日10:16:25
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_tagadd_color_config;
+
+.mc-switch-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .mc-tip{
+        line-height: 32px;
+    }
+    .mc-switch-wrap{
+        background-color: #fff;
+        border: 1px solid #dfdfdf;
+        border-radius: 20px;
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+        position: relative;
+        vertical-align: middle;
+        width: 50px;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-sizing: content-box;
+        background-clip: content-box;
+        box-shadow: 0px 0px 0px 0px rgb(223, 223, 223) inset;
+        border-color: rgb(223, 223, 223);
+        background-color: rgb(255, 255, 255);
+        transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;
+        &.mc-switch-open{
+            transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;
+            box-shadow: 0px 0px 0px 16px rgb(100, 189, 99) inset;
+            border-color: rgb(100, 189, 99);
+            background-color: rgb(100, 189, 99);
+            .mc-switch-btn{
+                left: 20px;
+                background-color: rgb(255, 255, 255);
+            }
+        }
+        &.mc-switch-readonly{
+            cursor: default;
+        }
+        .mc-switch-btn{
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            height: 30px;
+            position: absolute;
+            top: 0;
+            width: 30px;
+            left: 0;
+            transition: background-color 0.4s ease 0s, left 0.2s ease 0s;
+        }
+    }
+}

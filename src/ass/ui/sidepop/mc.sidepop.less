@@ -1,0 +1,84 @@
+﻿/*
+    Name: sidepop (侧边弹出)
+    Version: 0.1
+    Create Time: 2016年3月25日11:50:13
+    Update Time: 2016年3月25日11:50:17
+    Author: Zero
+*/
+@import "../base/css/MammothcodeCoreLib.less";
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_sidepop_color_config;
+
+.mc-sidepop-cotar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    width: 500px;
+    border-left: 1px solid @c_border;
+    background: @c_nc_1;
+    z-index: 99;
+    #McBaseLib > .animationTransition;
+    #McBaseLib > .boxShadow(.1, -1px 0 2px);
+    [slot]{
+        visibility: visible;
+    }
+    &.mc-sidepop-show{
+        display: block;
+    }
+    &.mc-show-animate{
+        #McBaseLib > .animation(sideInLeft);
+        #McBaseLib > .animationFillMode(backwards);
+    }
+    &.mc-hide-animate{
+        #McBaseLib > .animation(sideInLeft);
+        #McBaseLib > .reverseAnimation;
+        #McBaseLib > .animationFillMode(forwards);
+    }
+    &.mc-sidepop-sm{
+        width: 300px;
+        &.mc-show-animate{
+            #McBaseLib > .animation(sideInLeftS);
+        }
+        &.mc-hide-animate{
+            #McBaseLib > .animation(sideInLeftS);
+            #McBaseLib > .reverseAnimation;
+        }
+    }
+    &.mc-sidepop-lg{
+        width: 700px;
+        &.mc-show-animate{
+            #McBaseLib > .animation(sideInLeftL);
+        }
+        &.mc-hide-animate{
+            #McBaseLib > .animation(sideInLeftL);
+            #McBaseLib > .reverseAnimation;
+        }
+    }
+    &.mc-sidepop-page{
+        width: 1050px;
+        &.mc-show-animate{
+            #McBaseLib > .animation(sideInLeftL);
+        }
+        &.mc-hide-animate{
+            #McBaseLib > .animation(sideInLeftL);
+            #McBaseLib > .reverseAnimation;
+        }
+    }
+    .mc-sidepop-header{
+        border-bottom: 1px solid @c_border;
+    }
+    .mc-scroll-wrap{
+        position: absolute;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .mc-sidepop-footer{
+        border-top: 1px solid @c_border;
+    }
+}
+

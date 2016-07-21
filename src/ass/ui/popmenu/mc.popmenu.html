@@ -1,0 +1,10 @@
+<div class="mc-popmenu-cotar fade" ms-click="hideDialog($event)" ms-class-1="mc-dialog-show:show"
+        ms-class-2="mc-dialog-hide:!show">
+    <div class="mc-popmenu-content" ms-click="clickDialog($event)" ms-class-1="mc-popmenu-lg: size=='large'"
+         ms-class-2="mc-popmenu-sm: size=='small'" ms-class-3="mc-popmenu-st: size=='tiny'" ms-css-top="position.top" ms-css-left="position.left">
+        <!-- popmenu body -->
+        <div class="mc-popmenu-body" ms-css-padding="padding">{{content|html}}</div>
+    </div>
+    <!-- popmenu bg -->
+    <div class="mc-popmenu-bg"></div>
+</div>

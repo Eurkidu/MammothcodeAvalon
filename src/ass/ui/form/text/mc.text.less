@@ -1,0 +1,74 @@
+﻿/*
+    Name: text (输入框)
+    Version: 0.1
+    Create Time: 2016年1月14日21:13:42
+    Update Time: 2016年1月14日21:13:45
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+//导入组件颜色配置表
+.mc_text_color_config;
+.mc-text-cotar {
+    position: relative;
+    line-height: 20px;
+    [slot] {
+        visibility: visible;
+    }
+    .mc-ipt {
+        height: 27px;
+        padding: 0 5px;
+        border-radius: 3px;
+        border: 1px solid @c_default_border;
+        font-size: 14px;
+    }
+    .mc-mult-ipt {
+        height: 75px;
+        min-height: 75px;
+        padding: 3px 5px;
+        border-radius: 3px;
+        border: 1px solid @c_default_border;
+        font-size: 14px;
+    }
+    .mc-text-show {
+        font-size: 14px;
+        .mc_txtJB;
+    }
+    .mc-text-valid-info {
+        position: fixed;
+        margin-left: 10px;
+        padding: 4px;
+        text-indent: 2px;
+        color: white;
+        text-align: center;
+        //text-decoration: none;
+        background-color: black;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        font-size: 14px;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: -5px;
+            margin-top: -5px;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 5px 5px 0;
+            border-right-color: #000000;
+        }
+    }
+    .mc-text-field-tip {
+        line-height: 30px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+}
+//禁用状态
+.mc-text-disabled {
+    color: @c_nc_8;
+    cursor: default;
+    cursor: not-allowed;
+}

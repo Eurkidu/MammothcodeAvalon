@@ -1,0 +1,61 @@
+﻿<div class="mc-datagrid-cotar" ms-class-1="{{name}}" ms-class-2="mc-hide:isInit">
+    <div class="mc-datagrid-scroll-cotar">
+        {{renderHeader()|html}}
+        <table class="data-table">
+            <tr>
+                <th ms-repeat="tableConfig" ms-class="col-{{$index}}" ms-class-1="active:sortActive" ms-click="sort($event, $index)">
+                    <span class="vm-cotar" ms-if="dataHeadType($index)==='data'">{{el.headTxt}}</span>
+                    <!-- 复选框 -->
+                    <div class="vm-cotar checkbox-wrap" ms-if="dataHeadType($index)===1">
+                        <mc:checkbox on-changed="selectAll" on-init="getCheckBoxAllVm" ms-attr-config="checkbox_opt{{$outer.$index}}"></mc:checkbox>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <div class="mc-tbody">
+            <div class="mc-no-data" ms-if="dataGridState === 0">
+                <div class="h1">数据加载中</div>
+            </div>
+            <table class="data-table" ms-if="dataGridState === 1">
+                <tr ms-repeat="data" ms-class="active:selected[$index]" ms-click="clickRow($event, $index)">
+                    <!-- 数据内容 -->
+                    <td ms-repeat-el="tableConfig" ms-class="col-{{$index}}">
+                        <!-- 正常数据 -->
+                        <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===false">{{renderContent($outer.$index,$index)}}</span>
+                        <!-- 时间数据 -->
+                        <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===4">{{renderContent($outer.$index,$index)| date("yyyy-MM-dd HH:mm:ss")}}</span>
+                        <!-- 带连接数据 -->
+                        <a class="vm-cotar" ms-if="datagridType($outer.$index,$index)===true" ms-attr-href="{{renderHref($outer.$index,$index)}}">{{renderContent($outer.$index,$index)}}</a>
+                        <!-- 复选框 -->
+                        <div class="vm-cotar checkbox-wrap" ms-if="datagridType($outer.$index,$index)===1">
+                            <mc:checkbox on-changed="selectRow" on-init="getChildCheckBoxVm" ms-attr-trindex="$outer.$index" ms-attr-tdindex="$index"></mc:checkbox>
+                        </div>
+                        <!-- switch -->
+                        <div class="vm-cotar switch-wrap" ms-if="datagridType($outer.$index,$index)===5">
+                            <mc:switch on-click="clickSwitch" on-init="setSwitch" ms-attr-trindex="$outer.$index" ms-attr-tdindex="$index"></mc:switch>
+                        </div>
+                        <!-- select box -->
+                        <div class="vm-cotar" ms-if="datagridType($outer.$index,$index)===6">
+                            <mc:selectbox config="$selectbox_opt" on-selected="changeSelect" on-init="setSelect" ms-attr-trindex="$outer.$index" ms-attr-tdindex="$index"></mc:selectbox>
+                        </div>
+                        <!-- icon -->
+                        <div class="vm-cotar" ms-if="datagridType($outer.$index,$index) === 7">
+                            <span class="vm-cotar iconfont"> {{renderContent($outer.$index,$index)|html}} </span>
+                        </div>
+                        <!-- 按钮 -->
+                        <div class="vm-cotar button-wrap" ms-if="datagridType($outer.$index,$index)===2 && ( el.filter ?  el.filter($outer.el.$model) : true )">
+                            <mc:button on-click="clickButton" on-init="getChildButtonVm" ms-attr-trindex="$outer.$index" ms-attr-tdindex="$index" ms-attr-label="{{renderBtn($outer.$index,$index)}}"></mc:button>
+                        </div>
+                        <!-- 图片 -->
+                        <div class="vm-cotar img-wrap" ms-if="datagridType($outer.$index,$index)===3"><div class="mc-img-cotar"><img ms-attr-src="renderContent($outer.$index,$index)"></div></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="mc-no-data" ms-if="dataGridState === 2">
+                <img src="/Content/Include/img/img_no_data.jpg" />
+                <!--<div class="h1">暂无数据</div>-->
+            </div>
+        </div>
+        {{renderStyle()|html}}
+    </div>
+</div>

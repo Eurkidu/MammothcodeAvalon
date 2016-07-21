@@ -1,0 +1,67 @@
+﻿<div class="mc-datagrid-cotar-test" ms-class="{{name}}">
+    {{renderHeader()|html}}
+    <table class="data-table">
+        <thead ms-class="mc-hide:isInit">
+            <tr>
+                <th ms-repeat="tableConfig" ms-class="col-{{$index}}" ms-class-1="active: field===el.dataId" ms-class-2="trend: trend===1"
+                    ms-click="clickHead($event,el )">
+
+                    <!-- 字段 可排序 -->
+                    <span class="vm-cotar" ms-if="dataHeadType($index)==='data'">{{el.headTxt}}</span>
+                    <!-- 复选框 -->
+                    <div class="vm-cotar checkbox-wrap" ms-if="dataHeadType($index)===1">
+
+                        <div class="form-group mc-checkbox-cotar" ms-click="selectAll($event, $outer.$index, $index)">
+                            <i class="mc-checkbox" ms-class-1="mc-active: selectedAll"></i>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody ms-class="mc-hide:isInit">
+            <!-- ms-class="active:selected[$index]" -->
+            <tr ms-repeat-item="data"  ms-click="clickRow($event, $index)">
+                <!-- 数据内容 找列对应type-->
+                <td ms-repeat-config="tableConfig" ms-class="col-{{$index}}">
+                    <!-- 正常数据 -->
+                    <span class="vm-cotar" ms-if="datagridType($outer.$index,$index)===false">{{renderContent($outer.$index,$index)}}</span>
+                    <!-- 带连接数据 -->
+                    <a class="vm-cotar" ms-if="datagridType($outer.$index,$index)===true" ms-attr-href="{{$outer.item.tdlink}}">{{renderContent($outer.$index,$index)}}</a>
+                    <!-- 复选框 -->
+                    <div class="vm-cotar checkbox-wrap" ms-if="datagridType($outer.$index,$index)===1">
+
+                        <div class="form-group mc-checkbox-cotar" ms-click="selectRow($event, $outer.$index, $index)">
+                            <i class="mc-checkbox" ms-class-1="mc-active: selectedList[$outer.$index]"></i>
+                        </div>
+
+                    </div>
+                    <!-- 按钮 -->
+                    <div class="vm-cotar" ms-if="datagridType($outer.$index,$index)===2">
+
+                        <div class="mc-form-group mc-button-cotar" ms-class-1="mc-button-disabled: $outer.item.disabled"
+                             ms-click="clickButton($event, $outer.$index,$index)">
+                            <span class="mc-button-label">{{renderBtn($outer.$index,$index)}}</span>
+                        </div>
+
+                    </div>
+                    <!-- 选择框 -->
+                    <div class="mc-form-group mc-selectbox-cotar hf" ms-if="datagridType($outer.$index,$index)===3">
+                        <div class="mc-selectbox-wrap fp" ms-class="mc-active: selectboxActiveList[$outer.$index]">
+                            <!--
+          应该是不需要同步到这的,直接在数据源中更新
+         <input type="hidden" ms-attr-value="data[select].value">
+        -->
+
+                            <div class="mc-txt" ms-click="clickSelectbox($event,$outer.$index,$index)">{{renderSelectBoxText($outer.$index,$index,config.selectboxOpt)}}</div>
+                            <ul class="mc-select-list mc-arrow-down">
+                                <li ms-repeat-opt="config.selectboxOpt" ms-click="clickSelectboxItem($event, $outer.$outer.$index, $index,$outer.config.dataId,opt.value)">{{opt.text}}</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {{renderStyle()|html}}
+</div>

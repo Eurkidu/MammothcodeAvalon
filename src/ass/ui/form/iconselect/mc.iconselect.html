@@ -1,0 +1,10 @@
+﻿<div class="mc-form-group mc-iconselect-cotar hf" ms-class="mc-loading: isInit">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="mc-select-cotar ftp hf">
+        <div class="mc-selected-icon iconfont fp" ms-click="doPopSelect" ms-if="iconCode != ''">{{iconCode|html}}</div>
+        <div class="mc-select-btn fp" ms-click="doPopSelect" ms-if="iconCode == '' && !readonly">选择图标</div>
+        <div class="mc-iconselect-content hf" ms-class="mc-show: popShow" ms-if="!readonly">
+            <div class="mc-item iconfont fp" ms-repeat="iconList" ms-click="doSelect($event, el.iconCode)">{{el.iconCode|html}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿<div class="mc-listdata-add-cotar">
+    <div class="left-list group-list">
+        <div class="all-num">
+            待添加 {{allLen.left}}
+        </div>
+        <input type="text" class="ipt" placeholder="输入关键字" ms-duplex-string="q.left">
+        <div class="group-box">
+            <div class="group-item" ms-repeat="leftObj">
+                <div class="gourp-title">
+                    {{$key}} <div class="rfp"> {{$val.length}}项 </div>
+                </div>
+                <div class="item" ms-repeat-item="$val"
+                     ms-class="active: item.selected"
+                     ms-click="selectItem(item[idName])">
+                    {{item[textName]}}
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="gourp-footer">
+            <div class="form-group mc-checkbox-cotar"
+                 ms-click="selectAll('left')">
+                <i class="mc-checkbox" ms-class-1="mc-active: selectedAll.left"></i>
+                <span class="mc-checkbox-label">全选</span>
+            </div> <div class="rfp">选中{{seletedLen.left}}项</div>
+        </div>
+    </div>
+    <!-- 操作按钮 -->
+    <div class="op-list "> 
+        <div class="vm-cotar" >
+            <div class="btn add" ms-click="addItem(false,'left')" ms-class="disabled: seletedLen.left<1">
+                ＞＞添加＞＞
+            </div>
+            <div class="btn add" ms-click="addItem(true,'right')" ms-class="disabled: seletedLen.right<1">
+                ＜＜取消＜＜
+            </div>
+        </div> 
+    </div>
+    <div class="right-list group-list">
+        <div class="all-num">
+            已添加 {{allLen.right}}
+        </div>
+        <input type="text" class="ipt" placeholder="输入关键字" ms-duplex-string="q.right">
+        <div class="group-box">
+            <div class="group-item" ms-repeat="rightObj">
+                <div class="gourp-title">
+                    {{$key}} <div class="rfp"> {{$val.length}}项 </div>
+                </div>
+                <div class="item" ms-repeat-item="$val"
+                     ms-class="active: item.selected"
+                     ms-click="selectItem(item[idName])">
+                    {{item[textName]}}
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="gourp-footer">
+            <div class="form-group mc-checkbox-cotar"
+                 ms-click="selectAll('right')">
+                <i class="mc-checkbox" ms-class-1="mc-active: selectedAll.right"></i>
+                <span class="mc-checkbox-label">全选</span>
+            </div> <div class="rfp">选中{{seletedLen.right}}项</div> 
+        </div>
+    </div>
+
+    <div class="the-op-footer">
+        <!--
+        本次操作:添加{{addedList.size()}}部门,取消{{deledList.length}} 部门
+        -->
+
+        <div class="hor-list  "> 
+            <mc:button class="item" label="保存" mcstyle="" on-click="confirm"></mc:button>
+        </div>
+    </div>
+
+
+</div>

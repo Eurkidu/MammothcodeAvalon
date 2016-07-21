@@ -1,0 +1,96 @@
+﻿/*
+    Name: listdataAdd ()
+    Version: 0.1
+    Create Time: 2016年3月21日 14:12:37 
+    Author: cxt
+*/
+@import "../../base/css/McColorConfig.less";
+//导入组件颜色配置表
+//.mc_listdata_add_color_config;
+.mc-listdata-add-cotar {
+    .group-list {
+        display: inline-block;
+        width: 280px;
+         vertical-align: -webkit-baseline-middle;
+        .ipt {
+            border: 1px solid #b1b1b1;
+            width: 100%;
+            padding: 2px 5px;
+            font-size: 14px;
+        }
+
+        .group-box {
+            height: 550px;
+            overflow-y: auto;
+            margin: 5px 0;
+            border: 1px solid #b1b1b1;
+            .gourp-title {
+                background-color: #d9eef7;
+                line-height: 26px;
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            .item {
+                line-height: 26px;
+                font-size: 14px;
+                padding: 0 10px;
+
+                &.active {
+                    color: #FFFFFF;
+                    background-color: rgb(66, 170, 220);
+                }
+            }
+        }
+
+        .gourp-footer {
+            .mc-checkbox-cotar {
+                display: inline-block;
+
+                .mc-checkbox {
+                    position: relative;
+                    display: inline-block;
+                    height: 22px;
+                    width: 22px;
+                    .mc_bgNp("unchecked.png");
+
+                    &.mc-active {
+                        .mc_bgNp("checked.png");
+                    }
+                }
+
+                .mc-checkbox-label {
+                    position: relative;
+                    height: 22px;
+                    line-height: 18px;
+                    font-size: 18px;
+                    bottom: 3px;
+                }
+            }
+        }
+    }
+
+    .op-list {
+        display: inline-block;
+        width: 100px;
+
+        .btn {
+            background-color: #fff;
+            border: 1px solid #666666;
+            margin-bottom:15px;
+            &.disabled {
+                color: #b9b9b9;
+                border: 1px solid #cccccc;
+            }
+        }
+    }
+
+    .the-op-footer {
+        text-align: right;
+        margin-top: 30px;
+
+        .mc-button-cotar {
+            display: inline-block;
+        }
+    }
+}

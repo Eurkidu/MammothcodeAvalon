@@ -1,0 +1,456 @@
+﻿/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+@charset "utf-8";
+
+@import "McConfig.less";
+
+//基础代码Lib
+#McBaseLib {
+    //变量配置引用
+    #McCoreLibConfig;
+
+    /*#region 页面初始化 */
+    .initialize(@pageWidth:1200px,@bodyBackground:@c_nc_1){
+        html,body{width:100%;font-size:@defaultFontSize}
+        html, body, body div, span, object, iframe, 
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+        abbr, address, cite, code, del, dfn, em, img, 
+        ins, kbd, q, samp, small, strong, sub, sup, 
+        var, b, i, dl, dt, dd, ol, ul, li, fieldset, 
+        form, label, legend, table, caption, tbody, 
+        tfoot, thead, tr, th, td, article, aside, 
+        figure, footer, header, menu, nav, section, 
+        time, mark, audio, video, details, summary{
+            margin: 0;
+	        padding: 0;
+	        border: 0;
+	        font-size: 100%;
+            font-family: @mcFont;
+	        vertical-align: baseline;
+	        background: transparent;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust:none;
+        }
+        html{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+        *,*:before,*:after{-moz-box-sizing:inherit;-webkit-box-sizing:inherit;box-sizing:inherit}
+        body{background:@bodyBackground;overflow-x:hidden} //body 背景色
+        article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+        img,object,embed{max-width:100%}
+        i,em{font-style:normal}
+        ol,ul,li{list-style:none}
+        h1,h2,h3,h4,h5,h6,b{font-weight:normal}
+        a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;color:inherit}
+        a,a:hover,a:active,a:focus{text-decoration:none;outline:none;cursor:pointer}
+        hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+        table{border-collapse:collapse;border-spacing:0}
+        p{-ms-word-break:break-all;word-break:break-all;text-align:justify}
+        input,textarea{display:block;margin:0;padding:0;border-radius:0;border:none;font-size:100%;font-family:@mcFont;line-height:1.2em;outline:none;-webkit-appearance:none}
+        input::-webkit-input-placeholder{line-height:1.2em}
+        .wrap{width:100%;min-width:@pageWidth;}
+        .ie7 img{-ms-interpolation-mode:bicubic}
+    }
+    .initializeOld(@pageWidth:1200px,@bodyBackground:@c_nc_1) {
+    //页面初始化
+        html,body{width:100%;font-size:@defaultFontSize}
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+        p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em,
+        img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
+        i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, time, mark,
+        audio, video, input, textarea, tr, th, td, :before, :after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            font-size: 100%;
+            /*line-height: 1em;*/
+            font-family: @mcFont;
+            //color: @mcFontColor;
+            vertical-align: baseline;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body{background:@bodyBackground;overflow-x:hidden} //body 背景色
+        i,em{font-style:normal}
+        ol,ul,li{list-style:none}
+        h1,h2,h3,h4,h5,h6,b{font-weight:normal}
+        a,a:hover,a:active,a:focus{text-decoration:none;outline:none;cursor:pointer}
+        input{display:block;margin:0;padding:0;border-radius:0;border:none}
+        input,textarea{line-height:1.2em;outline:none;-webkit-appearance:none}
+        img{max-width:100%;max-height:100%;border:0;vertical-align:middle}
+        table{border-collapse:collapse;border-spacing:0}
+        p{-ms-word-break:break-all;word-break:break-all;text-align:justify}
+        input::-webkit-input-placeholder{line-height:1.2em}
+        .wrap{width:100%;min-width:@pageWidth}
+    }
+
+    .setPlaceholderColor(@color) {
+    //改变输入框placeholder颜色
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: @color;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: @color;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: @color;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: @color;
+        }
+    }
+
+    .setScrollbar() {
+    //设置webkit内核浏览器滚动条样式
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track-piece {
+            background-color: #CCCCCC;
+            -webkit-border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:vertical {
+            height: 5px;
+            background-color: #999999;
+            -webkit-border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:horizontal {
+            width: 5px;
+            background-color: #CCCCCC;
+            -webkit-border-radius: 6px;
+        }
+    }
+    /*#endregion */
+
+    /*#region Util */
+    //背景图片
+    .backgroundSize(@imgName,@size,@agru: no-repeat center,@imgUrl: @mcImgUrl) when (isstring(@imgName)) {
+        background: e(%('url("%s/%s")',@imgUrl,@imgName)) @agru;
+        background-size: @size;
+    }
+    .backgroundSize(@color,@imgName,@size,@agru: no-repeat center,@imgUrl: @mcImgUrl) when (iscolor(@color)) {
+        background: @color e(%('url("%s/%s")',@imgUrl,@imgName)) @agru;
+        background-size: @size;
+    }
+    .background(@imgName,@agru: no-repeat center,@imgUrl: @mcImgUrl) when (isstring(@imgName)) {
+        background: e(%('url("%s/%s")',@imgUrl,@imgName)) @agru;
+    }
+    .background(@color,@imgName,@agru: no-repeat center,@imgUrl: @mcImgUrl) when (iscolor(@color)) {
+        background: @color e(%('url("%s/%s")',@imgUrl,@imgName)) @agru;
+    }
+    
+    //伪元素的使用
+    .pseudoElementsInline(@width, @height) {
+    //同行垂直居中显示伪元素
+        content: "";
+        display: inline-block;
+        width: @width;
+        height: @height;
+        line-height: 1em;
+        vertical-align: middle;
+    }
+    .pseudoElementsAbsolute(@width, @height) {
+    //绝对定位显示伪元素
+        position: absolute;
+        content: "";
+        display: block;
+        width: @width;
+        height: @height;
+        line-height: 1em;
+    }
+    .pseudoElementsVerticalMiddle() {
+    //伪元素使用,用来垂直居中元素
+    //WRING:伪类父级元素须有非百分比的高度
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            visibility: hidden;
+            vertical-align: middle;
+        }
+    }
+
+    //文本控制
+    .textOverflowEllipsis() {
+        //文本单行省略
+        //WRING:文本包裹层必须有非百分比定宽
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .textJustifyBreak() {
+        //文本两端对齐
+        -ms-word-break: break-all;
+        word-break: break-all;
+        text-align: justify;
+    }
+    .textEditorContent(@fontSize: @mcSize16,@lineHeight: 30px) {
+        //控制文本编辑器显示的内容
+        padding: 10px 15px;
+        -ms-word-break: break-all !important;
+        word-break: break-all !important;
+        text-align: justify !important;
+        //控制内容
+        * {
+            line-height: @lineHeight !important;
+            font-size: @fontSize !important;
+            font-family: @mcFont !important;
+        }
+        //段落
+        p {
+            text-indent: 2em !important;
+        }
+    }
+    /*#endregion */
+
+    /*#region 布局 */
+    //浮动
+    .floatLeft(){
+    //左浮
+        float: left;
+    }
+    .floatRight(){
+    //左浮
+        float: right;
+    }
+    .cleanFloat(){
+    //清除浮动
+        width: 100%;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    //文本布局
+    .inlineBox(){
+        display: inline-block;
+        font-size: @defaultFontSize;
+    }
+
+    //CSS3 - 弹性盒模型
+    .flexBox() {
+        // CSS3 弹性盒模型(父元素使用)
+        display: -moz-box; //* Firefox 17- */
+        display: -webkit-flex; //* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+        display: -moz-flex; //* Firefox 18+ */
+        display: -ms-flexbox; //* IE 10 */
+        display: flex; //* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+        display: -webkit-box; //* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    }
+    .boxFlex(@flex: 1) {
+        // CSS3 弹性盒模型(子元素使用)
+        // 若子元素所占比例不同,使用boxFlexFull
+        -o-box-flex: @flex;
+        -moz-box-flex: @flex;
+        -webkit-box-flex: @flex;
+        box-flex: @flex;
+        flex: @flex;
+    }
+    .boxFlexFull(@flex: 1) {
+        // CSS3 弹性盒模型(子元素使用,使子元素所占比例相同)
+        width: 100%;
+        .boxFlex(@flex);
+    }
+    /*#endregion*/
+
+    /*#region CSS3相关 */
+    //CSS3 - 阴影
+    .boxShadow(@style) {
+        //css3阴影
+        /*-webkit-box-shadow: @style;
+        -moz-box-shadow: @style;
+        -o-box-shadow: @style;*/
+        box-shadow: @style;
+    }
+    .boxShadow(@color,@style: 0 0 7px 0) when (iscolor(@color)) {
+        //外阴影
+        .boxShadow(@style @color);
+    }
+    .boxShadow(@alpha: 20%,@style: 0 0 7px 0) when (isnumber(@alpha)) {
+        //外阴影
+        .boxShadow(@style rgba(0, 0, 0, @alpha));
+    }
+    .boxShadowInset(@color,@style: 0 0 7px 0) when (iscolor(@color)) {
+        //内阴影
+        .boxShadow(@style @color inset);
+    }
+    .boxShadowInset(@alpha: 20%,@style: 0 0 7px 0) when (isnumber(@alpha)) {
+        //内阴影
+        .boxShadow(@style rgba(0, 0, 0, @alpha) inset);
+    }
+    /*#endregion*/
+
+    /*#region CSS3动画 */
+    .dxva() {
+    //CSS3硬件加速,消除动画撕裂
+        -webkit-backface-visibility: hidden; //隐藏3D元素背面
+        -webkit-perspective: 1000; //Chrome 和 Safari 支持替代的 -webkit-perspective 属性
+        //开启硬件加速
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .transition(@property: all,@duration: 0.3s,@type: ease-in-out,@delay: 0s) {
+    //css3过度
+        -webkit-transition: @arguments;
+        -moz-transition: @arguments;
+        -o-transition: @arguments;
+        transition: @arguments;
+    }
+
+
+    .animation(@name) {
+    //css3动画
+        -webkit-animation-name: @name;
+        animation-name: @name;
+    }
+    .animationTransition(@duration: 0.3s,@timing: ease-in-out,@delay: 0s) {
+    //css3动画过度
+        -webkit-animation-duration: @duration;
+        animation-duration: @duration;
+        -webkit-animation-timing-function: @timing;
+        animation-timing-function: @timing;
+        -webkit-animation-delay: @delay;
+        animation-delay: @delay;
+    }
+    .animationFillMode(@mode: both){
+        -webkit-animation-fill-mode: @mode;
+        animation-fill-mode: @mode;
+    }
+    .reverseAnimation(){
+    //css3动画反转
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+    .infiniteAnimation(){
+    //css3动画无限播放
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    .transform(@name,@argu) {
+    //css3变换
+        -webkit-transform: e(%('%s(%s)',@name,@argu));
+        -moz-transform: e(%('%s(%s)',@name,@argu));
+        -ms-transform: e(%('%s(%s)',@name,@argu));
+        -o-transform: e(%('%s(%s)',@name,@argu));
+        transform: e(%('%s(%s)',@name,@argu));
+    }
+
+    .transformRotate(@deg) {
+    //css3旋转
+        .transform(rotate,@deg);
+    }
+
+    .transform3d(@x: 0,@y: 0,@z: 0) {
+    //3d变换
+        @xyz: e(%('%s,%s,%s',@x,@y,@z));
+        .transform(translate3d,@xyz);
+    }
+
+    .transformX(@distance: 0) {
+    //X轴平移
+        .transform3d(@distance,0,0);
+    }
+
+    .transformY(@distance: 0) {
+    //Y轴平移
+        .transform3d(0,@distance,0);
+    }
+
+    .transformZ(@distance: 0) {
+    //Z轴平移
+        .transform3d(0,0,@distance);
+    }
+    /*#endregion*/
+}
+
+//网页布局Lib
+#McLayoutLib{
+    .baseLayout(){
+    //基础布局
+        .lfp{#McBaseLib>.floatLeft} //左浮 | (命名解释 left-float-part)
+        .rfp{#McBaseLib>.floatRight} //右浮 | (命名解释 right-float-part)
+        .cf{#McBaseLib>.cleanFloat} //清除浮动(不常用,仅当after伪类被占用的时候使用) | (命名解释 clean-float)
+        .cfa:after{display:block;content:"";#McBaseLib>.cleanFloat} //通过after伪类来清除浮动 | (命名解释 clean-float-after)
+        .tb{display:table !important} //表格布局父级 | (命名解释 table-block)
+        .tc{display:table-cell;vertical-align:top} //表格布局子级 | (命名解释 table-cell)
+        .txtl{text-align:left} //文字居左 | (命名解释 text-left)
+        .txtr{text-align:right} //文字居右 | (命名解释 text-right)
+        .txtc{text-align:center} //文字居中 | (命名解释 text-center)
+    }
+    .pcLayout(){
+    //主站布局
+        .item,.field{display:block;font-size:@defaultFontSize;} //盒子布局
+        .center-cotar{display:block;width:@minWidth;margin:0 auto} //网页居中(主站)
+        .vm-cotar{display:inline-block;line-height:1.2em;vertical-align:middle} //垂直居中包裹层
+        .ftp{#McBaseLib>.inlineBox;vertical-align:top} //横向布局-顶对齐[子级] | (命名解释 field-top-part)
+        .fp{#McBaseLib>.inlineBox;vertical-align:middle} //横向布局-居中对齐[子级] | (命名解释 field-part)
+        .fbp{#McBaseLib>.inlineBox;vertical-align:bottom} //横向布局-底对齐[子级] | (命名解释 field-bottom-part)
+        .hf{font-size:0;} //横向布局-水平域(配合下面3类布局使用)[父级] | (命名解释 horizontal-field)
+    }
+    .appLayout(){
+    //微站布局
+        .fbox{#McBaseLib>.flexBox}  //横向布局-水平域(配合下面3类布局使用)[父级] | (命名解释 flex-box)
+        .bf1{#McBaseLib>.boxFlex(1)} //横向布局-所占比重1 | (命名解释 box-flex)
+        .bf2{#McBaseLib>.boxFlex(2)} //横向布局-所占比重2
+        .bf3{#McBaseLib>.boxFlex(3)} //横向布局-所占比重3
+    }
+}
+
+//导航栏Lib
+#McNavLib{
+    //导航栏控件库
+
+}
+
+//小部件控件库
+#McWidget{
+    //按钮
+    .btn(@padding,@border,@bg){
+        display: inline-block;
+        line-height: 1em;
+        padding: @padding;
+        border: @border;
+        background-color: @bg;
+    }
+    .btn_change(@class,@padding,@border,@bg){
+        &.@{class}{
+            padding: @padding;
+            border: @border;
+            background-color: @bg;
+        }
+    }
+    .btn_change_extend(@class,@padding,@border,@bg){
+        &:extend(.@{class});
+        padding: @padding;
+        border: @border;
+        background-color: @bg;
+    }
+}
+
+#McPageLib{
+    #Pc{
+
+    }
+    #App{
+
+    }
+}

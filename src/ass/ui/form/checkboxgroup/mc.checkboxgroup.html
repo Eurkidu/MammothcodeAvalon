@@ -1,0 +1,16 @@
+﻿<div class="mc-checkboxgroup-cotar mc-form-group">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="check-list">
+        <div class="form-group form-control mc-checkbox-cotar"
+             ms-repeat-checkbox="data"
+             ms-class="disabled: disabled||readonly"
+             ms-click="clickCheckbox($event,checkbox,checkbox.value)">
+            <i class="mc-checkbox" ms-class-1="mc-active: checkbox.checked"
+               ms-class-2="single-mode: !muilt"
+               ms-class-3="disabled: disabled||readonly"></i>
+            <span class="mc-checkbox-label">{{checkbox.text}}</span>
+        </div>
+    </div>
+    <span class="mc-text-valid-info ftp" ms-if="!isValid && validInfo != ''">{{validInfo}}</span>
+    <div class="mc-text-field-tip" ms-css-padding-left="labelSize" ms-if="tip">{{tip}}</div>
+</div>

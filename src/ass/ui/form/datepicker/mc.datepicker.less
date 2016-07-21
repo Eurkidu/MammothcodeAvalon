@@ -1,0 +1,70 @@
+﻿/*
+    Name: datepicker (日期选择)
+    Version: 0.1
+    Create Time: 2016年4月10日15:46:52
+    Update Time: 2016年4月10日15:47:01
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_datepicker_color_config;
+
+.mc-datepicker-cotar{
+    position: relative;
+    .mc-datepicker-wrap{
+       // height: 27px;
+        &.mc-readonly{
+            height: 20px;
+            .mc-datepicker-content{
+                line-height: 20px;
+                padding: 0;
+                border: none;
+                cursor: default;
+            }
+        }
+        .mc-datepicker-content{
+            line-height: 25px;
+            padding: 0 5px;
+            border: 1px solid @c_nc_5;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    .mc-datepicker-ipt{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .control-label {
+        margin-top: 5px;
+    }
+    .mc-text-field-tip{
+        line-height: 30px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+    /*.date_selector, .date_selector *{width: auto;height: auto;border: none;background: none;margin: 0;padding: 0;text-align: left;text-decoration: none;}*/
+    .date_selector{background:#fbfbfb;border: 1px solid #ccc;padding: 10px;margin:0;margin-top:-1px;position: absolute;z-index:100000;display:none;border-radius: 3px;box-shadow: 0 0 5px #aaa;box-shadow:0 2px 2px #ccc; width:243px;}
+    .date_selector_ieframe{position: absolute;z-index: 99999;display: none;}
+    .date_selector .nav{width: 100%;}
+    .date_selector .nav p{clear: none;}
+    .date_selector .month_nav, .date_selector .year_nav{margin: 0 0 3px 0;padding: 0;display: block;position: relative;text-align: center;}
+    .date_selector .month_nav{float: left;width: 105px;}
+    .date_selector .year_nav{float: right;width: 105px;}
+    .date_selector .month_name, .date_selector .year_name{font-weight: bold;line-height: 20px;font-size: 14px;}
+    .date_selector .button{display: block;position: absolute;top: 0;width:18px;height:18px;line-height:16px;font-weight:bold;color:#5985c7;text-align: center;font-size:12px;overflow:hidden;border: 1px solid #ccc;border-radius:2px;}
+    .date_selector .button:hover, .date_selector .button.hover{background:#5985c7;color: #fff;cursor: pointer;border-color:#3a930d;}
+    .date_selector .prev{left: 0;}
+    .date_selector .next{right: 0;}
+    .date_selector table{border-spacing: 0;border-collapse: collapse;clear: both;margin: 0; width:220px;}
+    .date_selector th, .date_selector td{width: 2.5em;height: 2em;padding: 0 !important;text-align: center !important;color: #666;font-weight: normal;}
+    .date_selector th{font-size: 12px;}
+    .date_selector td{border:1px solid #f1f1f1;line-height: 2em;text-align: center;white-space: nowrap;color:#5985c7;background: #fff;}
+    .date_selector td.today{background: #eee;}
+    .date_selector td.unselected_month{color: #ccc;}
+    .date_selector td.selectable_day{cursor: pointer;}
+    .date_selector td.selected{background:#2b579a;color: #fff;font-weight: bold;}
+    .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:#5985c7;color: #fff;}
+}

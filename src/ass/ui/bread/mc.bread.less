@@ -1,0 +1,40 @@
+﻿/*
+    Name: bread (面包屑)
+    Version: 0.1
+    Create Time: 2016年4月19日16:48:18
+    Update Time: 2016年4月19日16:48:21
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_bread_color_config;
+
+.mc-bread-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .mc-bread-list{
+        line-height: 50px;
+        padding: 0 20px;
+        .mc-bread-item{
+            padding: 0 7px;
+            font-size: 18px;
+            &.mc-active{
+                position: relative;
+                padding-right: 20px;
+                color: @c_main_color;
+                &:after{
+                    .mc_peAbsolute(20px, 30px);
+                    top: 14px;
+                    right: 4px;
+                    border-right: 1px solid @c_nc_30;
+                    #McBaseLib > .transformRotate(-25deg);
+                }
+            }
+            &.mc-cur-item{
+                font-size: 16px;
+            }
+        }
+    }
+}

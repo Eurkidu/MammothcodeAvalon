@@ -1,0 +1,21 @@
+﻿<div class="mc-letter-list-cotar">
+    <div class="left-list group-list">
+        <div class="all-num">
+            <!--总数 {{renderDataLen(data)}}-->
+        </div>
+        <input type="text" class="ipt" placeholder="输入关键字" ms-duplex-string="q">
+        <div class="group-box">
+            <div class="group-item" ms-if-loop="data" ms-repeat="data">
+                <div class="gourp-title">
+                    {{$key}} <div class="rfp"> {{$val.length}}项 </div>
+                </div>
+                <div class="item" ms-repeat-item="$val"
+                     ms-class="active: item.selected"
+                     ms-click="click(item)">
+                    <img ms-if="hasPic" ms-attr-src="item[picName]" class="sm-pic" alt=""> 
+                    <span>{{item[textName]}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

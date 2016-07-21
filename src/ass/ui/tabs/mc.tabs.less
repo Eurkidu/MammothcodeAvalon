@@ -1,0 +1,88 @@
+﻿/*
+    Name: tabs (切换页)
+    Version: 0.1
+    Create Time: 2015年12月29日22:35:54
+    Update Time: 2015年12月29日22:35:57
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_tabs_color_config;
+
+.mc-tabs-cotar {
+	position: relative;
+    width: 100% !important;
+    [slot]{
+        visibility: visible;
+    }
+    //切换按钮
+    .mc-tabs-switch-wrap{
+        line-height: 22px;
+        border-bottom: 1px solid @c_border_color;
+        .mc-switch-item{
+            padding: 0 15px;
+            &.active{
+                >span{
+                    padding-bottom: 0;
+                    border-bottom: 4px solid @c_active_switch_border;
+                    color: @c_active_label;
+                }
+            }
+            >span{
+                display: inline-block;
+                line-height: 1.6em;
+                padding: 4px 5px;
+                color: @c_default_label;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+    //切换页
+    .mc-tabs-body{
+        overflow: auto;
+        //mc.sidebar
+        .mc-sidebar-cotar{
+            background: transparent;
+            .panel-header{
+                background: transparent;
+                a{
+                    color: @c_nc_60;
+                }
+            }
+            .panel-body{
+                background: transparent;
+                font-size: 16px;
+                .link-bar{
+                    &:hover{
+                        padding-left: 60px;
+                        background: @c_nc_3;
+                        border-left: none;
+                    }
+                    a{
+                        color: @c_nc_60;
+                    }
+                }
+                //mc.sidebar.button
+                .mc-button-cotar{
+                    border: none;
+                    background: none;
+                    font-size: 14px;
+                    span{
+                        color: @c_nc_50;
+                        &:hover{
+                            color: @c_nc_60;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//禁用状态
+.mc-button-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+}

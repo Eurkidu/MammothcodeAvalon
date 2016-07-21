@@ -1,0 +1,72 @@
+﻿/*
+    Name: iconselect (图标选择)
+    Version: 0.1
+    Create Time: 2016年4月21日21:10:36
+    Update Time: 2016年4月21日21:10:40
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_iconselect_color_config;
+
+.mc-iconselect-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .mc-tip{
+        line-height: 27px;
+    }
+    .mc-ipt{
+        height: 27px;
+        line-height: 25px;
+        padding: 0 5px;
+        border-radius: 3px;
+        border: 1px solid @c_default_border;
+        font-size: 14px;
+    }
+    .mc-select-cotar{
+        position: relative;
+        .mc-selected-icon{
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .mc-select-btn{
+            line-height: 27px;
+            padding: 0 10px;
+            font-size: 14px;
+            border-radius: 3px;
+            background: @c_add_btn_bg;
+            color: @c_nc_1;
+            cursor: pointer;
+        }
+        //图标选择弹出层
+        .mc-iconselect-content{
+            display: none;
+            position: absolute;
+            top: 27px;
+            left: 0;
+            width: 322px;
+            padding: 10px;
+            border: 1px solid @c_nc_30;
+            .mc_boxShadow;
+            background: @c_nc_1;
+            z-index: 9;
+            &.mc-show{
+                display: block;
+            }
+            .mc-item{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}

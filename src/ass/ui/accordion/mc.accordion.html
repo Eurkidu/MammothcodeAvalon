@@ -1,0 +1,14 @@
+﻿<div class="mc-accordion-cotar">
+    <div class="panel-wrap" ms-repeat="panels" ms-class="last:$last" ms-class-1="active:$index==active">
+        <div class="panel-header" ms-click="clickPanel($event, $index)">
+            <!--<h4 class="panel-title">
+                <a href="javascript:void(0)">{{el.title}}</a>
+            </h4>-->
+            <a href="javascript:void(0)">{{el.title}}</a>
+        </div>
+        <div class="panel-body" ms-css-padding="padding">
+            {{renderContent($index)|html}}
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,88 @@
+﻿/*
+    Name: upload (上传)
+    Version: 0.1
+    Create Time: 2016年3月30日16:18:42
+    Update Time: 2016年3月30日16:18:45
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_upload_color_config;
+
+.mc-upload-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .mc-button-label{
+        display: inline-block;
+    }
+    //上传图片的file的ipt的样式
+    .ms-upload-ipt{
+        //display: none;
+        display: block;
+        width: 1px;
+        height: 0;
+        overflow: hidden;
+    }
+    //选择图片按钮
+    .mc-upload-btn{
+        display: inline-block;
+        width: 100px;
+        line-height: 25px;
+        color: @c_nc_1;
+        border-radius: 5px;
+        background: @c_upload_btn_bg;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+    }
+    //图片显示层
+    .mc-img-show-cotar{
+        width: 200px;
+        margin-top: 7px;
+        &.mc-mult-img-cotar{
+            margin-top: 0;
+        }
+        //多图上传图片显示
+        .mc-img-item{
+            position: relative;
+            display: inline-block;
+            width: 190px;
+            margin: 3px 5px;
+            padding-top: 5px;
+            padding-right: 5px;
+            cursor: default;
+            &:hover{
+                .mc-close-btn{
+                    opacity: 1;
+                }
+            }
+            .mc-close-btn{
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                border-radius: 50%;
+                background: @c_nc_6;
+                color: @c_nc_1;
+                text-align: center;
+                cursor: pointer;
+                opacity: 0;
+                #McBaseLib > .transition;
+                &:hover{
+                    #McBaseLib > .transformRotate(180deg);
+                    background: @c_close_btn_hover_bg;
+                }
+            }
+        }
+    }
+    .mc-text-field-tip{
+        line-height: 20px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+}

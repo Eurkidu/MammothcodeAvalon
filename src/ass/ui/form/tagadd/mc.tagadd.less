@@ -1,0 +1,102 @@
+﻿/*
+    Name: tagadd (标签添加)
+    Version: 0.1
+    Create Time: 2016年4月6日10:16:21
+    Update Time: 2016年4月6日10:16:25
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_tagadd_color_config;
+
+.mc-tagadd-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .mc-tip{
+        line-height: 27px;
+    }
+    .mc-ipt{
+        height: 27px;
+        line-height: 25px;
+        padding: 0 5px;
+        border-radius: 3px;
+        border: 1px solid @c_default_border;
+        font-size: 14px;
+    }
+    .mc-add-btn{
+        line-height: 27px;
+        margin: 0 5px;
+        padding: 0 10px;
+        font-size: 14px;
+        border-radius: 3px;
+        background: @c_add_btn_bg;
+        color: @c_nc_1;
+        cursor: pointer;
+    }
+        .mc-text-field-tip{
+        line-height: 20px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+    //标签显示区
+    .mc-tag-show-cotar{
+        .mc-tag-item{
+            position: relative;
+            margin: 3px 5px;
+            padding-top: 5px;
+            padding-right: 5px;
+            cursor: default;
+            &:hover{
+                .mc-close-btn{
+                    opacity: 1;
+                }
+            }
+            //关闭按钮
+            .mc-close-btn{
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                border-radius: 50%;
+                background: @c_nc_6;
+                color: @c_nc_1;
+                text-align: center;
+                cursor: pointer;
+                opacity: 0;
+                #McBaseLib > .transition;
+                &:hover{
+                    #McBaseLib > .transformRotate(180deg);
+                    background: @c_close_btn_hover_bg;
+                }
+            }
+            //标签类型
+            .mc-tag-type{
+                position: absolute;
+                left: 7px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                color: @c_nc_1;
+            }
+            //标签文字
+            .mc-tag-name{
+                height: 20px;
+                line-height: 20px;
+                padding: 0 13px;
+                border-radius: 10px;
+                background: @c_tag_bg;
+                color: @c_nc_1;
+                font-size: 12px;
+                &.mc-type{
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}

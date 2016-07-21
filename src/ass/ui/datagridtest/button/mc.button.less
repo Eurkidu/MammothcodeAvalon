@@ -1,0 +1,63 @@
+﻿/*
+    Name: button (按钮)
+    Version: 0.1
+    Create Time: 2015年12月29日22:35:54
+    Update Time: 2015年12月29日22:35:57
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_button_color_config;
+ 
+     
+.mc-button-cotar {
+	position: relative;
+	display: inline-block;
+	line-height: 27px;
+    height: 25px\9;
+    padding: 0 10px;
+    border: 1px solid @c_default_border;
+    border-radius: 3px;
+    background: @c_default_bg;
+    font-size: 14px;
+	cursor: pointer;
+    [slot]{
+        visibility: visible;
+    }
+    //成功状态按钮
+    &.success {
+        border-color: @c_success_border;
+        background: @c_success_bg;
+        .mc-button-label {
+            color: @c_success_label;
+        }
+    }
+    //危险状态按钮
+    &.danger {
+        border-color: @c_danger_border;
+        background: @c_danger_bg;
+        .mc-button-label {
+            color: @c_danger_label;
+        }
+    }
+    &.noborder{
+        border: none;
+        .mc-button-label {
+            color: @c_main_color;
+        }
+    }
+    .mc-button-label {
+        display: inline-block;
+	    line-height: 1em;
+        padding: 0 3px;
+        color: @c_default_label;
+    }
+}
+//禁用状态
+.mc-button-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+}
+ 

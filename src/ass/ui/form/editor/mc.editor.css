@@ -1,0 +1,136 @@
+﻿@charset "utf-8";
+/*
+    Name: editor (文本编辑器)
+    Version: 0.1
+    Create Time: 2016年4月2日15:33:34
+    Update Time: 2016年4月2日15:33:37
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-editor-cotar {
+  /*.edui-container{
+        max-width: 1000px;
+    }*/
+}
+.mc-editor-cotar [slot] {
+  visibility: visible;
+}
+.mc-editor-cotar .edui-body-container {
+  width: 100% !important;
+}
+.mc-editor-cotar .mc-editor-wrap {
+  overflow: hidden;
+}
+.mc-editor-cotar .mc-editor-wrap .edui-body-container {
+  height: 500px;
+}
+.mc-editor-cotar .mc-editor-fullscreen .edui-body-container {
+  height: auto;
+}
+.mc-editor-cotar .mc-text-field-tip {
+  line-height: 20px;
+  font-size: 14px;
+  color: #888888;
+}
+/*# sourceMappingURL=mc.editor.css.map */

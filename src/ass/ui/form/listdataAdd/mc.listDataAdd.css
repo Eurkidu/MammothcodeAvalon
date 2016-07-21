@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+/*
+    Name: listdataAdd ()
+    Version: 0.1
+    Create Time: 2016年3月21日 14:12:37 
+    Author: cxt
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-listdata-add-cotar .group-list {
+  display: inline-block;
+  width: 280px;
+  vertical-align: -webkit-baseline-middle;
+}
+.mc-listdata-add-cotar .group-list .ipt {
+  border: 1px solid #b1b1b1;
+  width: 100%;
+  padding: 2px 5px;
+  font-size: 14px;
+}
+.mc-listdata-add-cotar .group-list .group-box {
+  height: 550px;
+  overflow-y: auto;
+  margin: 5px 0;
+  border: 1px solid #b1b1b1;
+}
+.mc-listdata-add-cotar .group-list .group-box .gourp-title {
+  background-color: #d9eef7;
+  line-height: 26px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.mc-listdata-add-cotar .group-list .group-box .item {
+  line-height: 26px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.mc-listdata-add-cotar .group-list .group-box .item.active {
+  color: #FFFFFF;
+  background-color: #42aadc;
+}
+.mc-listdata-add-cotar .group-list .gourp-footer .mc-checkbox-cotar {
+  display: inline-block;
+}
+.mc-listdata-add-cotar .group-list .gourp-footer .mc-checkbox-cotar .mc-checkbox {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url("img/unchecked.png") no-repeat top left;
+}
+.mc-listdata-add-cotar .group-list .gourp-footer .mc-checkbox-cotar .mc-checkbox.mc-active {
+  background: url("img/checked.png") no-repeat top left;
+}
+.mc-listdata-add-cotar .group-list .gourp-footer .mc-checkbox-cotar .mc-checkbox-label {
+  position: relative;
+  height: 22px;
+  line-height: 18px;
+  font-size: 18px;
+  bottom: 3px;
+}
+.mc-listdata-add-cotar .op-list {
+  display: inline-block;
+  width: 100px;
+}
+.mc-listdata-add-cotar .op-list .btn {
+  background-color: #fff;
+  border: 1px solid #666666;
+  margin-bottom: 15px;
+}
+.mc-listdata-add-cotar .op-list .btn.disabled {
+  color: #b9b9b9;
+  border: 1px solid #cccccc;
+}
+.mc-listdata-add-cotar .the-op-footer {
+  text-align: right;
+  margin-top: 30px;
+}
+.mc-listdata-add-cotar .the-op-footer .mc-button-cotar {
+  display: inline-block;
+}
+/*# sourceMappingURL=mc.listDataAdd.css.map */

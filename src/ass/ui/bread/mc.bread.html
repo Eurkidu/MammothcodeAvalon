@@ -1,0 +1,8 @@
+<div class="mc-bread-cotar" ms-class="mc-loading: isInit">
+    <div class="mc-bread-list hf">
+        <a class="mc-bread-item fp mc-active" ms-repeat="data"
+           ms-attr-href="el.href" ms-if-loop="el.href">{{el.text}}</a>
+        <div class="mc-bread-item fp mc-cur-item" ms-repeat="data" ms-class="mc-active: el.href"
+             ms-if-loop="!el.href">{{el.text}}</div>
+    </div>
+</div>

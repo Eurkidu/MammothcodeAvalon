@@ -1,0 +1,25 @@
+﻿
+ 
+<div class="mc-form-group mc-list-select-cotar hf" ms-class="mc-error: !isValid" ms-visible="!isHide">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="form-control mc-ipt fp" ms-if="!readonly"
+         ms-attr-name="formName" ms-css-width="width"
+         ms-click="doClick($event)">{{text}}</div>
+    <div class="mc-text-show ftp" ms-if="readonly" ms-attr-name="formName" ms-css-width="width">{{text}}</div>
+    <span class="mc-text-valid-info ftp" ms-if="!isValid && validInfo != ''">{{validInfo}}</span>
+    <div class="mc-text-field-tip" ms-css-padding-left="labelSize" ms-if="tip">{{tip}}</div>
+
+
+    <mc:dialog config="$dialog_opt" title="" on-init="getDialogVM">
+        <div slot="content">
+            <!-- list -->
+            <mc:letterlist config="$list_opt" ms-attr-identifier="$listId"></mc:letterlist>
+            <!-- data -->
+            <div class="data-list">
+                <div class="item" ms-repeat-item="data" ms-click="dataClick(item)" ms-class="active: item.selected">{{item[$data_opt.textName]}}</div>
+            </div>
+        </div>
+
+    </mc:dialog>
+</div>
+

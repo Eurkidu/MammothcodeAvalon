@@ -1,0 +1,270 @@
+﻿@import "MammothcodeCoreLib.less";
+//图片路径
+@configImgUrl: "img";
+
+//中性色(白->黑) nc <-> NeutralColor
+@c_nc_1: #ffffff; //Default
+@c_nc_2: #f4f4f4; //√
+@c_nc_20: #f1f1f1; //√
+@c_nc_3: #eeeeee; //√
+@c_nc_30: #dddddd; //√
+@c_nc_4: #cccccc; //√
+@c_nc_5: #bebebe; //√
+@c_nc_50: #aaaaaa;
+@c_nc_6: #888888; //√
+@c_nc_60: #666666; //√
+@c_nc_7: #444444; //√
+@c_nc_8: #333333; //√
+@c_nc_80: #1b1b1b; //√
+@c_nc_9: #080808; //Default
+
+@c_main_color: #349fd5;
+@c_sc_1: #15B956;
+
+//accordion color config
+.mc_accordion_color_config(){
+    @c_panel_header: #292f37; //标题背景色
+    @c_panel_body: #252a2f; //面板颜色
+}
+
+/*#region bread 面包屑*/
+.mc_bread_color_config(){
+
+}
+/*#endregion*/
+
+/*#region selectbox 搜索框*/
+.mc_searchbox_color_config(){
+
+}
+/*#endregion*/
+
+/*#region iconselect 图标选择*/
+.mc_iconselect_color_config(){
+    @c_default_border: @c_nc_5; //按钮边框颜色
+    @c_add_btn_bg: @c_main_color; //添加标签按钮的背景色
+}
+/*#endregion*/
+
+//dialog color config
+.mc_dialog_color_config(){
+    @c_colse_btn_bg: #e63c3c; //右上角关闭按钮背景色
+    @c_modal_bg: rgba(0,0,0,.4); //弹出层背景遮罩层颜色
+}
+
+//popmenu color config
+.mc_popmenu_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//sidepop color config
+.mc_sidepop_color_config(){
+    @c_border: #e8e8e8; //边框颜色
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//datagrid color config
+.mc_datagrid_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//droplist color config
+.mc_droplist_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//tabs color config
+.mc_tabs_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+    @c_active_switch_border: @c_main_color; //激活项底部边框条颜色
+    @c_border_color: @c_nc_3; //默认边框颜色
+    @c_default_label: @c_nc_50; //默认切换按钮文本颜色
+    @c_active_label: @c_nc_8; //激活的切换按钮文本颜色
+}
+
+//button color config
+.mc_button_color_config(){
+    //default
+    @c_default_bg: @c_nc_1; //按钮背景色
+    @c_default_border: @c_nc_5; //按钮边框颜色
+    @c_default_label: @c_nc_8; //按钮内文字颜色
+
+    //success
+    @c_success_bg: #3D83E9;
+    @c_success_border: #3D83E9;
+    @c_success_label: @c_nc_1;
+
+    //danger
+    @c_fail_bg: #e63c3c;
+    @c_fail_border: #e63c3c;
+    @c_fail_label: @c_nc_1;
+}
+
+//checkbox color config
+.mc_checkbox_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+
+//selectbox color config
+.mc_selectbox_color_config(){
+    //default
+    @c_default_bg: @c_nc_1; //按钮背景色
+    @c_default_border: @c_nc_5; //边框颜色
+    @c_default_label: @c_nc_8; //文字颜色
+    @c_select_item_hover_bg: @c_nc_3; //下拉选择项hover时bg
+    @c_select_item_hover_txt_color: @c_nc_8; //下拉选择项hover时文字颜色
+}
+
+//text color config
+.mc_text_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+    @c_default_border: @c_nc_5; //按钮边框颜色
+    
+}
+
+//editor color config
+.mc_editor_color_config(){
+    
+}
+
+//tagadd color config
+.mc_tagadd_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+    @c_default_border: @c_nc_5; //按钮边框颜色
+    @c_add_btn_bg: @c_sc_1; //添加标签按钮的背景色
+    @c_tag_bg: @c_main_color; //标签背景色
+    @c_close_btn_hover_bg: #E24343; //关闭删除按钮bg
+}
+
+//upload color config
+.mc_upload_color_config(){
+    @c_upload_btn_bg: @c_main_color; //选择图片按钮的背景色
+    @c_close_btn_hover_bg: #E24343; //关闭删除按钮bg (仅限多图上传)
+}
+
+//linearlayout color config
+.mc_linearlayout_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//gridlayout color config
+.mc_gridlayout_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+}
+
+//absolutelayout color config
+.mc_absolutelayout_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+
+}
+
+//relativelayout color config
+.mc_relativelayout_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+
+}
+
+
+//table color config
+.mc_table_color_config(){
+    @c_txt: @c_nc_8; //文字默认颜色
+
+}
+
+//pagemodal color config
+.mc_pagemodal_color_config(){
+
+}
+
+//datepicker color config
+.mc_datepicker_color_config(){
+
+}
+
+/*#region css3相关 */
+.mc_boxShadow(){
+    #McBaseLib > .boxShadow(.1,1px 1px 1px 0px);
+}
+/*#endregion */
+
+/*#region 文本相关 */
+.mc_txtOverEllipsis(){
+//文本超出宽度显示省略号
+    #McBaseLib > .textOverflowEllipsis;
+}
+.mc_txtJB(){
+//文本换行加两端对齐
+    #McBaseLib > .textJustifyBreak;
+}
+/*#endregion */
+
+/*#region 伪元素使用 */
+.mc_peInline(@width,@height){
+//图标化伪类元素(同行)
+    #McBaseLib > .pseudoElementsInline(@width,@height);
+}
+.mc_peAbsolute(@width,@height){
+//图标化伪类元素(绝对定位)
+    #McBaseLib > .pseudoElementsAbsolute(@width,@height);
+}
+.mc_peVm(){
+//用after元素实现垂直居中
+    #McBaseLib > .pseudoElementsVerticalMiddle;
+}
+/*#endregion */
+
+/*#region 背景图的使用(传入图片名) - 主站 */
+//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("brands.png",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .background(@imgName,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .background(@color,@imgName,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .background(@imgName,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .background(@color,@imgName,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .background(@imgName,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .background(@color,@imgName,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .background(@imgName,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .background(@color,@imgName,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .background(@imgName,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .background(@color,@imgName,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .background(@imgName,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .background(@color,@imgName,repeat-y top left);
+}
+/*#endregion */

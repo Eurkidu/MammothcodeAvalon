@@ -1,0 +1,34 @@
+﻿/*
+    Name: accordion (手风琴)
+    Version: 0.1
+    Create Time: 2015年12月12日11:19:48
+    Update Time: 2015年12月12日11:20:16
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_accordion_color_config;
+
+.mc-accordion-cotar{
+    [slot]{
+        visibility: visible;
+    }
+    .panel-wrap{
+        .panel-header{
+            padding: 10px;
+            background: @c_panel_header;
+            font-size: 16px;
+            a{
+                display: block;
+                color: @c_nc_1;
+            }
+        }
+        .panel-body{
+            display: none;
+            background: @c_panel_body;
+            font-size: 14px;
+        }
+    }
+}
+

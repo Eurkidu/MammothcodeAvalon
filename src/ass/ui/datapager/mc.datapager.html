@@ -1,0 +1,16 @@
+﻿<div class="mc-datapager-cotar hf">
+    <div class="item">显示行数</div>
+    <mc:selectbox class="bar-group item" config="$page_size_opt" width="60" arrow-down="false" on-init="getSelectPageVM" on-selected="changePageSize"></mc:selectbox>
+    <div class="item"><em>{{dataStartIndex}}-{{dataEndIndex}}条/</em><span>共{{allCount}}条</span></div>
+    <div class="bar-group item hf">
+        <mc:button class="bar-item bl" label="首页" on-click="firstPage"></mc:button>
+        <mc:button class="bar-item bm" label="上一页" on-click="prevPage"></mc:button>
+        <mc:button class="bar-item bm" label="下一页" on-click="nextPage"></mc:button>
+        <mc:button class="bar-item br" label="尾页" on-click="lastPage"></mc:button>
+    </div>
+    <div class="bar-group item hf">
+        <mc:text class="fp bar-item bl" label="前往" label-size="40" width="40" on-init="getPageJumpVM"></mc:text>
+        <mc:button class="fp bar-item br" label="跳转" on-click="jumpPage"></mc:button>
+    </div>
+    <div class="item"><span>共{{allPageCount}}页</span></div>
+</div>

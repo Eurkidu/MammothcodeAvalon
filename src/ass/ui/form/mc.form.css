@@ -1,0 +1,23 @@
+﻿/*
+    Name: form (表单)
+    Version: 0.1
+    Create Time: 2016年2月24日16:53:38
+    Update Time: 2016年2月24日16:53:42
+    Author: Zero
+*/
+.mc-form-container .mc-form-group {
+  margin: 10px 0;
+}
+.mc-form-container .mc-form-group .mc-tip {
+  padding-right: 10px;
+  text-align: right;
+  font-size: 14px;
+}
+.mc-form-container .btn-wrap {
+  padding-top: 15px;
+  border-top: 1px solid #E6E6E6;
+}
+.mc-form-container .btn-wrap .mc-button-cotar {
+  margin-right: 20px;
+}
+/*# sourceMappingURL=mc.form.css.map */

@@ -1,0 +1,131 @@
+﻿/*
+    Name: dialog (弹出层)
+    Version: 0.1
+    Create Time: 2016年1月11日19:46:39
+    Update Time: 2016年1月11日19:46:43
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_dialog_color_config;
+
+.mc-modal-cotar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    .mc_peVm;
+    z-index: 9999;
+    overflow: auto;
+    [slot] {
+        visibility: visible;
+    }
+    &.mc-dialog-show {
+        display: block !important;
+    }
+    &.mc-dialog-hide {
+        display: none !important;
+    }
+    .mc-modal-dialog{
+        //margin-bottom: 15%;
+        background: @c_nc_1;
+        .mc_boxShadow;
+        &.mc-modal-page{
+            .mc-modal-content{
+                width: 1000px;
+            }
+            .mc-modal-title{
+                width: 950px;
+            }
+        }
+        &.mc-modal-lg{
+            .mc-modal-content{
+                width: 700px;
+            }
+            .mc-modal-title{
+                width: 650px;
+            }
+        }
+        &.mc-modal-sm{
+            .mc-modal-content{
+                width: 300px;
+            }
+            .mc-modal-title{
+                width: 250px;
+            }
+        }
+        .mc-modal-content{
+            position: relative;
+            width: 530px;
+            z-index: 9;
+        }
+    }
+    //模态窗口header
+    .mc-modal-header{
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid @c_nc_30;
+        background: #f6f6f5;
+        text-align: left;
+        .mc-modal-title{
+            width: 480px;
+            padding-left: 15px;
+        }
+        .mc-close-btn{
+            width: 50px;
+            text-align: center;
+            font-size: 25px;
+            span{
+                &:hover{
+                    background: @c_colse_btn_bg;
+                    color: @c_nc_1;
+                }
+                display: inline-block;
+                width: 35px;
+                height: 30px;
+                line-height: 30px;
+                vertical-align: top;
+                #McBaseLib > .transition(background);
+                cursor: pointer;
+            }
+        }
+    }
+    //模态窗口body
+    .mc-modal-body{
+        position: relative;
+        text-align: left;
+        .tip-txt-cotar{
+            height: 90px;
+            text-align: center;
+            .mc_peVm;
+            .vm-cotar{
+                max-width: 260px;
+                .mc_txtJB;
+                text-align: left;
+            }
+        }
+    }
+    //模态窗口footer
+    .mc-modal-footer{
+        padding: 12px 2px;
+        border-top: 1px solid @c_nc_30;
+        text-align: right;
+        >.mc-button-cotar{
+            margin: 0 10px;
+        }
+    }
+    //弹出层背景
+    .mc-modal-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        .mc_bgRp("pixel_40.png");
+        background: @c_modal_bg;
+    }
+}

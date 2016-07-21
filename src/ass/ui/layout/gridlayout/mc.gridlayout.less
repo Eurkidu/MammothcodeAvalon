@@ -1,0 +1,28 @@
+﻿/*
+    Name: gridlayout (网格布局)
+    Version: 0.1
+    Create Time: 2016年1月11日16:52:16
+    Update Time: 2016年1月11日16:52:20
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_gridlayout_color_config;
+
+.mc-gridlayout-cotar {
+	position: relative;
+    width: 100%;
+    [slot]{
+        visibility: visible;
+    }
+    .mc-grid-table {
+        width: 100%;
+        tr{
+            td{
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+}

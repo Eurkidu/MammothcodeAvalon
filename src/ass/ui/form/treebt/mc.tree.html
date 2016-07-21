@@ -1,0 +1,55 @@
+﻿<div class="mc-tree-cotar" ms-class="mc-loading: isInit">
+    <script type="avalon" id="treeitem" style="display: none">
+        <i ms-click="foldClick($event,el,'icon')" class="mc-ic parent"
+           ms-class-1="expand:  el.expand"
+           ms-class-2="unexpand:!el.expand"
+           ms-class-3="leaf: isLeaf(el)"
+           ms-class-4="wait: isLeafName ?  false :  el.wait"
+           ms-class-5="waiting: el.wait===0"
+           ms-visible="!hideVir || el[idName]!==virtualId">
+        </i>
+
+
+
+        <div class="form-group mc-checkbox-cotar" ms-class="mc-tree-bar:barSelectMode" ms-if="!barSelectMode" ms-visible="!hideVir || el[idName]!==virtualId">
+            <i ms-if="hasCheckbox" ms-click="clickCheckbox($event,el)" class="mc-checkbox"
+               ms-class-1="mc-active: el.checked"
+               ms-class-2="mc-semi-checked: el.semiChecked"
+               ms-class-3="mc-checkbox-disabled: el.disabled&&el.checked"
+               ms-class-4="mc-checkbox-unchecked-disabled: el.disabled&& (!el.checked)"></i>
+            <span ms-click="foldClick($event,el,'text')" class="mc-checkbox-label text-field"
+                  ms-class-1="mc-text-active: el.active"
+                  ms-class-2="mc-text-disabled: el.disabled">
+                {{el[textName]}}
+            </span>
+            <mc:button ms-if="hasButton" config="$btn_opt"
+                       ms-attr-str="{{JSON.stringify(el.$model)}}">
+
+            </mc:button>
+        </div>
+        <!-- 单行选择模式 -->
+        <div class="form-group mc-checkbox-cotar mc-tree-bar" ms-if="barSelectMode" ms-click="clickCheckbox($event,el)"
+             ms-visible="!hideVir || el[idName]!==virtualId">
+            <i class="mc-checkbox"
+               ms-class-1="mc-active: el.checked"
+               ms-class-2="mc-semi-checked: el.semiChecked"
+               ms-class-3="mc-checkbox-disabled: el.disabled&&el.checked"
+               ms-class-4="mc-checkbox-unchecked-disabled: el.disabled&& (!el.checked)"></i>
+            <span class="mc-checkbox-label text-field"
+                  ms-class-1="mc-text-active: el.active"
+                  ms-class-2="mc-text-disabled: el.disabled">
+                {{el[textName]}}
+            </span>
+        </div>
+        <ul ms-visible="el.expand">
+            <!--ms-if="!isLeaf(el)"-->
+            <li ms-repeat="el.children" ms-include="'treeitem'">
+            </li>
+        </ul>
+    </script>
+    <ul class="tree-view">
+        <li ms-repeat="data" ms-include="'treeitem'">
+        </li>
+    </ul>
+</div>
+

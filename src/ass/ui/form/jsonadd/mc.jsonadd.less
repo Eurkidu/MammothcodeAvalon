@@ -1,0 +1,61 @@
+﻿/*
+    Name: text (输入框)
+    Version: 0.1
+    Create Time: 2016年1月14日21:13:42
+    Update Time: 2016年1月14日21:13:45
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+//导入组件颜色配置表
+.mc_text_color_config;
+.mc-jsonadd-cotar {
+    position: relative;
+    line-height: 20px;
+    [slot] {
+        visibility: visible;
+    }
+    .add-area {
+        display: inline-block;
+        .mc-text-cotar {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .mc-button-cotar {
+            line-height: 27px;
+            height: 27px;
+            vertical-align: bottom;
+        }
+    }
+
+    .show-area{
+            table {
+        font-family: verdana,arial,sans-serif;
+        font-size: 11px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        td{
+             font-size:14px;
+        }
+        .key-item{
+           width:110px;
+        }
+        .val-item{
+           width:110px;
+        }
+    }  
+    }
+    .mc-text-show {
+        font-size: 14px;
+        .mc_txtJB;
+    }
+    .mc-text-valid-info {
+        font-size: 14px;
+    }
+    .mc-text-field-tip {
+        line-height: 30px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+}

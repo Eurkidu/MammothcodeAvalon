@@ -1,0 +1,46 @@
+﻿/*
+    Name: checkbox (复选框)
+    Version: 0.1
+    Create Time: 2015年12月12日11:19:48
+    Update Time: 2015年12月12日11:20:16
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_checkbox_color_config;
+
+.mc-checkbox-cotar {
+	position: relative;
+	height: 18px;
+	cursor: pointer;
+	display: inline-block;
+    [slot]{
+        visibility: visible;
+    }
+    .mc-checkbox {
+	    position: relative;
+	    display: inline-block;
+	    height: 18px;
+	    width: 18px;
+        .mc_bgNp("unchecked.png");
+        &.mc-active{
+            .mc_bgNp("checked.png");
+        }
+    }
+    .mc-checkbox-label {
+	    position: relative;
+	    height: 18px;
+	    line-height:16px;
+	    font-size: 16px;
+    }
+}
+//禁用状态
+.mc-checkbox-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+    .mc-checkbox{
+        .mc_bgNp("checked-disabled.png");
+    }
+}

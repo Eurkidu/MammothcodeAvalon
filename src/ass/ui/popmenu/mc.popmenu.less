@@ -1,0 +1,90 @@
+﻿/*
+    Name: popmenu (弹出菜单)
+    Version: 0.1
+    Create Time: 2016年2月14日20:30:31
+    Update Time: 2016年2月15日09:23:37
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_popmenu_color_config;
+
+.mc-popmenu-cotar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    .mc_peVm;
+    z-index: 9999;
+    [slot] {
+        visibility: visible;
+    }
+    &.mc-dialog-show {
+        display: block !important;
+    }
+    &.mc-dialog-hide {
+        display: none !important;
+    }
+    .mc-popmenu-content{
+        position: relative;
+        width: 500px;
+        border-radius: 5px;
+        background: @c_nc_1;
+        #McBaseLib > .boxShadow(.1,1px 1px 5px 2px);
+        z-index: 9;
+        &.mc-popmenu-lg{
+            width: 700px;
+        }
+        &.mc-popmenu-sm{
+            width: 300px;
+        }
+        &.mc-popmenu-st{
+            width: 180px;
+        }
+        //title
+        .mc-title{
+            line-height: 1em;
+            margin-bottom: 5px;
+            span{
+                font-size: 14px;
+                color: @c_nc_50;
+            }
+        }
+        //按钮
+        .mc-button-cotar{
+            border: none;
+            background: none;
+            font-size: 14px;
+            span{
+                color: @c_nc_7;
+            }
+            &:hover{
+                background: @c_nc_2;
+            }
+        }
+        //分组线
+        .mc-sp-line{
+            width: 100%;
+            height: 1px;
+            margin: 5px 0;
+            border-top: 1px solid @c_nc_3;
+        }
+    }
+    //模态窗口body
+    .mc-popmenu-body{
+        text-align: left;
+    }
+    //弹出层背景
+    .mc-popmenu-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: transparent;
+    }
+}

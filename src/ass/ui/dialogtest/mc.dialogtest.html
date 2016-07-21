@@ -1,0 +1,24 @@
+<div class="mc-modal-cotar fade"  ms-class-1="mc-dialog-show:showState"
+     ms-class-2="mc-dialog-hide:!showState">
+    <div class="mc-modal-dialog vm-cotar" ms-click="clickDialog($event)" 
+         ms-class-1="mc-modal-lg: size=='large'"
+         ms-class-2="mc-modal-sm: size=='small'">
+        <div class="mc-modal-content">
+            <!-- modal header 标题,X按钮-->
+            <div class="mc-modal-header hf">
+                <div class="mc-modal-title fp" ms-on-mousedown="onMousedown"   >{{title}}</div>
+                <div class="mc-close-btn fp" ms-click="hide($event)"><span>&times;</span></div>
+            </div>
+            <!-- modal body -->
+            <div class="mc-modal-body" ms-css-padding="padding">{{content|html}}</div>
+            <!-- modal footer 按钮-->
+            <div class="mc-modal-footer" ms-if="buttons.length > 0">
+                <mc:button ms-repeat-btn="buttons" ms-attr-type="getBtnType($index)" on-click="btnClick"
+                           ms-attr-lindex="$index" ms-attr-label="btn.label">
+                </mc:button>
+            </div>
+        </div>
+        <!-- modal bg -->
+        <div class="mc-modal-bg" ms-click="hideByBg($event)"></div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿<div class="mc-datapager-cotar hf" ms-controller="datapager">
+    <div class="fp">显示行数</div>
+    <div class="fp"><mc:selectbox config="$page_size_select_config" arrow-down="true" on-click="clickDrop" on-selected="clickSize"></mc:selectbox></div>
+    <div class="fp">选择页数</div>
+    <div class="fp"><mc:selectbox config="$page_select_config" arrow-down="true" on-init="getPageSelectboxVM" on-selected="clickPage"></mc:selectbox></div>
+    <div class="fp"><em>  </em><span>共{{allPageCount*pageSize}}条</span></div>
+
+    <div class="page-list">
+        <!--
+            <div ms-class="active: curPage===page" ms-repeat-page="pageList" class="item" ms-click="turnPage($event,page)">
+            {{page}}
+        </div>
+            -->
+
+ 
+    </div>
+
+    <div class="fp"><mc:button label="首页" on-click="firstPage"></mc:button></div>
+    <div class="fp"><mc:button label="尾页" on-click="lastPage"></mc:button></div> 
+    <div class="fp"><mc:button label="上一页" on-click="prevPage"></mc:button></div>
+    <div class="fp"><mc:button label="下一页" on-click="nextPage"></mc:button></div>
+</div>

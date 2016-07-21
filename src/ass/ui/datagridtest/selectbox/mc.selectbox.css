@@ -1,0 +1,204 @@
+﻿@charset "utf-8";
+/*
+    Name: selectbox (下拉选择框)
+    Version: 0.1
+    Create Time: 2016年1月11日09:16:34
+    Update Time: 2016年1月11日09:16:40
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-selectbox-cotar {
+  text-align: left;
+}
+.mc-selectbox-cotar [slot] {
+  visibility: visible;
+}
+.mc-selectbox-cotar .mc-selectbox-wrap {
+  position: relative;
+  line-height: 0;
+  cursor: pointer;
+}
+.mc-selectbox-cotar .mc-selectbox-wrap.mc-active:after {
+  background: url("img/ic_arrow_up.png") no-repeat top left;
+}
+.mc-selectbox-cotar .mc-selectbox-wrap.mc-active .mc-txt {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.mc-selectbox-cotar .mc-selectbox-wrap.mc-active .mc-select-list {
+  visibility: visible;
+  opacity: 1;
+}
+.mc-selectbox-cotar .mc-selectbox-wrap:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 9px;
+  line-height: 1em;
+  top: 50%;
+  right: 8px;
+  margin-top: -5px;
+  background: url("img/ic_arrow_down.png") no-repeat top left;
+}
+.mc-selectbox-cotar .mc-txt {
+  display: inline-block;
+  width: 100%;
+  line-height: 27px;
+  height: 27px;
+  height: 25px\9;
+  padding: 0 10px;
+  padding-right: 30px;
+  border: 1px solid #bebebe;
+  border-radius: 3px;
+  background: #ffffff;
+  font-size: 14px;
+}
+.mc-selectbox-cotar .mc-select-list {
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #bebebe;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  -moz-transition: opacity 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s;
+  z-index: 9;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.mc-selectbox-cotar .mc-select-list.mc-arrow-down {
+  margin-top: -1px;
+  border-top: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.mc-selectbox-cotar .mc-select-list.mc-arrow-up {
+  bottom: 27px;
+  margin-bottom: -1px;
+  border-bottom: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.mc-selectbox-cotar .mc-select-list > li {
+  line-height: 25px;
+  padding: 0 10px;
+  font-size: 14px;
+  -webkit-transition: background 0.3s ease-in-out 0s;
+  -moz-transition: background 0.3s ease-in-out 0s;
+  -o-transition: background 0.3s ease-in-out 0s;
+  transition: background 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+.mc-selectbox-cotar .mc-select-list > li:hover {
+  color: #333333;
+  background: #eeeeee;
+}
+.mc-selectbox-disabled {
+  color: #333333;
+  cursor: default;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=mc.selectbox.css.map */

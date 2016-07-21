@@ -1,0 +1,66 @@
+﻿/*
+    Name: listdataAdd ()
+    Version: 0.1
+    Create Time: 2016年3月21日 14:12:37 
+    Author: cxt
+*/
+@import "../../base/css/McColorConfig.less";
+//导入组件颜色配置表
+//.mc_listdata_add_color_config;
+.mc-letter-list-cotar {
+            display: inline-block;
+        width: 280px;
+        vertical-align: -webkit-baseline-middle;
+    .group-list {
+        
+        .ipt {
+            border: 1px solid #b1b1b1;
+            width: 100%;
+            padding: 2px 5px;
+            font-size: 14px;
+        }
+        .group-box {
+            height: 550px;
+            overflow-y: auto;
+            margin: 5px 0;
+            border: 1px solid #b1b1b1;
+            .gourp-title {
+                background-color: #d9eef7;
+                line-height: 26px;
+                font-size: 14px;
+                padding: 0 10px;
+            }
+            .item {
+                line-height: 40px;
+                height: 40px;
+                vertical-align: text-bottom;
+                font-size: 14px;
+                padding: 0 10px;
+                &.active {
+                    color: #FFFFFF;
+                    background-color: rgb(66, 170, 220);
+                }
+                .sm-pic {
+                    width: 40px;
+                    height: 40px;
+                }
+                span {
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+    }
+    .op-list {
+        display: inline-block;
+        width: 100px;
+        .btn {
+            background-color: #fff;
+            border: 1px solid #666666;
+            margin-bottom: 15px;
+            &.disabled {
+                color: #b9b9b9;
+                border: 1px solid #cccccc;
+            }
+        }
+    }
+}

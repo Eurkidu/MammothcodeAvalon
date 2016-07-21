@@ -1,0 +1,79 @@
+﻿/*
+    Name: pagemodal (弹出层)
+    Version: 0.1
+    Create Time: 2016年4月9日14:26:27
+    Update Time: 2016年4月9日14:26:32
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_pagemodal_color_config;
+
+.mc-pagemodal-cotar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    .mc_peVm;
+    z-index: 9999;
+    [slot] {
+        visibility: visible;
+    }
+    &.mc-pagemodal-show {
+        display: block !important;
+    }
+    &.mc-pagemodal-hide {
+        display: none !important;
+    }
+    .mc-modal-content{
+        height: 100%;
+        background: @c_nc_1;
+        overflow: auto;
+    }
+    //模态窗口header
+    .mc-modal-header{
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid @c_nc_30;
+        background: #f6f6f5;
+        text-align: left;
+        .mc-modal-title{
+            width: 480px;
+            padding-left: 15px;
+        }
+        .mc-close-btn{
+            width: 50px;
+            text-align: center;
+            font-size: 25px;
+            span{
+                &:hover{
+                    color: @c_nc_1;
+                }
+                display: inline-block;
+                width: 35px;
+                height: 30px;
+                line-height: 30px;
+                vertical-align: top;
+                #McBaseLib > .transition(background);
+                cursor: pointer;
+            }
+        }
+    }
+    //模态窗口body
+    .mc-modal-body{
+        text-align: left;
+        .tip-txt-cotar{
+            height: 90px;
+            text-align: center;
+            .mc_peVm;
+            .vm-cotar{
+                max-width: 260px;
+                .mc_txtJB;
+                text-align: left;
+            }
+        }
+    }
+}

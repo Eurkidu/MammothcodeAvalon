@@ -1,0 +1,49 @@
+﻿<div class="mc-layout-cotar" ms-attr-id="layoutid">
+    <div class="mc-layout-manager-cotar" ms-class-1="{{mcstyle}}" ms-css-width="renderStyle('width')"
+         ms-css-height="renderStyle('height')"
+         ms-css-padding="renderStyle('padding')" ms-css-padding-top="renderStyle('pt')"
+         ms-css-padding-left="renderStyle('pl')" ms-css-padding-right="renderStyle('pr')"
+         ms-css-padding-bottom="renderStyle('pb')"
+         ms-class-2="hf: data._m === 'h'">
+        <script type="avalon" ms-attr-id="mtmpid" style="display: none">
+            <div class="mc-absolute-item" ms-repeat="el._c" ms-class-1="{{el.s}}" ms-class-2="mc_ai{{el.s}}: el.s"
+                 ms-css-width="$outer.el._m === 'h' && el.w.indexOf('%') === -1 && el.w" ms-css-height="$outer.el._m !== 'h' && el.w.indexOf('%') === -1 && el.w"
+                 ms-css-top="calPosition('top', $outer.el, $index)" ms-css-bottom="calPosition('bottom', $outer.el, $index)"
+                 ms-css-left="calPosition('left', $outer.el, $index)" ms-css-right="calPosition('right', $outer.el, $index)"
+                 ms-css-padding="el.p">
+                <div ms-include="mtmpid" ms-if="el._c.size()" data-include-replace="true"></div>
+            </div>
+        </script>
+        <div class="mc-absolute-item" ms-repeat="data._c" ms-class-1="{{el.s}}" ms-class-2="mc_ai{{el.s}}: el.s"
+             ms-css-width="data._m === 'h' && el.w.indexOf('%') === -1 && el.w" ms-css-height="data._m !== 'h' && el.w.indexOf('%') === -1 && el.w"
+             ms-css-top="calPosition('top', data, $index)" ms-css-bottom="calPosition('bottom', data, $index)"
+             ms-css-left="calPosition('left', data, $index)" ms-css-right="calPosition('right', data, $index)"
+             ms-css-padding="el.p">
+            <div ms-include="mtmpid" ms-if="el._c.size()" data-include-replace="true"></div>
+        </div>
+    </div>
+
+    {{sizeStyle|html}}
+
+    <div class="mc-linearlayout-cotar" ms-class-1="{{mcstyle}}" ms-css-width="renderStyle('width')"
+         ms-css-height="renderStyle('height')"
+         ms-css-padding="renderStyle('padding')" ms-css-padding-top="renderStyle('pt')"
+         ms-css-padding-left="renderStyle('pl')" ms-css-padding-right="renderStyle('pr')"
+         ms-css-padding-bottom="renderStyle('pb')"
+         ms-class-2="hf: data._m === 'h'">
+        <script type="avalon" ms-attr-id="tmpid" style="display: none">
+            <div class="mc-linear-item" ms-repeat="el._c" ms-class-1="hf: el._c.size() && el._m === 'h'"
+                 ms-class-2="ftp: $outer.el._m === 'h'" ms-class-3="mc_li{{el.s}}: el.s" ms-css-width="$outer.el._m === 'h' && el.w.indexOf('%') === -1 && el.w"
+                 ms-css-height="$outer.el._m !== 'h' && el.w.indexOf('%') === -1 && el.w" ms-css-padding="el.p">
+                {{renderContent(el._p, el._c.size())|html}}
+                <div ms-include="tmpid" ms-if="el._c.size()" data-include-replace="true"></div>
+            </div>
+        </script>
+        <div class="mc-linear-item" ms-repeat="data._c" ms-class-1="hf: el._c.size() && el._m === 'h'"
+             ms-class-2="ftp: data._m === 'h'" ms-class-3="mc_li{{el.s}}: el.s" ms-css-width="data._m === 'h' && el.w.indexOf('%') === -1 && el.w"
+             ms-css-height="data._m !== 'h' && el.w.indexOf('%') === -1 && el.w" ms-css-padding="el.p">
+            {{renderContent(el._p, el._c.size())|html}}
+            <div ms-include="tmpid" ms-if="el._c.size()" data-include-replace="true"></div>
+        </div>
+    </div>
+</div>

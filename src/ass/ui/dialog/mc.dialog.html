@@ -1,0 +1,23 @@
+<div class="mc-modal-cotar fade" ms-click="hideDialog($event)" ms-class-1="mc-dialog-show:show"
+     ms-class-2="mc-dialog-hide:!show">
+    <div class="mc-modal-dialog vm-cotar" ms-click="clickDialog($event)" ms-class-1="mc-modal-lg: size=='large'"
+         ms-class-2="mc-modal-sm: size=='small'" ms-class-3="mc-modal-page: size=='page'">
+        <div class="mc-modal-content">
+            <!-- modal header -->
+            <div class="mc-modal-header hf">
+                <div class="mc-modal-title fp">{{title}}</div>
+                <div class="mc-close-btn fp" ms-click="hideDialog($event,true)"><span>&times;</span></div>
+            </div>
+            <!-- modal body -->
+            <div class="mc-modal-body" ms-css-padding="padding" ms-css-height="height">{{content|html}}</div>
+            <!-- modal footer -->
+            <div class="mc-modal-footer" ms-if="buttons.length > 0">
+                <mc:button ms-repeat="buttons" ms-attr-type="jBtnType($index)" on-click="btnClick"
+                           ms-attr-lindex="$index" ms-attr-label="el.label">
+                </mc:button>
+            </div>
+        </div>
+        <!-- modal bg -->
+        <div class="mc-modal-bg"></div>
+    </div>
+</div>

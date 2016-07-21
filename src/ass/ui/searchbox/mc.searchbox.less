@@ -1,0 +1,52 @@
+﻿/*
+    Name: searchbox (搜索框)
+    Version: 0.1
+    Create Time: 2016年1月29日12:34:23
+    Update Time: 2016年4月21日20:18:07
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_searchbox_color_config;
+
+.mc-searchbox-cotar {
+	position: relative;
+    [slot]{
+        visibility: visible;
+    }
+    //搜索类型选择
+    .mc-selectbox-cotar{
+        .mc-tip{
+            font-size: 15px;
+        }
+        .mc-txt{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: none;
+        }
+    }
+    //搜索框
+    .mc-text-cotar{
+        .mc-ipt{
+            border-radius: 0;
+        }
+    }
+    //按钮
+    .mc-button-cotar{
+        //无圆角
+        &.no-radius{
+            border-radius: 0;
+        }
+        //无左侧圆角
+        &.no-left-radius{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        //无左右边框
+        &.no-lr-border{
+            border-left: none;
+            border-right: none;
+        }
+    }
+}

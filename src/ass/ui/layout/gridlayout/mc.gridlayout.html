@@ -1,0 +1,18 @@
+﻿<div class="mc-gridlayout-cotar">
+    <table class="mc-grid-table">
+        <!--<thead ms-if="hasHead" ms-class="mc-hide:isInit">
+            <tr>
+                <th ms-repeat="$td" ms-class="col-{{$index}}">
+
+                </th>
+            </tr>
+        </thead>-->
+        <tbody ms-class="mc-hide:isInit">
+            <tr ms-repeat="tr">
+                <td ms-repeat-el="td" ms-class="col-{{$index}}">
+                    {{renderContent($outer.$index,$index)|html}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

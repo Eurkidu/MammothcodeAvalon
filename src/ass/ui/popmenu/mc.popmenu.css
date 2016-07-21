@@ -1,0 +1,202 @@
+﻿@charset "utf-8";
+/*
+    Name: popmenu (弹出菜单)
+    Version: 0.1
+    Create Time: 2016年2月14日20:30:31
+    Update Time: 2016年2月15日09:23:37
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-popmenu-cotar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+}
+.mc-popmenu-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-popmenu-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-popmenu-cotar [slot] {
+  visibility: visible;
+}
+.mc-popmenu-cotar.mc-dialog-show {
+  display: block !important;
+}
+.mc-popmenu-cotar.mc-dialog-hide {
+  display: none !important;
+}
+.mc-popmenu-cotar .mc-popmenu-content {
+  position: relative;
+  width: 500px;
+  border-radius: 5px;
+  background: #ffffff;
+  /*-webkit-box-shadow: @style;
+        -moz-box-shadow: @style;
+        -o-box-shadow: @style;*/
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+}
+.mc-popmenu-cotar .mc-popmenu-content.mc-popmenu-lg {
+  width: 700px;
+}
+.mc-popmenu-cotar .mc-popmenu-content.mc-popmenu-sm {
+  width: 300px;
+}
+.mc-popmenu-cotar .mc-popmenu-content.mc-popmenu-st {
+  width: 180px;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-title {
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-title span {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-button-cotar {
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-button-cotar span {
+  color: #444444;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-button-cotar:hover {
+  background: #f4f4f4;
+}
+.mc-popmenu-cotar .mc-popmenu-content .mc-sp-line {
+  width: 100%;
+  height: 1px;
+  margin: 5px 0;
+  border-top: 1px solid #eeeeee;
+}
+.mc-popmenu-cotar .mc-popmenu-body {
+  text-align: left;
+}
+.mc-popmenu-cotar .mc-popmenu-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: transparent;
+}
+/*# sourceMappingURL=mc.popmenu.css.map */

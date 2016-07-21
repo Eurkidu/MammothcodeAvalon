@@ -1,0 +1,122 @@
+﻿/*
+    Name: tree ()
+    Version: 0.1
+    Create Time: 2016年3月21日 14:12:37 
+    Author: cxt
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+//.mc_listdata_add_color_config;
+.mc-tree-cotar {
+    //buildin
+    .mc-button-cotar.noborder {
+        height: 22px;
+        line-height: 22px;
+        padding: 0;
+        vertical-align: top;
+    }
+
+    ul {
+        padding-left: 17px;
+    }
+
+    .text-field {
+        cursor: pointer;
+    }
+
+    .check-box {
+        width: 24px;
+        height: 18px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+    //树的单行
+    .mc-tree-bar{
+        &:hover{
+            background: @c_nc_2;
+        }
+    }
+    //选择框内
+    .mc-checkbox-cotar {
+        display: block;
+        padding: 5px 0;
+        padding-left: 23px;
+        height: initial;
+        .mc-checkbox {
+            float: right;
+            position: relative;
+            display: inline-block;
+            height: 22px;
+            width: 22px;
+            .mc_bgNpCC("unchecked.png");
+
+            &.mc-active {
+                .mc_bgNpCC("checked.png");
+            }
+
+            &.mc-semi-checked {
+                color: @c_nc_8;
+                cursor: default;
+                .mc_bgNpCC("checked-disabled.png");
+            }
+            //禁用状态
+            &.mc-checkbox-disabled {
+                color: @c_nc_8;
+                cursor: not-allowed;
+                .mc_bgNpCC("checked-disabled.png");
+            }
+            //禁用状态
+            &.mc-checkbox-unchecked-disabled {
+                color: @c_nc_8;
+                cursor: not-allowed;
+                .mc_bgNpCC("unchecked-disabled.png");
+            }
+        }
+        //text
+        .mc-text-disabled {
+            color: #B1B1B1;
+        }
+        .mc-checkbox-label {
+            position: relative;
+            display: inline-block;
+            height: initial;
+            line-height: 22px;
+            font-size: 14px;
+            bottom: 0;
+            vertical-align: top;
+            &.mc-text-active {
+                color: rgb(82, 203, 251);
+            }
+        }
+    }
+
+    .parent {
+        position: absolute;
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        margin-top: 5px;
+        z-index: 9;
+        &.expand {
+            .mc_bgNpCC("ic_plus.png");
+        }
+
+        &.unexpand {
+            .mc_bgNpCC("ic_minus.png");
+        }
+
+        &.leaf {
+            // display: none;
+            .mc_bgNpCC("null.png");
+        }
+
+        &.wait {
+            .mc_bgNpCC("ic_wait.png");
+        }
+
+        &.waiting {
+            .mc_bgNpCC("ic_waiting.gif");
+        }
+    }
+}

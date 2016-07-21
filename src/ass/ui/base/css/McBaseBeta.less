@@ -1,0 +1,381 @@
+/*----------------------------
+    Style Create: 2015年12月12日10:30:53
+    Author: Zero
+    Style Update: 2016年4月7日15:59:53
+    Author: Zero
+------------------------------*/
+
+//引用代码库
+@import "MammothcodeCoreLibBeta.less";
+#McBaseLib;
+
+//页面初始化
+.mc_initialize;
+
+.mc-hide,
+.ms-controller,
+.ms-important,
+[ms-controller],
+[ms-important],
+[slot] {
+    visibility: hidden;
+}
+
+//禁用选中
+body {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    //user-select: none;
+}
+//允许选中
+.mc-user-select{
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    -webkit-user-select: initial;
+}
+
+//图标
+.mc-bt{
+    border-top: 1px solid @c_nc_3;
+}
+.mc-bb{
+    border-bottom: 1px solid @c_nc_3;
+}
+.mc-bl{
+    border-left: 1px solid @c_nc_3;
+}
+.mc-br{
+    border-right: 1px solid @c_nc_3;
+}
+
+//Top Bar
+.index-top-bar-wrap{
+    height: 60px;
+    background: #292f37;
+    .logo{
+        width: 200px;
+        padding: 5px;
+        text-align: center;
+        .mc_peVm;
+        img{
+            display: inline-block;
+            max-height: 50px;
+        }
+    }
+    .top-nav{
+        .item{
+            line-height: 60px;
+            padding: 0 30px;
+            color: @c_nc_1;
+            &.active{
+                background: #16191c;
+            }
+        }
+    }
+    //用户
+    .user-tool-bar{
+        position: relative;
+        line-height: 60px;
+        padding: 0 30px;
+        cursor: default;
+        &:hover{
+            background: #16191c;
+            .drop-list{
+                display: block;
+            }
+        }
+        .user-name{
+            font-size: 16px;
+            color: @c_nc_1;
+        }
+        .drop-list{
+            position: absolute;
+            right: 0;
+            display: none;
+            width: 150px;
+            border: 1px solid @c_nc_30;
+            background: @c_nc_1;
+            z-index: 99;
+            .mc_boxShadow;
+            .item{
+                display: block;
+                line-height: 50px;
+                padding: 0 15px;
+                cursor: pointer;
+                &:hover{
+                    background: @c_nc_2;
+                }
+            }
+        }
+    }
+}
+//侧边导航
+.index-sidebar-wrap{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100%;
+}
+//右侧主体
+.index-main-body{
+    position: fixed;
+    top: 60px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    color: @c_nc_8;
+    &.full-page{
+        left: 0;
+    }
+    .well{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        overflow: auto;
+    }
+    .bg-cotar{
+        background: @c_sc_1;
+    }
+}
+
+.mc-cotar{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: @c_nc_1;
+    #McBaseLib > .boxShadow(0.1,0 0 4px);
+    overflow: hidden;
+}
+
+.mc-panel{
+    width: 100%;
+    height: 100%;
+}
+
+.mc-relative{
+    position: relative;
+}
+
+.mc-bread-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: @c_nc_1;
+    #McBaseLib > .boxShadow(0.1,0 0 4px);
+    overflow: auto;
+    .headline{
+        line-height: 50px;
+        margin: 0 20px;
+    }
+}
+
+//滚动层
+.mc-scroll-cotar{
+    overflow: auto;
+}
+
+//标题
+.headline{
+    line-height: 50px;
+    padding: 0 15px;
+}
+
+//水平列表
+.hor-list{
+    >.item{
+        display: inline-block;
+        padding: 0 10px;
+        vertical-align: middle
+    }
+}
+
+//工具条
+.tool-bar{
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 0;
+    >.item{
+        display: inline-block;
+        margin: 0 7px;
+        vertical-align: middle
+    }
+}
+
+/*#region 图标*/
+/*#endregion*/
+
+/*#region 动画*/
+.mc-loading{
+    //visibility: hidden !important;
+    display: none;
+    //opacity: 0;
+}
+
+.mc-animate-delay{
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.mc-animate{
+    #McBaseLib > .animationTransition;
+    #McBaseLib > .animationFillMode(backwards);
+}
+//页面显示动画
+.mc-animate-page-show{
+    #McBaseLib > .animation(sideInLeftS);
+}
+//内容显示动画
+.mc-animate-content-show{
+    #McBaseLib > .animation(sideInUp);
+}
+/*#endregion*/
+
+.my-repeat-animation {
+    //width: 400px;
+    //height: 30px;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+         
+.ng-enter {
+    -webkit-animation-name: enter_animation;
+    animation-name: enter_animation;
+}
+         
+.ng-leave {
+    -webkit-animation-name: leave_animation;
+    animation-name: leave_animation;
+}
+         
+@keyframes enter_animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+         
+@keyframes leave_animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+         
+@-webkit-keyframes enter_animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+         
+@-webkit-keyframes leave_animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/*#region animate sideInLeft 300px [sideInLeftS]*/
+@-webkit-keyframes sideInLeftS {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(300px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+@keyframes sideInLeftS {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(300px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+/*#endregion*/
+
+/*#region animate sideInLeft 500px [sideInLeft]*/
+@-webkit-keyframes sideInLeft {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(500px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+@keyframes sideInLeft {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(500px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+/*#endregion*/
+
+/*#region animate sideInLeft 700px [sideInLeftL]*/
+@-webkit-keyframes sideInLeftL {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(700px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+@keyframes sideInLeftL {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformX(700px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformX(0);
+    }
+}
+/*#endregion*/
+
+/*#region animate sideInUp 70px [sideInUp]*/
+@-webkit-keyframes sideInUp {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformY(70px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformY(0);
+    }
+}
+@keyframes sideInUp {
+    0% {
+        opacity: 0;
+        #McBaseLib > .transformY(70px);
+    }
+    100% {
+        opacity: 1;
+        #McBaseLib > .transformY(0);
+    }
+}
+/*#endregion*/

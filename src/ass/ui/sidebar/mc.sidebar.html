@@ -1,0 +1,26 @@
+﻿<div class="mc-sidebar-cotar" ms-class="mc-loading: isInit">
+    <div class="mc-accordion-cotar" ms-repeat="sidebarList">
+        <div class="panel-wrap" ms-class="last:$last" ms-class-1="active:$index==active" ms-if="el.children.length>0">
+            <div class="panel-header" ms-click="clickPanel($event, $index)">
+                <a href="javascript:void(0)">{{el.text}}</a>
+            </div>
+            <div class="panel-body" ms-css-padding="padding">
+                <div class="mc-accordion-cotar" ms-repeat-el="el.children">
+                    <div class="link-bar hf" ms-class-1="select:el.select">
+                        <a class="fp" ms-attr-href="el.href ? el.href : 'javascript:void(0)'">{{el.text}}</a>
+                        <div class="fp" ms-if="el.$btn_opt">
+                            <mc:button ms-attr-config="el.$btn_opt"></mc:button>
+                            <!--<mc:droplist config="$droplist_opt"></mc:droplist>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrap" ms-class="last:$last" ms-class-1="active:$index==active" ms-if="el.children.length==0">
+            <div class="panel-header">
+                <a ms-attr-href="el.href ? el.href : 'javascript:void(0)'">{{el.text}}</a>
+            </div>
+            <div class="panel-body"></div>
+        </div>
+    </div>
+</div>

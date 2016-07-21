@@ -1,0 +1,170 @@
+﻿@charset "utf-8";
+/*
+    Name: checkbox (复选框)
+    Version: 0.1
+    Create Time: 2015年12月12日11:19:48
+    Update Time: 2015年12月12日11:20:16
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-checkboxgroup-cotar {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.mc-checkboxgroup-cotar [slot] {
+  visibility: visible;
+}
+.mc-checkboxgroup-cotar .check-list {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar {
+  margin-right: 5px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url("img/blue_check_sprite.png") no-repeat top left;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.mc-active {
+  background-position-x: -48px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.single-mode {
+  background-position-x: -144px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.single-mode.mc-active {
+  background-position-x: -168px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.disabled {
+  background-position-x: 0;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.disabled.mc-active {
+  background-position-x: -48px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.disabled.single-mode {
+  background-position-x: -120px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox.disabled.single-mode.mc-active {
+  background-position-x: -216px;
+}
+.mc-checkboxgroup-cotar .check-list .mc-checkbox-cotar .mc-checkbox-label {
+  position: relative;
+  height: 22px;
+  line-height: 18px;
+  font-size: 18px;
+  bottom: 3px;
+}
+.mc-checkbox-disabled {
+  color: #333333;
+  cursor: default;
+  cursor: not-allowed;
+}
+.mc-checkbox-disabled .mc-checkbox {
+  background: url("img/checked-disabled.png") no-repeat top left;
+}
+/*# sourceMappingURL=mc.checkboxgroup.css.map */

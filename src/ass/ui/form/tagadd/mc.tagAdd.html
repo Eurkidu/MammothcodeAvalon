@@ -1,0 +1,21 @@
+﻿<div class="mc-form-group mc-tagadd-cotar hf" ms-class-1="mc-tagadd-lg: size=='large'"
+     ms-class-2="mc-tagadd-sm: size=='small'" ms-class-3="mc-loading: isInit">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="ftp">
+        <div class="hf">
+            <input class="form-control mc-ipt fp" type="text" ms-attr-placeholder="placeholder" ms-if="!readonly"
+                   ms-duplex="value" ms-keydown="doKeyDown" ms-css-width="width" />
+            <div class="mc-add-btn fp" ms-click="doAdd" ms-if="!readonly">添加</div>
+        </div>
+        <div class="item mc-text-field-tip" >
+            {{tip}}
+        </div>
+        <div class="mc-tag-show-cotar hf" ms-css-width="width + 80">
+            <div class="mc-tag-item fp" ms-repeat="tagList">
+                <div class="mc-close-btn" ms-click="doDel($event,$index)" ms-if="!readonly">&times;</div>
+                <div class="mc-tag-type iconfont" ms-class="mc-type-{{type}}" ms-if="type != 'normal'">{{getIcon() | html}}</div>
+                <div class="mc-tag-name" ms-class="mc-type : type != 'normal'">{{el.tagName}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿<div class="mc-tabs-cotar" ms-class-1="mc_li{{bindSize}}" ms-class-2="mc-loading: isInit">
+    <div class="mc-tabs-switch-wrap hf">
+        <div class="mc-switch-item fp" ms-repeat="tabConfig" ms-class="active:$index === activeIndex" ms-click="clickTab($event,$index)">
+            <span>{{el.label}}</span>
+        </div>
+    </div>
+    <div class="mc-tabs-body" ms-repeat="tabConfig" ms-class="active:$index === activeIndex" ms-visible="$index === activeIndex">
+        {{renderContent($index)|html}}
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿<div class="mc-form-group mc-selectbox-cotar hf" ms-class-1="mc-selectbox-disabled: disabled" ms-class-2="mc-loading: isInit">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="mc-selectbox-wrap fp" ms-class="mc-active: active" ms-if="!readonly"
+         ms-css-width="width" ms-click="clickSelectbox($event)">
+        <input type="hidden" ms-attr-value="data[select] && data[select].value">
+        <div class="mc-txt">{{data[select] && data[select].text}}</div>
+        <ul class="mc-select-list" ms-class-1="mc-arrow-down: arrowDown" ms-class-2="mc-arrow-up: !arrowDown">
+            <li ms-repeat="data" ms-click="clickLi($event,$index)">{{el.text}}</li>
+        </ul>
+    </div>
+    <div class="mc-readonly-txt fp" ms-if="readonly">{{data[select] && data[select].text}}</div>
+</div>

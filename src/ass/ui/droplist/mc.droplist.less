@@ -1,0 +1,50 @@
+﻿/*
+    Name: droplist (点击展开列表)
+    Version: 0.1
+    Create Time: 2015年12月29日22:35:54
+    Update Time: 2015年12月29日22:35:57
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_droplist_color_config;
+
+.mc-droplist-cotar {
+	position: relative;
+    [slot]{
+        visibility: visible;
+    }
+    //切换按钮
+    .mc-droplist-btn{
+        line-height: 22px;
+        >span{
+            display: inline-block;
+            line-height: 1.6em;
+            padding: 4px 5px;
+            color: @c_nc_6;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    //展开列表
+    .mc-droplist-body{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        border: 1px solid @c_nc_3;
+        background: @c_nc_1;
+        #McBaseLib > .boxShadow(0.1,0 0 4px);
+        .mc-droplist-item{
+
+        }
+    }
+}
+//禁用状态
+.mc-button-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+}

@@ -1,0 +1,260 @@
+﻿@charset "utf-8";
+/*
+    Name: dialog (弹出层)
+    Version: 0.1
+    Create Time: 2016年1月11日19:46:39
+    Update Time: 2016年1月11日19:46:43
+    Author: Zero
+*/
+/*----------------------------
+	Style Create: 2015.5.28
+	Author: Zero
+	Style Update: 2016年3月25日15:30:54
+	Author: Zero
+	Note: 曼码-LESS代码库
+	version: 0.2.4.3
+    version: 0.2.5.2
+------------------------------*/
+/*----------------------------
+	Note: 配置文件
+------------------------------*/
+/*#region Page Initialize */
+/*#endregion */
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 微站 */
+/*//网格图使用示例
+.mc_bg(@x,@y){
+    .mc_bgNpP("",-@x -@y);
+}
+.mc_bgNpP(@imgName,@position) when (isstring(@imgName)){
+//不重复(传入位置信息)
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat @position);
+}
+.mc_bgNpP(@color,@imgName,@position){
+//不重复带背景色(传入位置信息)
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat @position);
+}
+.mc_bgNp(@imgName) when (isstring(@imgName)){
+//不重复
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat top left);
+}
+.mc_bgNp(@color,@imgName){
+//不重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat top left);
+}
+.mc_bgNpCC(@imgName) when (isstring(@imgName)){
+//不重复-居中
+    #McBaseLib > .backgroundSize(@imgName,contain,no-repeat center);
+}
+.mc_bgNpCC(@color,@imgName){
+//不重复带背景色-居中
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,no-repeat center);
+}
+.mc_bgRp(@imgName) when (isstring(@imgName)){
+//XY重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat top left);
+}
+.mc_bgRp(@color,@imgName){
+//XY重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat top left);
+}
+.mc_bgRpX(@imgName) when (isstring(@imgName)){
+//X重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-x top left);
+}
+.mc_bgRpX(@color,@imgName){
+//X重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-x top left);
+}
+.mc_bgRpY(@imgName) when (isstring(@imgName)){
+//Y重复
+    #McBaseLib > .backgroundSize(@imgName,contain,repeat-y top left);
+}
+.mc_bgRpY(@color,@imgName){
+//Y重复带背景色
+    #McBaseLib > .backgroundSize(@color,@imgName,contain,repeat-y top left);
+}*/
+/*#endregion */
+#McBaseLib {
+  /*#region 页面初始化 */
+  /*#endregion */
+  /*#region Util */
+  /*#endregion */
+  /*#region 布局 */
+  /*#endregion*/
+  /*#region CSS3相关 */
+  /*#endregion*/
+  /*#region CSS3动画 */
+  /*#endregion*/
+}
+/*#region bread 面包屑*/
+/*#endregion*/
+/*#region selectbox 搜索框*/
+/*#endregion*/
+/*#region iconselect 图标选择*/
+/*#endregion*/
+/*#region css3相关 */
+/*#endregion */
+/*#region 文本相关 */
+/*#endregion */
+/*#region 伪元素使用 */
+/*#endregion */
+/*#region 背景图的使用(传入图片名) - 主站 */
+/*#endregion */
+.mc-modal-cotar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  overflow: auto;
+}
+.mc-modal-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-modal-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-modal-cotar [slot] {
+  visibility: visible;
+}
+.mc-modal-cotar.mc-dialog-show {
+  display: block !important;
+}
+.mc-modal-cotar.mc-dialog-hide {
+  display: none !important;
+}
+.mc-modal-cotar .mc-modal-dialog {
+  background: #ffffff;
+  /*-webkit-box-shadow: @style;
+        -moz-box-shadow: @style;
+        -o-box-shadow: @style;*/
+  /*-webkit-box-shadow: @style;
+        -moz-box-shadow: @style;
+        -o-box-shadow: @style;*/
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-page .mc-modal-content {
+  width: 1000px;
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-page .mc-modal-title {
+  width: 950px;
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-lg .mc-modal-content {
+  width: 700px;
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-lg .mc-modal-title {
+  width: 650px;
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-sm .mc-modal-content {
+  width: 300px;
+}
+.mc-modal-cotar .mc-modal-dialog.mc-modal-sm .mc-modal-title {
+  width: 250px;
+}
+.mc-modal-cotar .mc-modal-dialog .mc-modal-content {
+  position: relative;
+  width: 530px;
+  z-index: 9;
+}
+.mc-modal-cotar .mc-modal-header {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #dddddd;
+  background: #f6f6f5;
+  text-align: left;
+}
+.mc-modal-cotar .mc-modal-header .mc-modal-title {
+  width: 480px;
+  padding-left: 15px;
+}
+.mc-modal-cotar .mc-modal-header .mc-close-btn {
+  width: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+.mc-modal-cotar .mc-modal-header .mc-close-btn span {
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+  -webkit-transition: background 0.3s ease-in-out 0s;
+  -moz-transition: background 0.3s ease-in-out 0s;
+  -o-transition: background 0.3s ease-in-out 0s;
+  transition: background 0.3s ease-in-out 0s;
+  cursor: pointer;
+}
+.mc-modal-cotar .mc-modal-header .mc-close-btn span:hover {
+  background: #e63c3c;
+  color: #ffffff;
+}
+.mc-modal-cotar .mc-modal-body {
+  position: relative;
+  text-align: left;
+}
+.mc-modal-cotar .mc-modal-body .tip-txt-cotar {
+  height: 90px;
+  text-align: center;
+}
+.mc-modal-cotar .mc-modal-body .tip-txt-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-modal-cotar .mc-modal-body .tip-txt-cotar:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+}
+.mc-modal-cotar .mc-modal-body .tip-txt-cotar .vm-cotar {
+  max-width: 260px;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  text-align: justify;
+  text-align: left;
+}
+.mc-modal-cotar .mc-modal-footer {
+  padding: 12px 2px;
+  border-top: 1px solid #dddddd;
+  text-align: right;
+}
+.mc-modal-cotar .mc-modal-footer > .mc-button-cotar {
+  margin: 0 10px;
+}
+.mc-modal-cotar .mc-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("img/pixel_40.png") repeat top left;
+  background: rgba(0, 0, 0, 0.4);
+}
+/*# sourceMappingURL=mc.dialog.css.map */

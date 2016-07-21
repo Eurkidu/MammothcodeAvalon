@@ -1,0 +1,24 @@
+﻿<div class="mc-tree-cotar">
+    <script type="avalon" id="treeitem" style="display: none">
+        <i ms-click="foldClick($event,el,'icon')" class="mc-ic parent"
+           ms-class-1="expand:  el.expand"
+           ms-class-2="unexpand:!el.expand"
+           ms-class-3="leaf: !el.children || !el.children.size()"
+           ms-class-4="wait: el.wait"
+           ms-class-5="waiting: el.wait===0">
+        </i>
+        <div class="form-group mc-checkbox-cotar"   >
+            <i ms-if="hasCheckbox" ms-click="clickCheckbox($event,el)" class="mc-checkbox" ms-class-1="mc-active: el.checked" ms-class-2="mc-semi-checked: el.semiChecked"></i>
+            <span ms-click="foldClick($event,el,'text')" class="mc-checkbox-label text-field" ms-class="mc-text-active: el.active">{{el[textName]}}</span>
+        </div>
+        <ul   ms-visible="el.expand">
+            <li  ms-if="!isLeaf(el)" ms-repeat="el.children" ms-include="'treeitem'">
+            </li>
+        </ul>
+    </script>
+    <ul class="tree-view">
+        <li ms-repeat="data" ms-include="'treeitem'" >
+        </li>
+    </ul>
+</div>
+ 

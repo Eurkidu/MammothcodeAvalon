@@ -1,0 +1,18 @@
+﻿<div class="mc-sidepop-cotar" ms-class-1="mc-sidepop-lg: size=='large'" ms-class-2="mc-sidepop-sm: size=='small'"
+     ms-class-3="mc-sidepop-page: size=='page'" ms-class-4="mc-sidepop-show: show"
+     ms-class-5="mc-hide-animate: hideAnimate" ms-class-6="mc-show-animate: showAnimate" ms-class-7="mc-loading: isInit"
+     ms-click="clickSidePop($event)">
+    <div class="mc-sidepop-wrap">
+        <div class="mc-sidepop-header" ms-if="headerHeight" ms-css-height="headerHeight">
+            {{cheader|html}}
+        </div>
+        <div class="mc-scroll-wrap" ms-css-top="headerHeight" ms-css-bottom="footerHeight">
+            <div class="mc-sidepop-body" ms-css-padding="padding">
+                {{cbody|html}}
+            </div>
+        </div>
+        <div class="mc-sidepop-footer" ms-if="footerHeight" ms-css-height="footerHeight">
+            {{cfooter|html}}
+        </div>
+    </div>
+</div>

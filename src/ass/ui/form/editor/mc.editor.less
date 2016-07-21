@@ -1,0 +1,40 @@
+﻿/*
+    Name: editor (文本编辑器)
+    Version: 0.1
+    Create Time: 2016年4月2日15:33:34
+    Update Time: 2016年4月2日15:33:37
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_editor_color_config;
+
+.mc-editor-cotar {
+    [slot] {
+        visibility: visible;
+    }
+    .edui-body-container{
+        width: 100% !important;
+    }
+    .mc-editor-wrap{
+        overflow: hidden;
+        .edui-body-container{
+            height: 500px;
+        }
+    }
+    //fix fullscreen bug
+    .mc-editor-fullscreen{
+        .edui-body-container{
+            height: auto;
+        }
+    }
+    /*.edui-container{
+        max-width: 1000px;
+    }*/
+    .mc-text-field-tip{
+        line-height: 20px;
+        font-size: 14px;
+        color: @c_nc_6;
+    }
+}

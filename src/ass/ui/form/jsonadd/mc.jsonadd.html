@@ -1,0 +1,32 @@
+﻿<div class="mc-form-group mc-jsonadd-cotar hf" ms-class-1="mc-error: !isValid" ms-class-2="mc-loading: isInit" ms-visible="!isHide">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+
+
+    <!--添加区 -->
+    <div class="add-area" ms-if="!readonly">
+        <mc:text width="100" on-init="getKeyIptVM" ms-attr-placeholder="placeholder"></mc:text> 
+        &nbsp;&nbsp;
+        <mc:text width="100" on-init="getValIptVM" ms-attr-placeholder="placeholder"></mc:text>
+        <mc:button on-click="addItem" label="增加" type="success"></mc:button>
+    </div>
+
+
+    <!--显示区 -->
+    {{JSON.stringify(value)}}
+    <div class="show-area" ms-css-margin-left="labelSize">
+        <table>
+            <tr ms-repeat-item="value">
+                <td class="key-item">{{item[keyName]}}</td>
+                <td class="val-item">{{item[valName]}}</td>
+                <td class=""><mc:button  label="删除" on-click="$remove"></mc:button></td>
+            </tr>
+           
+        </table>
+    </div>
+
+
+    <!--X区 -->
+    <div class="mc-text-show ftp" ms-if="readonly" ms-attr-name="formName" ms-css-width="width"></div>
+    <span class="mc-text-valid-info ftp" ms-if="!isValid && validInfo != ''">{{validInfo}}</span>
+    <div class="mc-text-field-tip" ms-css-padding-left="labelSize" ms-if="tip">{{tip}}</div>
+</div>

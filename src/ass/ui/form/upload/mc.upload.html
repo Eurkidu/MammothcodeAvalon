@@ -1,0 +1,40 @@
+﻿<div class="mc-form-group mc-upload-cotar hf" ms-class-1="mc-upload-lg: size=='large'"
+     ms-class-2="mc-upload-sm: size=='small'" ms-class-3="mc-loading: isInit">
+    <label class="control-label mc-tip fp" ms-if="label != ''" ms-css-width="labelSize">{{label}}</label>
+    <div class="fp">
+        <!-- tip -->
+        <div ms-visible="tip" class="item mc-text-field-tip" ms-css-width="width">
+            {{tip}}
+        </div>
+        <div class="vm-cotar" ms-visible="allowOuter && (!readonly)">
+            <mc:switch label-size="76" label="是否外链" on-init="getSwitchVM" on-changed="outerChanged"></mc:switch>
+        </div>
+        <div class="vm-cotar" ms-visible="!isOuter">
+            <form ms-attr-id="uploadFormId" ms-if="!readonly">
+                <label class="mc-button-label">
+                    <input class="ms-upload-ipt" ms-change="fileChange($event,this)" type="file" name="uploadImg">
+                    <span class="mc-upload-btn" ms-visible="!s_upload">{{ allowFileType==='img'  ? '选择图片'  :   allowFileType==='video'? '选择视频' : '请选择'}}</span>
+                    <span class="mc-upload-btn" ms-visible="s_upload">上传中..</span>
+                </label>
+            </form>
+        </div>
+        <div class="vm-cotar" ms-visible="isOuter && (!readonly) ">
+            <mc:text on-init="getOuterTextVM"> </mc:text>
+        </div> 
+        <!-- 图片直接显示,其他直接url text, -->
+        <div ms-if="fileType==='img' && !mult" class="mc-img-show-cotar" ms-css-width="width">
+            <img ms-attr-src="fileSrc" ms-if="fileSrc != ''">
+        </div>
+        <!-- 多图上传 -->
+        <div ms-if="mult" class="mc-img-show-cotar mc-mult-img-cotar" ms-css-width="width">
+            <div class="mc-img-item" ms-repeat="fileSrcList">
+                <div class="mc-close-btn" ms-click="doDel($event,$index)" ms-if="!readonly">&times;</div>
+                <img ms-attr-src="el">
+            </div>
+        </div>
+        <div class="vm-cotar" ms-visible="fileSrc != '' && fileType!=='img' && (!isOuter) && (!readonly)">
+            已选择:{{fileSrc}}
+        </div>
+
+    </div>
+</div>

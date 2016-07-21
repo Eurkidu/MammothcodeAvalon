@@ -1,0 +1,86 @@
+﻿/*
+    Name: datapager (分页)
+    Version: 0.1
+    Create Time: 2015年12月29日22:35:54
+    Update Time: 2015年12月29日22:35:57
+    Author: Zero
+*/
+@import "../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_droplist_color_config;
+
+.mc-datapager-cotar {
+	position: relative;
+    font-size: 14px;
+    [slot]{
+        visibility: visible;
+    }
+    >.item{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .bar-group{
+        margin: 0 10px;
+    }
+    .bar-item{
+        &.bm{
+            border-radius: 0;
+            border-right: none;
+            .mc-ipt{
+                border-radius: 0;
+                border-right: none;
+            }
+        }
+        &.bl{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: none;
+            .mc-ipt{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-right: none;
+            }
+        }
+        &.br{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            .mc-ipt{
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+    //切换按钮
+    .mc-droplist-btn{
+        line-height: 22px;
+        >span{
+            display: inline-block;
+            line-height: 1.6em;
+            padding: 4px 5px;
+            color: @c_nc_6;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    //展开列表
+    .mc-droplist-body{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        border: 1px solid @c_nc_3;
+        background: @c_nc_1;
+        #McBaseLib > .boxShadow(0.1,0 0 4px);
+        .mc-droplist-item{
+
+        }
+    }
+}
+//禁用状态
+.mc-button-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+}

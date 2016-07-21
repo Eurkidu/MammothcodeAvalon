@@ -1,0 +1,102 @@
+﻿/*
+    Name: selectbox (下拉选择框)
+    Version: 0.1
+    Create Time: 2016年1月11日09:16:34
+    Update Time: 2016年4月10日13:32:49
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_selectbox_color_config;
+
+.mc-selectbox-cotar {
+    text-align: left;
+    [slot]{
+        visibility: visible;
+    }
+    .mc-selectbox-wrap{
+        position: relative;
+        line-height: 0;
+	    cursor: pointer;
+        &.mc-active{
+            &:after{
+                .mc_bgNp("ic_arrow_up.png");
+            }
+            .mc-txt{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .mc-select-list{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &:after{
+            .mc_peAbsolute(15px,9px);
+            top: 50%;
+            right: 8px;
+            margin-top: -5px;
+            .mc_bgNp("ic_arrow_down.png");
+        }
+    }
+    .mc-txt{
+        display: inline-block;
+        width: 100%;
+	    line-height: 25px;
+        line-height: 23px\9;
+        //height: 27px;
+        padding: 0 10px;
+        padding-right: 30px;
+        border: 1px solid @c_default_border;
+        border-radius: 3px;
+        background: @c_default_bg;
+        font-size: 14px;
+    }
+    .mc-select-list{
+        position: absolute;
+        width: 100%;
+        background: @c_default_bg;
+        border: 1px solid @c_default_border;
+        #McBaseLib > .transition(opacity);
+        z-index: 9;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        &.mc-arrow-down{
+            margin-top: -1px;
+            border-top: none;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        &.mc-arrow-up{
+            bottom: 27px;
+            margin-bottom: -1px;
+            border-bottom: none;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            bottom: 27px;
+        }
+        >li{
+            line-height: 25px;
+            padding: 0 10px;
+            font-size: 14px;
+            #McBaseLib > .transition(background);
+            &:hover{
+                color: @c_select_item_hover_txt_color;
+                background: @c_select_item_hover_bg;
+            }
+            cursor: pointer;
+        }
+    }
+    //只读状态
+    .mc-readonly-txt{
+        font-size: 14px;
+    }
+}
+//禁用状态
+.mc-selectbox-disabled {
+    color: @c_nc_8;
+	cursor: default;
+	cursor: not-allowed;
+}

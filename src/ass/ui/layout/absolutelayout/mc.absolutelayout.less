@@ -1,0 +1,20 @@
+﻿/*
+    Name: absolutelayout (绝对布局)
+    Version: 0.1
+    Create Time: 2016年1月12日21:51:38
+    Update Time: 2016年1月12日21:51:41
+    Author: Zero
+*/
+@import "../../base/css/McColorConfig.less";
+
+//导入组件颜色配置表
+.mc_absolutelayout_color_config;
+
+.mc-absolutelayout-cotar {
+	position: absolute;
+    //min-width: 1050px;
+    overflow: auto;
+    [slot]{
+        visibility: visible;
+    }
+}

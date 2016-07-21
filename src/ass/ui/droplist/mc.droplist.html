@@ -1,0 +1,7 @@
+﻿<div class="mc-droplist-cotar" ms-class-1="mc-active: active" ms-class-2="{{mcstyle}}" ms-css-width="width">
+    <div class="mc-droplist-btn" ms-click="clickDrop($event)"><span>{{label}}</span></div>
+    <div class="mc-droplist-body">
+        <div class="mc-droplist-item" ms-repeat="data">{{el.label}}</div>
+        <i ms-class-1="green: el.state === 1" ms-class-2="yellow: el.state === 2" ms-class-3="red: el.state === 3"></i>
+    </div>
+</div>
