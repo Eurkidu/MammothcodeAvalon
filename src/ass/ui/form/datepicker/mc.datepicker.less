@@ -12,9 +12,11 @@
 
 .mc-datepicker-cotar{
     position: relative;
-    .mc-datepicker-wrap{
-       // height: 27px;
-        &.mc-readonly{
+    &.mc-readonly{
+        .control-label {
+            margin-top: 0;
+        }
+        .mc-datepicker-wrap{
             height: 20px;
             .mc-datepicker-content{
                 line-height: 20px;
@@ -23,6 +25,12 @@
                 cursor: default;
             }
         }
+    }
+    .control-label {
+        margin-top: 5px;
+    }
+    .mc-datepicker-wrap{
+       // height: 27px;
         .mc-datepicker-content{
             line-height: 25px;
             padding: 0 5px;
@@ -36,9 +44,6 @@
         width: 0;
         height: 0;
         overflow: hidden;
-    }
-    .control-label {
-        margin-top: 5px;
     }
     .mc-text-field-tip{
         line-height: 30px;

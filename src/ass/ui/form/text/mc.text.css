@@ -115,6 +115,9 @@
 .mc-text-cotar [slot] {
   visibility: visible;
 }
+.mc-text-cotar.mc-ishide {
+  display: none !important;
+}
 .mc-text-cotar .mc-ipt {
   height: 27px;
   padding: 0 5px;

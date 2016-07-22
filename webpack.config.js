@@ -78,9 +78,9 @@ avalon: 'avalon' //或者jquery:'jQuery'
     extension: ['', '.js', '.css'],
     //别名,重定向,省了写路径,挺好
     alias: {     
-	  mcBase: path.join(__dirname, "./src/mc.base.js"), //base
-	  underscore: path.join(__dirname, './src/underscore.js'),    
-		mmRequest: path.join(__dirname, "./src/ass/ui/base/js/mmRequest.js"),
+        underscore: path.join(__dirname, './src/underscore.js'),    
+    	  mcBase: path.join(__dirname, "./src/ass/ui/base/js/mc.base.js"), //base
+    		mmRequest: path.join(__dirname, "./src/ass/ui/base/js/mmRequest.js"),
         mmPromise: path.join(__dirname, "./src/ass/ui/base/js/mmPromise.js"),
         mmHistory: path.join(__dirname, "./src/ass/ui/base/js/mmRouter/mmHistory.js"),
         mmRouter: path.join(__dirname, "./src/ass/ui/base/js/mmRouter/mmRouter.js"),

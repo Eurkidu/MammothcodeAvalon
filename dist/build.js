@@ -63,14 +63,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) { 
 	  
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(2), __webpack_require__(16), __webpack_require__(17), __webpack_require__(18), __webpack_require__(19),
-	    __webpack_require__(20), __webpack_require__(21), __webpack_require__(24), __webpack_require__(27), __webpack_require__(30), __webpack_require__(33),
-	    __webpack_require__(39), __webpack_require__(42), __webpack_require__(13), __webpack_require__(45), __webpack_require__(48), __webpack_require__(51), __webpack_require__(36),
-	    __webpack_require__(54), __webpack_require__(57), __webpack_require__(7), __webpack_require__(3), __webpack_require__(10), __webpack_require__(60),
-	    __webpack_require__(63), __webpack_require__(66), __webpack_require__(69), __webpack_require__(72), __webpack_require__(75), __webpack_require__(78), __webpack_require__(81),
-	    __webpack_require__(84), __webpack_require__(87), __webpack_require__(90), __webpack_require__(93), __webpack_require__(96),
-	    __webpack_require__(99), __webpack_require__(102),
-	    __webpack_require__(105), __webpack_require__(108), __webpack_require__(111), __webpack_require__(114), __webpack_require__(117)], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(2), __webpack_require__(16), __webpack_require__(18), __webpack_require__(19), __webpack_require__(20),
+	    __webpack_require__(21), __webpack_require__(22), __webpack_require__(25), __webpack_require__(28), __webpack_require__(31), __webpack_require__(34),
+	    __webpack_require__(40), __webpack_require__(43), __webpack_require__(13), __webpack_require__(46), __webpack_require__(49), __webpack_require__(52), __webpack_require__(37),
+	    __webpack_require__(55), __webpack_require__(58), __webpack_require__(7), __webpack_require__(3), __webpack_require__(10), __webpack_require__(61),
+	    __webpack_require__(64), __webpack_require__(67), __webpack_require__(70), __webpack_require__(73), __webpack_require__(76), __webpack_require__(79), __webpack_require__(82),
+	    __webpack_require__(85), __webpack_require__(88), __webpack_require__(91), __webpack_require__(94), __webpack_require__(97),
+	    __webpack_require__(100), __webpack_require__(103),
+	    __webpack_require__(106), __webpack_require__(109), __webpack_require__(112), __webpack_require__(115), __webpack_require__(118)], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 	avalon.log(_);
 	 avalon.log('组件库加载完毕');  
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -2948,8 +2948,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 16 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(17);
 	
 	//#region 图标
 	McIcon = function () {
@@ -3508,6 +3509,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 17 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//=========================================
@@ -3515,7 +3522,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//  版本: 1.0.0
 	//  最近更新: 2015/4/30
 	//==========================================
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(18)], __WEBPACK_AMD_DEFINE_RESULT__ = function(avalon) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(19)], __WEBPACK_AMD_DEFINE_RESULT__ = function(avalon) {
 	    var global = window
 	    var DOC = global.document
 	    var encode = encodeURIComponent
@@ -4563,7 +4570,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon) {
@@ -4790,7 +4797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4)], __WEBPACK_AMD_DEFINE_RESULT__ = function(avalon) {
@@ -5098,10 +5105,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 主要参数有 basepath  html5Mode  hashPrefix  interval domain fireAnchor
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(19)], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(20)], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 	
 	    function Router() {
 	        var table = {}
@@ -5456,13 +5463,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 	 * verson 0.9
 	 */
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(18), __webpack_require__(20)], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(19), __webpack_require__(21)], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 	//重写mmRouter中的route方法     
 	    avalon.router.route = function (method, path, query, options) {
 	        path = path.trim()
@@ -6437,8 +6444,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        url = url instanceof Array ? url : [url]
 	        if (window.requirejs) {
 	            requirejs(url, wrapper)
-	        } else if ("function" === "function" && __webpack_require__(22).ensure) {
-	            __webpack_require__(22).ensure(url, wrapper)
+	        } else if ("function" === "function" && __webpack_require__(23).ensure) {
+	            __webpack_require__(23).ensure(url, wrapper)
 	        } else if (avalon.require) {
 	            avalon.require(url, wrapper)
 	        } else { // 抛个错误，方便调试
@@ -6586,18 +6593,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./mmHistory": 19,
-		"./mmHistory.js": 19,
-		"./mmPromise": 23,
-		"./mmPromise.js": 23,
-		"./mmRouter": 20,
-		"./mmRouter.js": 20,
-		"./mmState": 21,
-		"./mmState.js": 21
+		"./mmHistory": 20,
+		"./mmHistory.js": 20,
+		"./mmPromise": 24,
+		"./mmPromise.js": 24,
+		"./mmRouter": 21,
+		"./mmRouter.js": 21,
+		"./mmState": 22,
+		"./mmState.js": 22
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -6610,11 +6617,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 22;
+	webpackContext.id = 23;
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon) {
@@ -6841,10 +6848,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(25), __webpack_require__(26)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(26), __webpack_require__(27)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:accordion", {
 	        //外部属性
@@ -6958,19 +6965,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-accordion-cotar\">\r\n    <div class=\"panel-wrap\" ms-repeat=\"panels\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\">\r\n        <div class=\"panel-header\" ms-click=\"clickPanel($event, $index)\">\r\n            <!--<h4 class=\"panel-title\">\r\n                <a href=\"javascript:void(0)\">{{el.title}}</a>\r\n            </h4>-->\r\n            <a href=\"javascript:void(0)\">{{el.title}}</a>\r\n        </div>\r\n        <div class=\"panel-body\" ms-css-padding=\"padding\">\r\n            {{renderContent($index)|html}}\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n"
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {toSideBarData = function (data) {
@@ -6988,7 +6995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return result;
 	};
 	
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(28), __webpack_require__(29)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(29), __webpack_require__(30)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:sidebar", {
 	        //外部属性
@@ -7128,22 +7135,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-sidebar-cotar\" ms-class=\"mc-loading: isInit\">\r\n    <div class=\"mc-accordion-cotar\" ms-repeat=\"sidebarList\">\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length>0\">\r\n            <div class=\"panel-header\" ms-click=\"clickPanel($event, $index)\">\r\n                <a href=\"javascript:void(0)\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\" ms-css-padding=\"padding\">\r\n                <div class=\"mc-accordion-cotar\" ms-repeat-el=\"el.children\">\r\n                    <div class=\"link-bar hf\" ms-class-1=\"select:el.select\">\r\n                        <a class=\"fp\" ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n                        <div class=\"fp\" ms-if=\"el.$btn_opt\">\r\n                            <mc:button ms-attr-config=\"el.$btn_opt\"></mc:button>\r\n                            <!--<mc:droplist config=\"$droplist_opt\"></mc:droplist>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"panel-wrap\" ms-class=\"last:$last\" ms-class-1=\"active:$index==active\" ms-if=\"el.children.length==0\">\r\n            <div class=\"panel-header\" ms-class-1=\"select:el.select\">\r\n                <a ms-attr-href=\"el.href ? el.href : 'javascript:void(0)'\">{{el.text}}</a>\r\n            </div>\r\n            <div class=\"panel-body\"></div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(31), __webpack_require__(32)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(32), __webpack_require__(33)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:sidepop", {
 	        //外部参数
@@ -7286,22 +7293,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-sidepop-cotar\" ms-class-1=\"mc-sidepop-lg: size=='large'\" ms-class-2=\"mc-sidepop-sm: size=='small'\"\r\n     ms-class-3=\"mc-sidepop-page: size=='page'\" ms-class-4=\"mc-sidepop-show: show\"\r\n     ms-class-5=\"mc-hide-animate: hideAnimate\" ms-class-6=\"mc-show-animate: showAnimate\" ms-class-7=\"mc-loading: isInit\"\r\n     ms-click=\"clickSidePop($event)\">\r\n    <div class=\"mc-sidepop-wrap\">\r\n        <div class=\"mc-sidepop-header\" ms-if=\"headerHeight\" ms-css-height=\"headerHeight\">\r\n            {{cheader|html}}\r\n        </div>\r\n        <div class=\"mc-scroll-wrap\" ms-css-top=\"headerHeight\" ms-css-bottom=\"footerHeight\">\r\n            <div class=\"mc-sidepop-body\" ms-css-padding=\"padding\">\r\n                {{cbody|html}}\r\n            </div>\r\n        </div>\r\n        <div class=\"mc-sidepop-footer\" ms-if=\"footerHeight\" ms-css-height=\"footerHeight\">\r\n            {{cfooter|html}}\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(34), __webpack_require__(35), __webpack_require__(36), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(35), __webpack_require__(36), __webpack_require__(37), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:datagrid", {
 	        //外部参数
@@ -8116,22 +8123,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-datagrid-cotar\" ms-class-1=\"{{name}}\" ms-class-2=\"mc-hide:isInit\">\r\n    <div class=\"mc-datagrid-scroll-cotar\">\r\n        {{renderHeader()|html}}\r\n        <table class=\"data-table\">\r\n            <tr>\r\n                <th ms-repeat=\"tableConfig\" ms-class=\"col-{{$index}}\" ms-class-1=\"active:sortActive\" ms-click=\"sort($event, $index)\">\r\n                    <span class=\"vm-cotar\" ms-if=\"dataHeadType($index)==='data'\">{{el.headTxt}}</span>\r\n                    <!-- 复选框 -->\r\n                    <div class=\"vm-cotar checkbox-wrap\" ms-if=\"dataHeadType($index)===1\">\r\n                        <mc:checkbox on-changed=\"selectAll\" on-init=\"getCheckBoxAllVm\" ms-attr-config=\"checkbox_opt{{$outer.$index}}\"></mc:checkbox>\r\n                    </div>\r\n                </th>\r\n            </tr>\r\n        </table>\r\n        <div class=\"mc-tbody\">\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 0\">\r\n                <div class=\"h1\">数据加载中</div>\r\n            </div>\r\n            <table class=\"data-table\" ms-if=\"dataGridState === 1\">\r\n                <tr ms-repeat=\"data\" ms-class=\"active:selected[$index]\" ms-click=\"clickRow($event, $index)\">\r\n                    <!-- 数据内容 -->\r\n                    <td ms-repeat-el=\"tableConfig\" ms-class=\"col-{{$index}}\">\r\n                        <!-- 正常数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===false\">{{renderContent($outer.$index,$index)}}</span>\r\n                        <!-- html数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===8\">{{renderContent($outer.$index,$index) | html }}</span>\r\n                        <!-- 时间数据 -->\r\n                        <span class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===4\">{{renderContent($outer.$index,$index)| date(\"yyyy-MM-dd HH:mm:ss\")}}</span>\r\n                        <!-- 带连接数据 -->\r\n                        <a class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===true\" ms-attr-href=\"{{renderHref($outer.$index,$index)}}\">{{renderContent($outer.$index,$index)}}</a>\r\n                        <!-- 复选框 -->\r\n                        <div class=\"vm-cotar checkbox-wrap\" ms-if=\"datagridType($outer.$index,$index)===1\">\r\n                            <mc:checkbox on-changed=\"selectRow\" on-init=\"getChildCheckBoxVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:checkbox>\r\n                        </div>\r\n                        <!-- switch -->\r\n                        <div class=\"vm-cotar switch-wrap\" ms-if=\"datagridType($outer.$index,$index)===5\">\r\n                            <mc:switch on-click=\"clickSwitch\" on-init=\"setSwitch\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:switch>\r\n                        </div>\r\n                        <!-- select box -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index)===6\">\r\n                            <mc:selectbox config=\"$selectbox_opt\" on-selected=\"changeSelect\" on-init=\"setSelect\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\"></mc:selectbox>\r\n                        </div>\r\n                        <!-- icon -->\r\n                        <div class=\"vm-cotar\" ms-if=\"datagridType($outer.$index,$index) === 7\">\r\n                            <span class=\"vm-cotar iconfont\"> {{renderContent($outer.$index,$index)|html}} </span>\r\n                        </div>\r\n                        <!-- 按钮 -->\r\n                        <div class=\"vm-cotar button-wrap\" ms-if=\"datagridType($outer.$index,$index)===2 && ( el.filter ?  el.filter($outer.el.$model) : true )\">\r\n                            <mc:button on-click=\"clickButton\" on-init=\"getChildButtonVm\" ms-attr-trindex=\"$outer.$index\" ms-attr-tdindex=\"$index\" ms-attr-label=\"{{renderBtn($outer.$index,$index)}}\"></mc:button>\r\n                        </div>\r\n                        <!-- 图片 -->\r\n                        <div class=\"vm-cotar img-wrap\" ms-if=\"datagridType($outer.$index,$index)===3\"><div class=\"mc-img-cotar\"><img ms-attr-src=\"renderContent($outer.$index,$index)\"></div></div>\r\n                    </td>\r\n                </tr>\r\n            </table>\r\n            <div class=\"mc-no-data\" ms-if=\"dataGridState === 2\">\r\n                <img src=\"/Content/Include/img/img_no_data.jpg\" />\r\n                <!--<div class=\"h1\">暂无数据</div>-->\r\n            </div>\r\n        </div>\r\n        {{renderStyle()|html}}\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(37), __webpack_require__(38)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(38), __webpack_require__(39)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:checkbox", {
 	        //外部参数
@@ -8242,22 +8249,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"form-group mc-checkbox-cotar\" ms-class-1=\"mc-checkbox-disabled: disabled\"\r\n     ms-class-2=\"mc-loading: isInit\" ms-click=\"clickCheckbox($event)\">\r\n    <i class=\"mc-checkbox\" ms-class-1=\"mc-active: checked&&!disabled\"></i>\r\n    <span class=\"mc-checkbox-label\">{{label}}</span>\r\n</div>\r\n"
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(40), __webpack_require__(41)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(41), __webpack_require__(42)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:popmenu", {
 	        //外部参数
@@ -8396,22 +8403,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-popmenu-cotar fade\" ms-click=\"hideDialog($event)\" ms-class-1=\"mc-dialog-show:show\"\r\n        ms-class-2=\"mc-dialog-hide:!show\">\r\n    <div class=\"mc-popmenu-content\" ms-click=\"clickDialog($event)\" ms-class-1=\"mc-popmenu-lg: size=='large'\"\r\n         ms-class-2=\"mc-popmenu-sm: size=='small'\" ms-class-3=\"mc-popmenu-st: size=='tiny'\" ms-css-top=\"position.top\" ms-css-left=\"position.left\">\r\n        <!-- popmenu body -->\r\n        <div class=\"mc-popmenu-body\" ms-css-padding=\"padding\">{{content|html}}</div>\r\n    </div>\r\n    <!-- popmenu bg -->\r\n    <div class=\"mc-popmenu-bg\"></div>\r\n</div>"
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(43), __webpack_require__(44)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(44), __webpack_require__(45)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:pop", {
 	        //#region 外部参数
@@ -8552,22 +8559,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-pop-cotar\"></div>"
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(17), __webpack_require__(46), __webpack_require__(47)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, req, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(18), __webpack_require__(47), __webpack_require__(48)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, req, template) {
 	    var _interface = function () { };
 	    /**
 	     * 判断子组件内是否有某个属性
@@ -9020,22 +9027,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-container mc-animate\" ms-class-1=\"mc-loading: isInit\" ms-class-2=\"mc-animate-content-show: !isInit\" \n        ms-css-padding=\"cpadding\">\n\t<div class=\"mc-form-title\" ms-if=\"title!=''\">{{title}}</div>\r\n    <div ms-class-1=\"padding_left2: border===true\" ms-class-2=\"padding_right2: border===true\" ms-class-3=\"padding_bottom: border===true\">\r\n        {{content|html}}\r\n    </div>\n\t<!--<div class=\"form-group no_margin padding_top padding_bottom\" ms-class-1=\"padding_left2: border===true\" ms-class-2=\"padding_right2: border===true\" ms-class-3=\"td_form_background: border===true\" ms-class-4=\"td_form_border_top:border===true\" ms-if=\"buttons===true\">\n\t\t<a ms-if=\"btnPos=='right'\" class=\"btn btn-default btn-primary waves-effect waves-light no_margin\" ms-class-1=\"btn-sm: btnSize=='small'\" style=\"visibility:hidden;\">&nbsp;</a>\n\t\t<a class=\"btn btn-default btn-primary waves-effect waves-light no_margin\" href=\"javascript:void(0)\" ms-class-1=\"btn-sm: btnSize=='small'\" ms-class-2=\"pull-right: btnPos=='right'\" ms-class-3=\"margin_left: btnPos=='right'\" ms-click=\"doSubmit($event)\">&nbsp;提&nbsp;&nbsp;交&nbsp;</a>\n\t\t<a class=\"btn btn-default waves-effect waves-light no_margin\" href=\"javascript:void(0)\" ms-class-1=\"btn-sm: btnSize=='small'\" ms-class-2=\"pull-right: btnPos=='right'\" ms-class-3=\"margin_left: btnPos=='left'\" ms-click=\"doReset($event)\">&nbsp;重&nbsp;&nbsp;置&nbsp;</a>\n\t</div>-->\n\t<!--<div class=\"loading-mask\" ms-visible=\"isLoading\">\n\t\t<div class=\"loading-container\">\n\t\t\t<div class=\"loading-speeding-wheel\"></div><strong>数据加载中,请稍后…</strong>\n\t\t</div>\n\t</div>-->\n    <div class=\"btn-wrap hf\" ms-if=\"hasButtons\" ms-css-padding-left=\"labelSize\">\r\n        <mc:button on-click=\"doSubmit\" ms-attr-label=\"{{leftLabel}}\" type=\"success\" size=\"wide\"></mc:button>\r\n        <mc:button on-click=\"doReset\" ms-attr-label=\"{{rightLabel}}\" size=\"wide\"></mc:button>\r\n    </div>\r</div>\n"
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(49), __webpack_require__(50)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(50), __webpack_require__(51)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:searchbox", {
 	        //#region 外部参数
@@ -9208,22 +9215,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-searchbox-cotar hf\" ms-class=\"mc-loading: isInit\">\r\n    <mc:selectbox class=\"fp\" config=\"$search_type_opt\" label=\"搜索\" label-size=\"40\" on-init=\"getSearchTypeVM\" on-selected=\"changeSearchType\"></mc:selectbox>\r\n    <mc:text class=\"fp\" width=\"150\" on-init=\"getSearchIptVM\" ms-attr-placeholder=\"placeholder\"></mc:text>\r\n    <mc:button class=\"fp no-radius no-lr-border\" label=\"搜索\" on-click=\"doSearch\"></mc:button>\r\n    <mc:button class=\"fp no-left-radius\" label=\"全部数据\" on-click=\"doGetAll\"></mc:button>\r\n</div>"
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(52), __webpack_require__(53)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(53), __webpack_require__(54)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    function setContentHeight(vm, elem) {
 	        var vmHeight = $(elem).css("height").replace("px", "") >>> 0; //组件高度
 	        $(elem).find(".mc-tabs-body").css("height", vmHeight - vm.otherOffset - vm.scrollContentOffset);
@@ -9335,19 +9342,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-tabs-cotar\" ms-class-1=\"mc_li{{bindSize}}\" ms-class-2=\"mc-loading: isInit\">\r\n    <div class=\"mc-tabs-switch-wrap hf\">\r\n        <div class=\"mc-switch-item fp\" ms-repeat=\"tabConfig\" ms-class=\"active:$index === activeIndex\" ms-click=\"clickTab($event,$index)\">\r\n            <span>{{el.label}}</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"mc-tabs-body\" ms-repeat=\"tabConfig\" ms-class=\"active:$index === activeIndex\" ms-visible=\"$index === activeIndex\">\r\n        {{renderContent($index)|html}}\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {toCheckBoxData = function (data) {
@@ -9357,7 +9364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    })
 	    return data;
 	};
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(55), __webpack_require__(56)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(56), __webpack_require__(57)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:checkboxgourp", {
 	        //表单相关
@@ -9580,19 +9587,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-checkboxgroup-cotar mc-form-group\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"check-list\">\r\n        <div class=\"form-group form-control mc-checkbox-cotar\"\r\n             ms-repeat-checkbox=\"data\"\r\n             ms-class=\"disabled: disabled||readonly\"\r\n             ms-click=\"clickCheckbox($event,checkbox,checkbox.value)\">\r\n            <i class=\"mc-checkbox\" ms-class-1=\"mc-active: checkbox.checked\"\r\n               ms-class-2=\"single-mode: !muilt\"\r\n               ms-class-3=\"disabled: disabled||readonly\"></i>\r\n            <span class=\"mc-checkbox-label\">{{checkbox.text}}</span>\r\n        </div>\r\n    </div>\r\n    <span class=\"mc-text-valid-info ftp\" ms-if=\"!isValid && validInfo != ''\">{{validInfo}}</span>\r\n    <div class=\"mc-text-field-tip\" ms-css-padding-left=\"labelSize\" ms-if=\"tip\">{{tip}}</div>\r\n</div>"
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {
@@ -9615,7 +9622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return r;
 	};
 	//todo 搜索只有indexof,全拼音后台没给 这也没做
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(58), __webpack_require__(59), __webpack_require__(10), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(59), __webpack_require__(60), __webpack_require__(10), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:listdataadd", {
 	        //外部参数
@@ -9915,22 +9922,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-listdata-add-cotar\">\r\n    <div class=\"left-list group-list\">\r\n        <div class=\"all-num\">\r\n            待添加 {{allLen.left}}\r\n        </div>\r\n        <input type=\"text\" class=\"ipt\" placeholder=\"输入关键字\" ms-duplex-string=\"q.left\">\r\n        <div class=\"group-box\">\r\n            <div class=\"group-item\" ms-repeat=\"leftObj\">\r\n                <div class=\"gourp-title\">\r\n                    {{$key}} <div class=\"rfp\"> {{$val.length}}项 </div>\r\n                </div>\r\n                <div class=\"item\" ms-repeat-item=\"$val\"\r\n                     ms-class=\"active: item.selected\"\r\n                     ms-click=\"selectItem(item[idName])\">\r\n                    {{item[textName]}}\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!-- footer -->\r\n        <div class=\"gourp-footer\">\r\n            <div class=\"form-group mc-checkbox-cotar\"\r\n                 ms-click=\"selectAll('left')\">\r\n                <i class=\"mc-checkbox\" ms-class-1=\"mc-active: selectedAll.left\"></i>\r\n                <span class=\"mc-checkbox-label\">全选</span>\r\n            </div> <div class=\"rfp\">选中{{seletedLen.left}}项</div>\r\n        </div>\r\n    </div>\r\n    <!-- 操作按钮 -->\r\n    <div class=\"op-list \"> \r\n        <div class=\"vm-cotar\" >\r\n            <div class=\"btn add\" ms-click=\"addItem(false,'left')\" ms-class=\"disabled: seletedLen.left<1\">\r\n                ＞＞添加＞＞\r\n            </div>\r\n            <div class=\"btn add\" ms-click=\"addItem(true,'right')\" ms-class=\"disabled: seletedLen.right<1\">\r\n                ＜＜取消＜＜\r\n            </div>\r\n        </div> \r\n    </div>\r\n    <div class=\"right-list group-list\">\r\n        <div class=\"all-num\">\r\n            已添加 {{allLen.right}}\r\n        </div>\r\n        <input type=\"text\" class=\"ipt\" placeholder=\"输入关键字\" ms-duplex-string=\"q.right\">\r\n        <div class=\"group-box\">\r\n            <div class=\"group-item\" ms-repeat=\"rightObj\">\r\n                <div class=\"gourp-title\">\r\n                    {{$key}} <div class=\"rfp\"> {{$val.length}}项 </div>\r\n                </div>\r\n                <div class=\"item\" ms-repeat-item=\"$val\"\r\n                     ms-class=\"active: item.selected\"\r\n                     ms-click=\"selectItem(item[idName])\">\r\n                    {{item[textName]}}\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!-- footer -->\r\n        <div class=\"gourp-footer\">\r\n            <div class=\"form-group mc-checkbox-cotar\"\r\n                 ms-click=\"selectAll('right')\">\r\n                <i class=\"mc-checkbox\" ms-class-1=\"mc-active: selectedAll.right\"></i>\r\n                <span class=\"mc-checkbox-label\">全选</span>\r\n            </div> <div class=\"rfp\">选中{{seletedLen.right}}项</div> \r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"the-op-footer\">\r\n        <!--\r\n        本次操作:添加{{addedList.size()}}部门,取消{{deledList.length}} 部门\r\n        -->\r\n\r\n        <div class=\"hor-list  \"> \r\n            <mc:button class=\"item\" label=\"保存\" mcstyle=\"\" on-click=\"confirm\"></mc:button>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>"
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(61), __webpack_require__(62)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(62), __webpack_require__(63)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:droplist", {
 	        //外部参数
@@ -10009,22 +10016,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-droplist-cotar\" ms-class-1=\"mc-active: active\" ms-class-2=\"{{mcstyle}}\" ms-css-width=\"width\">\r\n    <div class=\"mc-droplist-btn\" ms-click=\"clickDrop($event)\"><span>{{label}}</span></div>\r\n    <div class=\"mc-droplist-body\">\r\n        <div class=\"mc-droplist-item\" ms-repeat=\"data\">{{el.label}}</div>\r\n        <i ms-class-1=\"green: el.state === 1\" ms-class-2=\"yellow: el.state === 2\" ms-class-3=\"red: el.state === 3\"></i>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(64), __webpack_require__(65)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(65), __webpack_require__(66)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:datapager", {
 	        //外部参数
@@ -10331,22 +10338,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-datapager-cotar hf\">\r\n    <div class=\"item\">显示行数</div>\r\n    <mc:selectbox class=\"bar-group item\" config=\"$page_size_opt\" width=\"60\" arrow-down=\"false\" on-init=\"getSelectPageVM\" on-selected=\"changePageSize\"></mc:selectbox>\r\n    <div class=\"item\"><em>{{dataStartIndex}}-{{dataEndIndex}}条/</em><span>共{{allCount}}条</span></div>\r\n    <div class=\"bar-group item hf\">\r\n        <mc:button class=\"bar-item bl\" label=\"首页\" on-click=\"firstPage\"></mc:button>\r\n        <mc:button class=\"bar-item bm\" label=\"上一页\" on-click=\"prevPage\"></mc:button>\r\n        <mc:button class=\"bar-item bm\" label=\"下一页\" on-click=\"nextPage\"></mc:button>\r\n        <mc:button class=\"bar-item br\" label=\"尾页\" on-click=\"lastPage\"></mc:button>\r\n    </div>\r\n    <div class=\"bar-group item hf\">\r\n        <mc:text class=\"fp bar-item bl\" label=\"前往\" label-size=\"40\" width=\"40\" on-init=\"getPageJumpVM\"></mc:text>\r\n        <mc:button class=\"fp bar-item br\" label=\"跳转\" on-click=\"jumpPage\"></mc:button>\r\n    </div>\r\n    <div class=\"item\"><span>共{{allPageCount}}页</span></div>\r\n</div>\r\n"
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(67), __webpack_require__(68)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(68), __webpack_require__(69)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:datepicker", {
 	        //#region 外部参数
@@ -10465,22 +10472,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mc-form-group mc-datepicker-cotar hf\" ms-class=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"ftp mc-datepicker-wrap\" ms-class=\"mc-readonly: readonly\">\r\n        <div class=\"mc-datepicker-content ftp\" ms-click=\"doDatepicker\" ms-attr-name=\"formName\" ms-css-width=\"width\">{{value}}</div>\r\n        <input ms-attr-id=\"$datepicker_ipt\" class=\"form-control mc-datepicker-ipt\" type=\"text\" ms-attr-placeholder=\"placeholder\"\r\n               ms-attr-name=\"formName\" ms-duplex=\"value\" /> \r\n        <div class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n    </div>\r\n\r\n</div>"
+	module.exports = "<div class=\"mc-form-group mc-datepicker-cotar hf\" ms-class-1=\"mc-loading: isInit\" ms-class-2=\"mc-readonly: readonly\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"ftp mc-datepicker-wrap\">\r\n        <div class=\"mc-datepicker-content ftp\" ms-click=\"doDatepicker\" ms-attr-name=\"formName\" ms-css-width=\"width\">{{value}}</div>\r\n        <input ms-attr-id=\"$datepicker_ipt\" class=\"form-control mc-datepicker-ipt\" type=\"text\" ms-attr-placeholder=\"placeholder\"\r\n               ms-attr-name=\"formName\" ms-duplex=\"value\" />\r\n        <div class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n    </div>\r\n\r\n</div>"
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(70), __webpack_require__(71)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(71), __webpack_require__(72)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:selectbox", {
 	        //外部参数
@@ -10655,22 +10662,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-selectbox-cotar hf\" ms-class-1=\"mc-selectbox-disabled: disabled\" ms-class-2=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-selectbox-wrap fp\" ms-class=\"mc-active: active\" ms-if=\"!readonly\"\r\n         ms-css-width=\"width\" ms-click=\"clickSelectbox($event)\">\r\n        <input type=\"hidden\" ms-attr-value=\"data[select] && data[select].value\">\r\n        <div class=\"mc-txt\">{{data[select] && data[select].text}}</div>\r\n        <ul class=\"mc-select-list\" ms-class-1=\"mc-arrow-down: arrowDown\" ms-class-2=\"mc-arrow-up: !arrowDown\">\r\n            <li ms-repeat=\"data\" ms-click=\"clickLi($event,$index)\">{{el.text}}</li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"mc-readonly-txt fp\" ms-if=\"readonly\">{{data[select] && data[select].text}}</div>\r\n</div>"
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(73), __webpack_require__(74)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(74), __webpack_require__(75)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:switch", {
 	        //#region 外部参数
@@ -10790,22 +10797,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-switch-cotar hf\" ms-class=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-switch-wrap ftp\" ms-class-1=\"mc-switch-open:switchActive\"\r\n         ms-class-2=\"mc-switch-readonly:readonly\" ms-click=\"doClick\">\r\n        <div class=\"mc-switch-btn\"></div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(76), __webpack_require__(77)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(77), __webpack_require__(78)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:text", {
 	        //外部参数
@@ -10962,22 +10969,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mc-form-group mc-text-cotar hf\" ms-class-1=\"mc-error: !isValid\" ms-class-2=\"mc-loading: isInit\" ms-visible=\"!isHide\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <input class=\"form-control mc-ipt fp\" ms-attr-type=\"pwd?'password':'text'\" ms-attr-placeholder=\"placeholder\" ms-if=\"!readonly && !mult\"\r\n           ms-attr-maxlength=\"maxlen\" ms-attr-name=\"formName\" ms-duplex=\"value\" ms-css-width=\"width\"\r\n           ms-input=\"validValue($event)\" ms-paste=\"validValue($event)\" ms-click=\"doClick($event)\" />\r\n    <textarea class=\"form-control mc-mult-ipt ftp\" type=\"text\" ms-attr-placeholder=\"placeholder\" ms-if=\"!readonly && mult\"\r\n              ms-attr-maxlength=\"maxlen\" ms-attr-name=\"formName\" ms-duplex=\"value\" ms-css-width=\"width\" ms-css-max-width=\"width\" ms-css-min-width=\"width\"\r\n              ms-input=\"validValue($event)\" ms-paste=\"validValue($event)\" ms-click=\"doClick($event)\"></textarea>\r\n    <div class=\"mc-text-show ftp\" ms-if=\"readonly\" ms-attr-name=\"formName\" ms-css-width=\"width\">{{value}}</div>\r\n    <span class=\"mc-text-valid-info ftp\" ms-if=\"!isValid && validInfo != ''\">{{validInfo}}</span>\r\n    <div class=\"mc-text-field-tip\" ms-css-padding-left=\"labelSize\" ms-if=\"tip\">{{tip}}</div>\r\n</div>"
+	module.exports = "<div class=\"mc-form-group mc-text-cotar hf\" ms-class-1=\"mc-error: !isValid\" ms-class-2=\"mc-loading: isInit\" ms-class-3=\"mc-ishide: isHide\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <input class=\"form-control mc-ipt fp\" ms-attr-type=\"pwd?'password':'text'\" ms-attr-placeholder=\"placeholder\" ms-if=\"!readonly && !mult\"\r\n           ms-attr-maxlength=\"maxlen\" ms-attr-name=\"formName\" ms-duplex=\"value\" ms-css-width=\"width\"\r\n           ms-input=\"validValue($event)\" ms-paste=\"validValue($event)\" ms-click=\"doClick($event)\" />\r\n    <textarea class=\"form-control mc-mult-ipt ftp\" type=\"text\" ms-attr-placeholder=\"placeholder\" ms-if=\"!readonly && mult\"\r\n              ms-attr-maxlength=\"maxlen\" ms-attr-name=\"formName\" ms-duplex=\"value\" ms-css-width=\"width\" ms-css-max-width=\"width\" ms-css-min-width=\"width\"\r\n              ms-input=\"validValue($event)\" ms-paste=\"validValue($event)\" ms-click=\"doClick($event)\"></textarea>\r\n    <div class=\"mc-text-show ftp\" ms-if=\"readonly\" ms-attr-name=\"formName\" ms-css-width=\"width\">{{value}}</div>\r\n    <span class=\"mc-text-valid-info ftp\" ms-if=\"!isValid && validInfo != ''\">{{validInfo}}</span>\r\n    <div class=\"mc-text-field-tip\" ms-css-padding-left=\"labelSize\" ms-if=\"tip\">{{tip}}</div>\r\n</div>"
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(79), __webpack_require__(80), __webpack_require__(75), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(80), __webpack_require__(81), __webpack_require__(76), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:jsonadd", {
 	        //外部参数
@@ -11152,22 +11159,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-jsonadd-cotar hf\" ms-class-1=\"mc-error: !isValid\" ms-class-2=\"mc-loading: isInit\" ms-visible=\"!isHide\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n\r\n\r\n    <!--添加区 -->\r\n    <div class=\"add-area\" ms-if=\"!readonly\">\r\n        <mc:text width=\"100\" on-init=\"getKeyIptVM\" ms-attr-placeholder=\"placeholder\"></mc:text> \r\n        &nbsp;&nbsp;\r\n        <mc:text width=\"100\" on-init=\"getValIptVM\" ms-attr-placeholder=\"placeholder\"></mc:text>\r\n        <mc:button on-click=\"addItem\" label=\"增加\" type=\"success\"></mc:button>\r\n    </div>\r\n\r\n\r\n    <!--显示区 -->\r\n    {{JSON.stringify(value)}}\r\n    <div class=\"show-area\" ms-css-margin-left=\"labelSize\">\r\n        <table>\r\n            <tr ms-repeat-item=\"value\">\r\n                <td class=\"key-item\">{{item[keyName]}}</td>\r\n                <td class=\"val-item\">{{item[valName]}}</td>\r\n                <td class=\"\"><mc:button  label=\"删除\" on-click=\"$remove\"></mc:button></td>\r\n            </tr>\r\n           \r\n        </table>\r\n    </div>\r\n\r\n\r\n    <!--X区 -->\r\n    <div class=\"mc-text-show ftp\" ms-if=\"readonly\" ms-attr-name=\"formName\" ms-css-width=\"width\"></div>\r\n    <span class=\"mc-text-valid-info ftp\" ms-if=\"!isValid && validInfo != ''\">{{validInfo}}</span>\r\n    <div class=\"mc-text-field-tip\" ms-css-padding-left=\"labelSize\" ms-if=\"tip\">{{tip}}</div>\r\n</div>"
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(82), __webpack_require__(83), __webpack_require__(72)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(83), __webpack_require__(84), __webpack_require__(73)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    avalon.filters.uri = function (str) {
 	
 	        var r = '';
@@ -11514,22 +11521,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-upload-cotar hf\" ms-class-1=\"mc-upload-lg: size=='large'\"\r\n     ms-class-2=\"mc-upload-sm: size=='small'\" ms-class-3=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"fp\">\r\n        <!-- tip -->\r\n        <div ms-visible=\"tip\" class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n        <div class=\"vm-cotar\" ms-visible=\"allowOuter && (!readonly)\">\r\n            <mc:switch label-size=\"76\" label=\"是否外链\" on-init=\"getSwitchVM\" on-changed=\"outerChanged\"></mc:switch>\r\n        </div>\r\n        <div class=\"vm-cotar\" ms-visible=\"!isOuter\">\r\n            <form ms-attr-id=\"uploadFormId\" ms-if=\"!readonly\">\r\n                <label class=\"mc-button-label\">\r\n                    <input class=\"ms-upload-ipt\" ms-change=\"fileChange($event,this)\" type=\"file\" name=\"uploadImg\">\r\n                    <span class=\"mc-upload-btn\" ms-visible=\"!s_upload\">{{ allowFileType==='img'  ? '选择图片'  :   allowFileType==='video'? '选择视频' : '请选择'}}</span>\r\n                    <span class=\"mc-upload-btn\" ms-visible=\"s_upload\">上传中..</span>\r\n                </label>\r\n            </form>\r\n        </div>\r\n        <div class=\"vm-cotar\" ms-visible=\"isOuter && (!readonly) \">\r\n            <mc:text on-init=\"getOuterTextVM\"> </mc:text>\r\n        </div> \r\n        <!-- 图片直接显示,其他直接url text, -->\r\n        <div ms-if=\"fileType==='img' && !mult\" class=\"mc-img-show-cotar\" ms-css-width=\"width\">\r\n            <img ms-attr-src=\"fileSrc\" ms-if=\"fileSrc != ''\">\r\n        </div>\r\n        <!-- 多图上传 -->\r\n        <div ms-if=\"mult\" class=\"mc-img-show-cotar mc-mult-img-cotar\" ms-css-width=\"width\">\r\n            <div class=\"mc-img-item\" ms-repeat=\"fileSrcList\">\r\n                <div class=\"mc-close-btn\" ms-click=\"doDel($event,$index)\" ms-if=\"!readonly\">&times;</div>\r\n                <img ms-attr-src=\"el\">\r\n            </div>\r\n        </div>\r\n        <div class=\"vm-cotar\" ms-visible=\"fileSrc != '' && fileType!=='img' && (!isOuter) && (!readonly)\">\r\n            已选择:{{fileSrc}}\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(85), __webpack_require__(86)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(86), __webpack_require__(87)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:editor", {
 	        //#region 外部参数
@@ -11657,22 +11664,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-editor-cotar hf\" ms-class=\"mc-loading: isInit\" ms-css-min-width=\"labelSize + width\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-editor-wrap ftp\" ms-class=\"mc-editor-fullscreen: isFullscreen\">\r\n        <div class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n        <script type=\"text/plain\" ms-attr-id=\"ueditorId\" ms-css-width=\"width\">\r\n        </script>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(88), __webpack_require__(89)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(89), __webpack_require__(90)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:tagadd", {
 	        //#region 外部参数
@@ -11836,22 +11843,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-tagadd-cotar hf\" ms-class-1=\"mc-tagadd-lg: size=='large'\"\r\n     ms-class-2=\"mc-tagadd-sm: size=='small'\" ms-class-3=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"ftp\">\r\n        <div class=\"hf\">\r\n            <input class=\"form-control mc-ipt fp\" type=\"text\" ms-attr-placeholder=\"placeholder\" ms-if=\"!readonly\"\r\n                   ms-duplex=\"value\" ms-keydown=\"doKeyDown\" ms-css-width=\"width\" />\r\n            <div class=\"mc-add-btn fp\" ms-click=\"doAdd\" ms-if=\"!readonly\">添加</div>\r\n        </div>\r\n        <div class=\"item mc-text-field-tip\" >\r\n            {{tip}}\r\n        </div>\r\n        <div class=\"mc-tag-show-cotar hf\" ms-css-width=\"width + 80\">\r\n            <div class=\"mc-tag-item fp\" ms-repeat=\"tagList\">\r\n                <div class=\"mc-close-btn\" ms-click=\"doDel($event,$index)\" ms-if=\"!readonly\">&times;</div>\r\n                <div class=\"mc-tag-type iconfont\" ms-class=\"mc-type-{{type}}\" ms-if=\"type != 'normal'\">{{getIcon() | html}}</div>\r\n                <div class=\"mc-tag-name\" ms-class=\"mc-type : type != 'normal'\">{{el.tagName}}</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(91), __webpack_require__(92)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(92), __webpack_require__(93)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:pagemodal", {
 	        //外部参数
@@ -12011,22 +12018,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-pagemodal-cotar fade\" ms-class-1=\"mc-pagemodal-show:modalIsShow\"\r\n     ms-class-2=\"mc-pagemodal-hide:!modalIsShow\" ms-class-3=\"mc-loading: isInit\">\r\n    <div class=\"mc-modal-content\">\r\n        <!-- modal header -->\r\n        <div class=\"mc-modal-header hf\">\r\n            <div class=\"mc-modal-title fp\">{{title}}</div>\r\n        </div>\r\n        <!-- modal body -->\r\n        <div class=\"mc-modal-body\" ms-css-padding=\"padding\">{{content|html}}</div>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(94), __webpack_require__(95)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(95), __webpack_require__(96)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:bread", {
 	        //外部参数
@@ -12096,22 +12103,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-bread-cotar\" ms-class=\"mc-loading: isInit\">\r\n    <div class=\"mc-bread-list hf\">\r\n        <a class=\"mc-bread-item fp mc-active\" ms-repeat=\"data\"\r\n           ms-attr-href=\"el.href\" ms-if-loop=\"el.href\">{{el.text}}</a>\r\n        <div class=\"mc-bread-item fp mc-cur-item\" ms-repeat=\"data\" ms-class=\"mc-active: el.href\"\r\n             ms-if-loop=\"!el.href\">{{el.text}}</div>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(97), __webpack_require__(98)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(98), __webpack_require__(99)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:iconselect", {
 	        //#region 外部参数
@@ -12224,23 +12231,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-iconselect-cotar hf\" ms-class=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-select-cotar ftp hf\">\r\n        <div class=\"mc-selected-icon iconfont fp\" ms-click=\"doPopSelect\" ms-if=\"iconCode != ''\">{{iconCode|html}}</div>\r\n        <div class=\"mc-select-btn fp\" ms-click=\"doPopSelect\" ms-if=\"iconCode == '' && !readonly\">选择图标</div>\r\n        <div class=\"mc-iconselect-content hf\" ms-class=\"mc-show: popShow\" ms-if=\"!readonly\">\r\n            <div class=\"mc-item iconfont fp\" ms-repeat=\"iconList\" ms-click=\"doSelect($event, el.iconCode)\">{{el.iconCode|html}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//todo 右边 data需要写出来
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4),__webpack_require__(100), __webpack_require__(101),__webpack_require__(102), __webpack_require__(13)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4),__webpack_require__(101), __webpack_require__(102),__webpack_require__(103), __webpack_require__(13)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:listselect", {
 	        //buildIn相关
@@ -12443,19 +12450,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 100 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = "\r\n \r\n<div class=\"mc-form-group mc-list-select-cotar hf\" ms-class=\"mc-error: !isValid\" ms-visible=\"!isHide\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"form-control mc-ipt fp\" ms-if=\"!readonly\"\r\n         ms-attr-name=\"formName\" ms-css-width=\"width\"\r\n         ms-click=\"doClick($event)\">{{text}}</div>\r\n    <div class=\"mc-text-show ftp\" ms-if=\"readonly\" ms-attr-name=\"formName\" ms-css-width=\"width\">{{text}}</div>\r\n    <span class=\"mc-text-valid-info ftp\" ms-if=\"!isValid && validInfo != ''\">{{validInfo}}</span>\r\n    <div class=\"mc-text-field-tip\" ms-css-padding-left=\"labelSize\" ms-if=\"tip\">{{tip}}</div>\r\n\r\n\r\n    <mc:dialog config=\"$dialog_opt\" title=\"\" on-init=\"getDialogVM\">\r\n        <div slot=\"content\">\r\n            <!-- list -->\r\n            <mc:letterlist config=\"$list_opt\" ms-attr-identifier=\"$listId\"></mc:letterlist>\r\n            <!-- data -->\r\n            <div class=\"data-list\">\r\n                <div class=\"item\" ms-repeat-item=\"data\" ms-click=\"dataClick(item)\" ms-class=\"active: item.selected\">{{item[$data_opt.textName]}}</div>\r\n            </div>\r\n        </div>\r\n\r\n    </mc:dialog>\r\n</div>\r\n\r\n"
 
 /***/ },
-/* 101 */
+/* 102 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {
@@ -12471,7 +12478,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return r;
 	};
 	//todo 搜索只有indexof,全拼音后台没给 这也没做
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(103), __webpack_require__(104), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(104), __webpack_require__(105), __webpack_require__(10)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:letterlist", {
 	        //外部参数 
@@ -12616,22 +12623,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-letter-list-cotar\">\r\n    <div class=\"left-list group-list\">\r\n        <div class=\"all-num\">\r\n            <!--总数 {{renderDataLen(data)}}-->\r\n        </div>\r\n        <input type=\"text\" class=\"ipt\" placeholder=\"输入关键字\" ms-duplex-string=\"q\">\r\n        <div class=\"group-box\">\r\n            <div class=\"group-item\" ms-if-loop=\"data\" ms-repeat=\"data\">\r\n                <div class=\"gourp-title\">\r\n                    {{$key}} <div class=\"rfp\"> {{$val.length}}项 </div>\r\n                </div>\r\n                <div class=\"item\" ms-repeat-item=\"$val\"\r\n                     ms-class=\"active: item.selected\"\r\n                     ms-click=\"click(item)\">\r\n                    <img ms-if=\"hasPic\" ms-attr-src=\"item[picName]\" class=\"sm-pic\" alt=\"\"> \r\n                    <span>{{item[textName]}}</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(106), __webpack_require__(107)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(107), __webpack_require__(108)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:gridlayout", {
 	        //外部属性
@@ -12695,22 +12702,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-gridlayout-cotar\">\r\n    <table class=\"mc-grid-table\">\r\n        <!--<thead ms-if=\"hasHead\" ms-class=\"mc-hide:isInit\">\r\n            <tr>\r\n                <th ms-repeat=\"$td\" ms-class=\"col-{{$index}}\">\r\n\r\n                </th>\r\n            </tr>\r\n        </thead>-->\r\n        <tbody ms-class=\"mc-hide:isInit\">\r\n            <tr ms-repeat=\"tr\">\r\n                <td ms-repeat-el=\"td\" ms-class=\"col-{{$index}}\">\r\n                    {{renderContent($outer.$index,$index)|html}}\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(109), __webpack_require__(110)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(110), __webpack_require__(111)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    //获取内部保存项路径
 	    function getPath(d, hooks) {
 	        for (var i = 0; i < d.length; i++) {
@@ -12907,22 +12914,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-layout-cotar\" ms-attr-id=\"layoutid\">\r\n    {{sizeStyle|html}}\r\n\r\n    <div class=\"mc-linearlayout-cotar mc-animate\" ms-class-1=\"mc-loading: isInit\" ms-class-2=\"mc-animate-page-show: !isInit\"\r\n         ms-class-3=\"{{mcstyle}}\" ms-css-width=\"renderStyle('width')\"\r\n         ms-css-height=\"renderStyle('height')\"\r\n         ms-css-padding=\"renderStyle('padding')\" ms-css-padding-top=\"renderStyle('pt')\"\r\n         ms-css-padding-left=\"renderStyle('pl')\" ms-css-padding-right=\"renderStyle('pr')\"\r\n         ms-css-padding-bottom=\"renderStyle('pb')\"\r\n         ms-class-4=\"hf: data._m === 'h'\">\r\n        <script type=\"avalon\" ms-attr-id=\"tmpid\" style=\"display: none\">\r\n            <div class=\"mc-linear-item\" ms-repeat=\"el._c\" ms-class-1=\"hf: el._c.size() && el._m === 'h'\"\r\n                 ms-class-2=\"ftp: $outer.el._m === 'h'\" ms-class-3=\"mc_li{{el.s}}: el.s\" ms-css-padding=\"el.p\">\r\n                {{renderContent(el._p, el._c.size())|html}}\r\n                <div ms-include=\"tmpid\" ms-if=\"el._c.size()\" data-include-replace=\"true\"></div>\r\n            </div>\r\n        </script>\r\n        <div class=\"mc-linear-item\" ms-repeat=\"data._c\" ms-class-1=\"hf: el._c.size() && el._m === 'h'\"\r\n             ms-class-2=\"ftp: data._m === 'h'\" ms-class-3=\"mc_li{{el.s}}: el.s\" ms-css-padding=\"el.p\">\r\n            {{renderContent(el._p, el._c.size())|html}}\r\n            <div ms-include=\"tmpid\" ms-if=\"el._c.size()\" data-include-replace=\"true\"></div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"mc-layout-manager-cotar\" ms-class-1=\"{{mcstyle}}\" ms-css-width=\"renderStyle('width')\"\r\n         ms-css-height=\"renderStyle('height')\"\r\n         ms-css-padding=\"renderStyle('padding')\" ms-css-padding-top=\"renderStyle('pt')\"\r\n         ms-css-padding-left=\"renderStyle('pl')\" ms-css-padding-right=\"renderStyle('pr')\"\r\n         ms-css-padding-bottom=\"renderStyle('pb')\"\r\n         ms-class-2=\"hf: data._m === 'h'\">\r\n        <script type=\"avalon\" ms-attr-id=\"mtmpid\" style=\"display: none\">\r\n            <div class=\"mc-absolute-item\" ms-repeat=\"el._c\" ms-class-1=\"mc_ai{{el.s}}: el.s\"\r\n                 ms-css-width=\"$outer.el._m === 'h' && el.w.indexOf('%') === -1 && el.w\" ms-css-height=\"$outer.el._m !== 'h' && el.w.indexOf('%') === -1 && el.w\"\r\n                 ms-css-top=\"calPosition('top', $outer.el, $index)\" ms-css-bottom=\"calPosition('bottom', $outer.el, $index)\"\r\n                 ms-css-left=\"calPosition('left', $outer.el, $index)\" ms-css-right=\"calPosition('right', $outer.el, $index)\"\r\n                 ms-css-padding=\"el.p\">\r\n                <div ms-include=\"mtmpid\" ms-if=\"el._c.size()\" data-include-replace=\"true\"></div>\r\n            </div>\r\n        </script>\r\n        <div class=\"mc-absolute-item\" ms-repeat=\"data._c\" ms-class-1=\"mc_ai{{el.s}}: el.s\"\r\n             ms-css-width=\"data._m === 'h' && el.w.indexOf('%') === -1 && el.w\" ms-css-height=\"data._m !== 'h' && el.w.indexOf('%') === -1 && el.w\"\r\n             ms-css-top=\"calPosition('top', data, $index)\" ms-css-bottom=\"calPosition('bottom', data, $index)\"\r\n             ms-css-left=\"calPosition('left', data, $index)\" ms-css-right=\"calPosition('right', data, $index)\"\r\n             ms-css-padding=\"el.p\">\r\n            <div ms-include=\"mtmpid\" ms-if=\"el._c.size()\" data-include-replace=\"true\"></div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(112), __webpack_require__(113)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(113), __webpack_require__(114)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:absolutelayout", {
 	        //外部属性
@@ -12994,22 +13001,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-absolutelayout-cotar\" ms-class-1=\"{{mcstyle}}\" ms-class-2=\"mc-loading: isInit\" ms-css-width=\"renderStyle('width')\"\r\n     ms-css-height=\"renderStyle('height')\"\r\n     ms-css-top=\"renderStyle('top')\" ms-css-left=\"renderStyle('left')\"\r\n     ms-css-right=\"renderStyle('right')\" ms-css-bottom=\"renderStyle('bottom')\"\r\n     ms-css-padding=\"renderStyle('padding')\" ms-css-padding-top=\"renderStyle('pt')\"\r\n     ms-css-padding-left=\"renderStyle('pl')\" ms-css-padding-right=\"renderStyle('pr')\"\r\n     ms-css-padding-bottom=\"renderStyle('pb')\" ms-css-min-width=\"renderStyle('minWidth')\">\r\n    {{renderContent()|html}}\r\n</div>\r\n"
 
 /***/ },
-/* 113 */
+/* 114 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 114 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(115), __webpack_require__(116)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(116), __webpack_require__(117)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:relativelayout", {
 	        //外部属性
@@ -13067,22 +13074,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 115 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-relativelayout-cotar\" ms-class-1=\"{{mcstyle}}\" ms-class-2=\"mc-loading: isInit\" ms-css-width=\"renderStyle('width')\"\r\n     ms-css-padding=\"renderStyle('padding')\" ms-css-padding-top=\"renderStyle('pt')\"\r\n     ms-css-padding-left=\"renderStyle('pl')\" ms-css-padding-right=\"renderStyle('pr')\"\r\n     ms-css-padding-bottom=\"renderStyle('pb')\">\r\n    {{renderContent()|html}}\r\n</div>\r\n"
 
 /***/ },
-/* 116 */
+/* 117 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 117 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(118), __webpack_require__(119)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(_) {!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(4), __webpack_require__(119), __webpack_require__(120)], __WEBPACK_AMD_DEFINE_RESULT__ = function (avalon, template) {
 	    var _interface = function () { };
 	    avalon.component("mc:selectadd", {
 	        //#region 外部参数
@@ -13277,13 +13284,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 118 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mc-form-group mc-selectadd-cotar hf\" ms-class-1=\"mc-selectadd-lg: size=='large'\"\r\n     ms-class-2=\"mc-selectadd-sm: size=='small'\" ms-class-3=\"mc-loading: isInit\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"ftp\">\r\n        <div class=\"hf\" ms-if=\"!noAddBtn && !readonly\">\r\n            <div class=\"mc-add-btn fp\" ms-click=\"doAdd\">添加</div>\r\n        </div>\r\n        <div class=\"mc-tag-show-cotar hf\" ms-css-width=\"width + 80\">\r\n            <div class=\"mc-tag-item fp\" ms-repeat=\"tagList\">\r\n                <div class=\"mc-close-btn\" ms-click=\"doDel($event,$index)\" ms-if=\"!readonly\">&times;</div>\r\n                <div class=\"mc-tag-type iconfont\" ms-class=\"mc-type-{{el.tagType}}\" ms-if=\"el.tagType != 'normal'\">{{getIcon(el) | html}}</div>\r\n                <div class=\"mc-tag-name\" ms-class=\"mc-type | el.tagType != 'normal'\">{{el.tagName}}</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 119 */
+/* 120 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

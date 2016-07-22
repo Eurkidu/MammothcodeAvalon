@@ -112,14 +112,20 @@
   position: relative;
   /*.date_selector, .date_selector *{width: auto;height: auto;border: none;background: none;margin: 0;padding: 0;text-align: left;text-decoration: none;}*/
 }
-.mc-datepicker-cotar .mc-datepicker-wrap.mc-readonly {
+.mc-datepicker-cotar.mc-readonly .control-label {
+  margin-top: 0;
+}
+.mc-datepicker-cotar.mc-readonly .mc-datepicker-wrap {
   height: 20px;
 }
-.mc-datepicker-cotar .mc-datepicker-wrap.mc-readonly .mc-datepicker-content {
+.mc-datepicker-cotar.mc-readonly .mc-datepicker-wrap .mc-datepicker-content {
   line-height: 20px;
   padding: 0;
   border: none;
   cursor: default;
+}
+.mc-datepicker-cotar .control-label {
+  margin-top: 5px;
 }
 .mc-datepicker-cotar .mc-datepicker-wrap .mc-datepicker-content {
   line-height: 25px;
@@ -133,9 +139,6 @@
   width: 0;
   height: 0;
   overflow: hidden;
-}
-.mc-datepicker-cotar .control-label {
-  margin-top: 5px;
 }
 .mc-datepicker-cotar .mc-text-field-tip {
   line-height: 30px;

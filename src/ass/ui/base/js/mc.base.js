@@ -1,3 +1,4 @@
+require("../css/McBaseBeta.min.css");
 
 //#region 图标
 McIcon = function () {
