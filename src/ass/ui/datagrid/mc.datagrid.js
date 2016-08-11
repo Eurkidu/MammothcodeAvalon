@@ -337,6 +337,7 @@ define(["avalon", "text!./mc.datagrid.html", "css!./mc.datagrid.min.css", "mcChe
                 if (vm.tableConfig[tdIdx].type === "time") {
                     return (V >> 0) * 1000;
                 } else if (vm.tableConfig[tdIdx].type === "img") {
+                    if (V === null) return ""; //fix图片路径为null时,无法显示为空
                     if (V.indexOf(",") !== -1) {
                         //如果多图取第一张
                         return V.split(",")[0];

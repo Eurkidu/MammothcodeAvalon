@@ -128,7 +128,8 @@ define(["avalon", "text!./mc.sidepop.html", "css!./mc.sidepop.min.css"], functio
             vm.onInit(vm, elem); //调用外部初始化函数
             vm.isInit = false;
             McAvalon.$window.on("window_click", function (trigger, ev) {
-                if (ev.target.id.indexOf("_ueditor") === -1) {
+                //如果点击不是百度文本编辑器内产生的则关闭
+                if (ev.target.className.indexOf("edui-") === -1) {
                     vm.sidePopHide();
                 }
             });

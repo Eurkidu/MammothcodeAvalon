@@ -9,7 +9,8 @@
         placeholder: "",
         mcstyle: "", //风格
         size: "normal", //small large
-        width: 900, //宽度,默认600px
+        width: 900, //宽度,默认900px
+        height: 600, //高度,默认600px
         disabled: false, //是否禁用
         //表单相关
         formName: "", //表单data的key,输入框name
@@ -99,17 +100,17 @@
                 }
             }
             vm.iniEditor = function() {
-                UM.clearCache(vm.ueditorId);
+                //UE.clearCache(vm.ueditorId);
                 //实例化编辑器
-                vm.$ueditorObj = UM.getEditor(vm.ueditorId);
+                vm.$ueditorObj = UE.getEditor(vm.ueditorId);
                 //fix fullscreen bug
-                vm.$ueditorObj.addListener("afterfullscreenchange", function () {
-                    vm.isFullscreen = !vm.isFullscreen;
-                });
+                //vm.$ueditorObj.addListener("afterfullscreenchange", function () {
+                //    vm.isFullscreen = !vm.isFullscreen;
+                //});
             }
             vm.destroy = function () {
                 //销毁当前的百度文本编辑器对象
-                UM.clearCache(vm.ueditorId);
+                //UE.clearCache(vm.ueditorId);
             }
             //#endregion
         },

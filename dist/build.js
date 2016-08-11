@@ -7280,7 +7280,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            vm.onInit(vm, elem); //调用外部初始化函数
 	            vm.isInit = false;
 	            McAvalon.$window.on("window_click", function (trigger, ev) {
-	                if (ev.target.id.indexOf("_ueditor") === -1) {
+	                //如果点击不是百度文本编辑器内产生的则关闭
+	                if (ev.target.className.indexOf("edui-") === -1) {
 	                    vm.sidePopHide();
 	                }
 	            });
@@ -7647,6 +7648,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                if (vm.tableConfig[tdIdx].type === "time") {
 	                    return (V >> 0) * 1000;
 	                } else if (vm.tableConfig[tdIdx].type === "img") {
+	                    if (V === null) return ""; //fix图片路径为null时,无法显示为空
 	                    if (V.indexOf(",") !== -1) {
 	                        //如果多图取第一张
 	                        return V.split(",")[0];
@@ -11547,7 +11549,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        placeholder: "",
 	        mcstyle: "", //风格
 	        size: "normal", //small large
-	        width: 900, //宽度,默认600px
+	        width: 900, //宽度,默认900px
+	        height: 600, //高度,默认600px
 	        disabled: false, //是否禁用
 	        //表单相关
 	        formName: "", //表单data的key,输入框name
@@ -11637,17 +11640,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	            vm.iniEditor = function() {
-	                UM.clearCache(vm.ueditorId);
+	                //UE.clearCache(vm.ueditorId);
 	                //实例化编辑器
-	                vm.$ueditorObj = UM.getEditor(vm.ueditorId);
+	                vm.$ueditorObj = UE.getEditor(vm.ueditorId);
 	                //fix fullscreen bug
-	                vm.$ueditorObj.addListener("afterfullscreenchange", function () {
-	                    vm.isFullscreen = !vm.isFullscreen;
-	                });
+	                //vm.$ueditorObj.addListener("afterfullscreenchange", function () {
+	                //    vm.isFullscreen = !vm.isFullscreen;
+	                //});
 	            }
 	            vm.destroy = function () {
 	                //销毁当前的百度文本编辑器对象
-	                UM.clearCache(vm.ueditorId);
+	                //UE.clearCache(vm.ueditorId);
 	            }
 	            //#endregion
 	        },
@@ -11667,7 +11670,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 86 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mc-form-group mc-editor-cotar hf\" ms-class=\"mc-loading: isInit\" ms-css-min-width=\"labelSize + width\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-editor-wrap ftp\" ms-class=\"mc-editor-fullscreen: isFullscreen\">\r\n        <div class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n        <script type=\"text/plain\" ms-attr-id=\"ueditorId\" ms-css-width=\"width\">\r\n        </script>\r\n    </div>\r\n</div>\r\n"
+	module.exports = "<div class=\"mc-form-group mc-editor-cotar hf\" ms-class=\"mc-loading: isInit\" ms-css-min-width=\"labelSize + width\">\r\n    <label class=\"control-label mc-tip fp\" ms-if=\"label != ''\" ms-css-width=\"labelSize\">{{label}}</label>\r\n    <div class=\"mc-editor-wrap ftp\" ms-class=\"mc-editor-fullscreen: isFullscreen\">\r\n        <div class=\"item mc-text-field-tip\" ms-css-width=\"width\">\r\n            {{tip}}\r\n        </div>\r\n        <script ms-attr-id=\"ueditorId\" name=\"content\" type=\"text/plain\" ms-css-width=\"width\" ms-css-height=\"height\">\r\n        </script>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 87 */
